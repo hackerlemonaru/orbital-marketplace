@@ -20,4 +20,5 @@ All endpoints are rate limited; read /docs/agent-rate-limits.md before bulk acce
 
 ## Optional
 - [Creator submission guide](https://orbital-assets-proxy.jc-bose.workers.dev/docs/submit.md)
+- [Design system + anti-slop audit](https://orbital-assets-proxy.jc-bose.workers.dev/docs/design-system.md) · [Video brief](https://orbital-assets-proxy.jc-bose.workers.dev/docs/video-brief.md)
 - [AGENTS.md](https://orbital-assets-proxy.jc-bose.workers.dev/AGENTS.md) · [SKILL.md](https://orbital-assets-proxy.jc-bose.workers.dev/skills/orbital-assets/SKILL.md)

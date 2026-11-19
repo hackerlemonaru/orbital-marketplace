@@ -44,7 +44,10 @@ function ctype(key) {
   return {
     ".glb": "model/gltf-binary", ".gltf": "model/gltf+json", ".bin": "application/octet-stream",
     ".webp": "image/webp", ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg",
-    ".svg": "image/svg+xml", ".ktx2": "image/ktx2", ".html": "text/html; charset=utf-8",
+    ".svg": "image/svg+xml", ".ktx2": "image/ktx2", ".avif": "image/avif",
+    ".woff2": "font/woff2", ".woff": "font/woff", ".otf": "font/otf",
+    ".mp4": "video/mp4", ".m4v": "video/mp4", ".webm": "video/webm",
+    ".html": "text/html; charset=utf-8",
     ".css": "text/css; charset=utf-8", ".js": "application/javascript; charset=utf-8",
     ".json": "application/json; charset=utf-8", ".md": "text/markdown; charset=utf-8",
     ".txt": "text/plain; charset=utf-8", ".xml": "application/xml", ".lottie": "application/zip",

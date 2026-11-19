@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Generate the browsable storefront + agent discovery files from catalog.json."""
-import os, json, html, re, shutil, urllib.parse
+import os, json, html, re, shutil, urllib.parse, base64
 
 ROOT = "/home/user/orbital-marketplace"
 WEB = f"{ROOT}/website"
@@ -108,16 +108,37 @@ used_pct = round(used / 9.8 * 100, 1)
 github_count = counts["by_mode"].get("github", 0)
 r2_count = len(json.load(open(f"{ROOT}/catalog/r2-upload-log.json"))["uploaded"])
 model_rows = [a for a in assets if a.get("mode") == "github" and a.get("format") in ("GLB", "GLTF-Embedded", "GLSL")]
-viewer_models = [{"name": a["name"], "url": a.get("github_raw_url") or a.get("public_url"), "license": a["license"]}
-                 for a in model_rows if a.get("format") == "GLB" and (a.get("github_raw_url") or a.get("public_url"))][:4]
+preferred_glbs = ["threejs-robot-expressive.glb", "pmndrs-bunny.glb", "pmndrs-suzi.glb", "pmndrs-pmndrs.glb"]
+glb_rows = [a for a in model_rows if a.get("format") == "GLB" and (a.get("local_path") or "").startswith("website/")]
+def preferred_index(a):
+    name = os.path.basename(a.get("local_path") or "")
+    return preferred_glbs.index(name) if name in preferred_glbs else len(preferred_glbs)
+glb_rows.sort(key=preferred_index)
+viewer_models = [{
+    "name": a["name"],
+    "url": a["local_path"].replace("website/", "", 1),
+    "license": a["license"],
+} for a in glb_rows[:4]]
+
+def data_uri(path, mime):
+    raw = open(path, "rb").read()
+    return "data:" + mime + ";base64," + base64.b64encode(raw).decode("ascii")
+
+font_sans = data_uri(f"{WEB}/fonts/Geist-Variable.woff2", "font/woff2")
+font_mono = data_uri(f"{WEB}/fonts/GeistMono-Variable.woff2", "font/woff2")
+poster_hero = data_uri(f"{WEB}/media/poster-hero.jpg", "image/jpeg")
+poster_material = data_uri(f"{WEB}/media/poster-material.jpg", "image/jpeg")
+poster_orbit = data_uri(f"{WEB}/media/poster-orbit.jpg", "image/jpeg")
+poster_agent = data_uri(f"{WEB}/media/poster-agent.jpg", "image/jpeg")
+
 esc = html.escape
 model_cards = "".join(
-    f'<div class="model"><b>{esc(a["name"][:34])}</b><small>{esc(a["format"])} · {esc(a["license"])}</small><p style="font:10px var(--mono);color:var(--muted);margin-top:12px;line-height:1.5">{esc((a.get("source_repo") or "github").split("/")[-1])} · {a["bytes"]//1024} KB · GitHub-served</p><span class="bar"></span></div>'
-    for a in model_rows[:12]
+    f'<div class="model-row"><span class="idx">{i+1:02d}</span><b>{esc(a["name"][:42])}</b><span>{esc(a["format"])}</span><span>{esc(a["license"])}</span><span>{esc(a.get("source_repo") or "github")}</span><span>{int(a.get("bytes") or 0)//1024} KB</span></div>'
+    for i, a in enumerate(model_rows[:12])
 )
 source_cards = "".join(
-    f'<div class="source"><b>{esc(s["id"])}</b><span>{esc(s["license"])} · {esc(s["mode"])}<br>{esc(s["url"])}</span></div>'
-    for s in doc["sources"] if s["id"] in {"pmndrs-assets","threejs-robot","erichlof-pathtracing","javagl-tutorial","khronos-cc0-small","polyhaven-link","smithsonian-link","nasa-3d-resources","polygonal-mind-cc0"}
+    f'<div class="source-row"><span class="idx">{i+1:02d}</span><b>{esc(s["id"])}</b><span>{esc(s["license"])}</span><span>{esc(s["mode"])}</span><a href="{esc(s["url"])}">{esc(s["url"])}</a></div>'
+    for i, s in enumerate(s for s in doc["sources"] if s["id"] in {"pmndrs-assets","threejs-robot","erichlof-pathtracing","javagl-tutorial","khronos-cc0-small","polyhaven-link","smithsonian-link","nasa-3d-resources","polygonal-mind-cc0"})
 )
 ticker = " &nbsp;·&nbsp; ".join(["CC0 GLB","three.js 0.187.0","WebGL2","GLSL","glTF 2.0","Poly Haven","Smithsonian","NASA","GitHub raw","R2 Worker","free agent tier","9.8 GiB cap","commercial use","dotLottie","KHR_gaussian_splatting"])
 ticker = f'<span>{ticker}</span><span>{ticker}</span>'
@@ -133,6 +154,9 @@ repl = {
     "__USEDPCT__": str(used_pct), "__STORAGE_NOTE__": esc(storage_note),
     "__TICKER__": ticker, "__MODEL_CARDS__": model_cards, "__SOURCE_CARDS__": source_cards,
     "__INLINE__": inline_json, "__MODELS_JSON__": models_json,
+    "__FONT_SANS__": font_sans, "__FONT_MONO__": font_mono,
+    "__POSTER_HERO__": poster_hero, "__POSTER_MATERIAL__": poster_material,
+    "__POSTER_ORBIT__": poster_orbit, "__POSTER_AGENT__": poster_agent,
 }
 for k, v in repl.items():
     tpl = tpl.replace(k, v)
@@ -145,6 +169,8 @@ os.makedirs(f"{PUB}/docs", exist_ok=True)
 # BASE is set above from worker/url.txt
 
 files = {}
+files["docs/design-system.md"] = open(f"{ROOT}/docs/design-system.md").read()
+files["docs/video-brief.md"] = open(f"{ROOT}/docs/video-brief.md").read()
 files["llms.txt"] = f"""# ORBITAL — 3D, motion & UI-decoration asset marketplace
 
 > Browser-ready 3D, shader, motion and UI assets with performance budgets, machine-readable licences and a rate-limited agent API. Free read-only access for agents.
@@ -167,6 +193,7 @@ All endpoints are rate limited; read /docs/agent-rate-limits.md before bulk acce
 
 ## Optional
 - [Creator submission guide]({BASE}/docs/submit.md)
+- [Design system + anti-slop audit]({BASE}/docs/design-system.md) · [Video brief]({BASE}/docs/video-brief.md)
 - [AGENTS.md]({BASE}/AGENTS.md) · [SKILL.md]({BASE}/skills/orbital-assets/SKILL.md)
 """
 files["robots.txt"] = """User-agent: *

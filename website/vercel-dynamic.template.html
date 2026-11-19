@@ -3,165 +3,171 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>ORBITAL — spatial assets, shipped</title>
-<meta name="description" content="A Vercel-inspired, super-dynamic storefront for web-native 3D, motion, shader and UI assets."/>
+<title>ORBITAL — asset layer for the spatial web</title>
+<meta name="description" content="A licence-cleared 3D, shader, motion and UI asset catalogue with machine-readable provenance, GitHub/R2 delivery and a WebGL storefront."/>
 <style>
-:root{--bg:#050505;--ink:#fafafa;--muted:#8b8b8b;--line:rgba(255,255,255,.12);--panel:rgba(255,255,255,.035);--accent:#fff;--glow1:#5b8cff;--glow2:#b45cff;--glow3:#00e5c0;--mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;--sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}button,input,select{font:inherit}::selection{background:#fff;color:#000}
-#bg{position:fixed;inset:0;width:100%;height:100%;z-index:-3;display:block}
-.grid-bg{position:fixed;inset:0;z-index:-2;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(circle at 50% 30%,#000 0%,transparent 72%);opacity:.34;pointer-events:none}
-.noise{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-.cursor{position:fixed;width:12px;height:12px;border:1px solid #fff;border-radius:50%;pointer-events:none;z-index:99;mix-blend-mode:difference;transition:width .2s,height .2s,background .2s;transform:translate(-50%,-50%)}
-.cursor.big{width:46px;height:46px;background:rgba(255,255,255,.14)}
-nav{position:fixed;top:0;left:0;right:0;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;border-bottom:1px solid var(--line);background:rgba(5,5,5,.72);backdrop-filter:blur(18px);z-index:50}
-.brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:-.03em;font-size:15px}
-.tri{width:20px;height:18px;background:#fff;clip-path:polygon(50% 0,100% 100%,0 100%)}
-.navlinks{display:flex;gap:26px;font-size:12px;color:var(--muted);font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em}
-.navlinks a:hover{color:#fff}.navlinks .live{color:#fff}
-.btn{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#fff;border-radius:999px;font-size:12px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em;cursor:pointer;transition:transform .2s,border-color .2s,background .2s}
-.btn:hover{border-color:#fff;background:rgba(255,255,255,.1);transform:translateY(-2px)}
-.btn.primary{background:#fff;color:#000;border-color:#fff;font-weight:700}.btn.primary:hover{background:#eaeaea}
-.wrap{width:min(1240px,90vw);margin:0 auto}
-.hero{min-height:100svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:4vw;padding:110px 0 70px;position:relative}
-.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:10px}
-.kicker:before{content:"";width:24px;height:1px;background:#fff}
-h1{font-size:clamp(54px,8vw,112px);line-height:.9;letter-spacing:-.075em;margin:24px 0 22px;font-weight:800}
-h1 .grad{background:linear-gradient(92deg,#fff 10%,var(--glow1) 40%,var(--glow2) 68%,var(--glow3) 92%);-webkit-background-clip:text;background-clip:text;color:transparent;animation:shift 9s ease-in-out infinite alternate}
-@keyframes shift{to{filter:hue-rotate(45deg)}}
-.lede{font-size:clamp(15px,1.5vw,19px);line-height:1.6;color:#bdbdbd;max-width:600px;margin:0 0 34px}
-.ctas{display:flex;gap:12px;flex-wrap:wrap}
-.stats{display:flex;gap:34px;margin-top:54px;flex-wrap:wrap}
-.stat b{display:block;font-size:26px;letter-spacing:-.04em}.stat span{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
-.orb-wrap{position:relative;height:min(62vw,560px);display:grid;place-items:center}
-.orb{width:min(36vw,420px);aspect-ratio:1;border-radius:50%;position:relative;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.9),rgba(91,140,255,.34) 18%,rgba(180,92,255,.16) 42%,transparent 68%);box-shadow:inset 0 0 80px rgba(255,255,255,.12),0 0 120px rgba(91,140,255,.18);animation:float 7s ease-in-out infinite}
-.orb:before,.orb:after{content:"";position:absolute;inset:-9%;border:1px solid rgba(255,255,255,.18);border-radius:50%;transform:rotateX(68deg) rotateZ(0deg);animation:spin 14s linear infinite}
-.orb:after{inset:-20%;border-color:rgba(180,92,255,.18);animation-duration:22s;animation-direction:reverse}
-.cube{position:absolute;width:130px;height:130px;border:1px solid rgba(255,255,255,.45);transform-style:preserve-3d;animation:cubespin 18s linear infinite}
-.cube i{position:absolute;inset:0;border:1px solid rgba(255,255,255,.22);transform:translateZ(65px)}.cube i:nth-child(2){transform:rotateY(90deg) translateZ(65px)}.cube i:nth-child(3){transform:rotateX(90deg) translateZ(65px)}
-@keyframes float{50%{transform:translateY(-18px) scale(1.02)}}@keyframes spin{to{transform:rotateX(68deg) rotateZ(360deg)}}@keyframes cubespin{to{transform:rotateX(360deg) rotateY(720deg)}}
-#viewer{position:absolute;inset:8% 4%;border:1px solid var(--line);border-radius:24px;background:rgba(8,8,10,.55);overflow:hidden;box-shadow:0 30px 100px rgba(0,0,0,.5)}
-#viewer canvas{display:block;width:100%;height:100%}
-.viewer-tag{position:absolute;left:14px;bottom:14px;font:10px var(--mono);text-transform:uppercase;letter-spacing:.12em;color:#fff;background:rgba(0,0,0,.55);padding:8px 12px;border:1px solid var(--line);border-radius:999px;z-index:2}
-.viewer-switch{position:absolute;right:14px;top:14px;display:flex;gap:6px;z-index:2}.viewer-switch button{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:rgba(0,0,0,.55);color:#fff;cursor:pointer;font:10px var(--mono)}
-.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);padding:14px 0}
-.ticker div{display:inline-block;animation:marquee 28s linear infinite}.ticker span{margin:0 34px}@keyframes marquee{to{transform:translateX(-50%)}}
-section{padding:100px 0;border-bottom:1px solid var(--line)}
-.shead{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:42px}.shead h2{font-size:clamp(34px,5vw,64px);letter-spacing:-.06em;line-height:.95;margin:14px 0 0}.shead p{max-width:440px;color:var(--muted);font-size:14px;line-height:1.65;margin:0}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.card{border:1px solid var(--line);background:var(--panel);border-radius:18px;padding:24px;min-height:180px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s,background .3s}
-.card:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.07)}
-.card:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(91,140,255,.2),transparent 70%);right:-80px;top:-80px;pointer-events:none}
-.card .num{font:10px var(--mono);color:var(--muted);letter-spacing:.12em}.card h3{font-size:20px;letter-spacing:-.03em;margin:34px 0 10px}.card p{font-size:13px;line-height:1.6;color:#aaa;margin:0}
-.tag{display:inline-block;font:10px var(--mono);text-transform:uppercase;letter-spacing:.1em;border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:#d6d6d6;margin-top:14px}
-.model-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.model{border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025);padding:16px;min-height:132px;transition:.25s;position:relative;overflow:hidden}
-.model:hover{border-color:#fff;transform:translateY(-3px)}.model b{display:block;font-size:13px;margin-bottom:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.model small{font:10px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.model .bar{position:absolute;left:0;bottom:0;height:2px;background:linear-gradient(90deg,var(--glow1),var(--glow2),var(--glow3));width:0;transition:width .5s}.model:hover .bar{width:100%}
-.source-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.source{border:1px solid var(--line);border-radius:14px;padding:18px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.01))}
-.source b{font-size:13px}.source span{display:block;font:10px var(--mono);color:var(--muted);margin-top:8px;line-height:1.5}
-.storage{display:grid;grid-template-columns:1fr 1.4fr;gap:30px;align-items:center}
-.meter{height:14px;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:rgba(255,255,255,.03)}.meter i{display:block;height:100%;background:linear-gradient(90deg,#fff,var(--glow1),var(--glow2));width:44.5%}
-.storage small{font:11px var(--mono);color:var(--muted);line-height:1.7;display:block;margin-top:12px}
-.catbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}.catbar input,.catbar select{background:rgba(255,255,255,.04);border:1px solid var(--line);color:#fff;padding:11px 14px;border-radius:10px;font-size:12px;outline:none;min-width:150px}.catbar label{display:inline-flex;align-items:center;gap:8px;font-size:11px;color:var(--muted);padding:0 8px;font-family:var(--mono)}
-.catgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-height:520px;overflow:auto;padding-right:6px}.asset{border:1px solid var(--line);border-radius:12px;padding:14px;background:rgba(255,255,255,.025);transition:.25s}.asset:hover{border-color:#fff;transform:translateY(-2px)}.asset b{font-size:12px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.asset .c{font-size:10px;color:var(--muted);margin:6px 0 10px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.asset .row{display:flex;justify-content:space-between;gap:8px;font:9px var(--mono);text-transform:uppercase;letter-spacing:.06em}.asset .row span:first-child{color:#fff}.asset .row span:last-child{color:var(--muted)}
-.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.price{border:1px solid var(--line);border-radius:18px;padding:28px;background:var(--panel)}.price.featured{background:#fff;color:#000;border-color:#fff}.price h3{margin:0 0 12px;font-size:18px}.price .amt{font-size:44px;font-weight:800;letter-spacing:-.06em;margin:10px 0 20px}.price ul{list-style:none;padding:0;margin:0 0 24px;font-size:12px;line-height:2;color:inherit;opacity:.78}
-footer{padding:60px 0 90px;color:var(--muted);font:11px var(--mono);text-transform:uppercase;letter-spacing:.1em}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.reveal.on{opacity:1;transform:none}
-@media(max-width:1000px){.hero{grid-template-columns:1fr;padding-top:100px}.orb-wrap{height:420px}.cards,.pricing{grid-template-columns:1fr 1fr}.model-grid,.source-grid,.catgrid{grid-template-columns:1fr 1fr}.storage{grid-template-columns:1fr}}
-@media(max-width:620px){.navlinks{display:none}.cards,.pricing,.model-grid,.source-grid,.catgrid{grid-template-columns:1fr}.shead{display:block}.shead p{margin-top:18px}section{padding:70px 0}.orb-wrap{height:340px}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+@font-face{font-family:"Geist";src:url("__FONT_SANS__") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Geist Mono";src:url("__FONT_MONO__") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+:root{--bg:#fafafa;--surface:#ffffff;--ink:#171717;--muted:#666666;--faint:#8f8f8f;--line:#ebebeb;--line-strong:#171717;--blue:#0070f3;--black:#000000;--white:#ededed;--sans:"Geist","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;--mono:"Geist Mono","SFMono-Regular",Menlo,Consolas,monospace;--r-sm:6px;--r-md:8px;--r-lg:12px;--ease:cubic-bezier(.16,1,.3,1);--wrap:min(1240px,90vw)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden;font-variant-numeric:tabular-nums}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button{cursor:pointer}::selection{background:var(--blue);color:#fff}
+#bg-webgl{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.52;mix-blend-mode:multiply}
+.site{position:relative;z-index:1}.wrap{width:var(--wrap);margin:0 auto}
+.mono{font-family:var(--mono);font-size:11px;line-height:1.45;letter-spacing:.02em;color:var(--muted);font-variant-numeric:tabular-nums}
+.blue{color:var(--blue)}
+.cursor{position:fixed;left:0;top:0;width:14px;height:14px;border:1px solid var(--blue);z-index:90;pointer-events:none;transform:translate(-50%,-50%);transition:width .18s var(--ease),height .18s var(--ease),background .18s var(--ease);mix-blend-mode:multiply}
+.cursor.big{width:38px;height:38px;background:rgba(0,112,243,.08)}
+.progress{position:fixed;left:0;top:64px;bottom:0;width:2px;background:var(--line);z-index:45}.progress i{display:block;width:100%;height:0;background:var(--blue)}
+nav{position:fixed;top:0;left:0;right:0;height:64px;z-index:50;background:rgba(250,250,250,.97);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 5vw}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-.035em;font-size:15px}.brand svg{width:18px;height:18px;display:block}.navlinks{display:flex;align-items:center;gap:28px}.navlinks a{font-family:var(--mono);font-size:11px;color:var(--muted);transition:color .15s var(--ease)}.navlinks a:hover{color:var(--ink)}.navlinks a:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--blue);outline-offset:2px}.nav-status{font-family:var(--mono);font-size:10px;color:var(--muted);display:flex;align-items:center;gap:7px}.nav-status i{width:6px;height:6px;background:var(--blue);display:block}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:38px;padding:0 14px;border:1px solid var(--line-strong);border-radius:var(--r-sm);background:var(--ink);color:#fff;font-family:var(--mono);font-size:11px;transition:transform .15s var(--ease),background .15s var(--ease),border-color .15s var(--ease)}
+.btn:hover{transform:translateY(-1px);background:#000}.btn.secondary{background:var(--surface);color:var(--ink);border-color:var(--line)}.btn.secondary:hover{border-color:var(--ink);background:#fff}.btn.blue{background:var(--blue);border-color:var(--blue)}
+.hero{min-height:calc(100svh - 64px);padding:96px 0 48px;display:grid;grid-template-columns:1.18fr .82fr;gap:48px;align-items:center;position:relative}
+.hero-copy{max-width:720px}.release{display:flex;align-items:center;gap:12px;margin-bottom:28px}.release:before{content:"";width:28px;height:1px;background:var(--ink)}
+h1{font-size:clamp(56px,7.6vw,112px);line-height:.91;letter-spacing:-.072em;font-weight:500;margin:0 0 28px;max-width:11ch}.line{display:block;overflow:hidden}.line span{display:block;transform:translateY(110%);animation:lineIn .9s var(--ease) forwards}.line:nth-child(2) span{animation-delay:.09s}.line:nth-child(2) em{font-style:normal;color:var(--blue)}
+@keyframes lineIn{to{transform:translateY(0)}}
+.lede{font-size:clamp(16px,1.5vw,19px);line-height:1.55;color:#333;max-width:58ch;margin:0 0 32px}.lede code{font-family:var(--mono);font-size:.82em;background:#f0f0f0;border:1px solid var(--line);padding:2px 5px;border-radius:4px}
+.ctas{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:48px}
+.spec-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line)}.spec{padding:16px 14px 14px 0;border-right:1px solid var(--line)}.spec:last-child{border-right:0}.spec b{display:block;font-size:22px;font-weight:500;letter-spacing:-.04em}.spec span{font-family:var(--mono);font-size:9px;color:var(--muted);text-transform:lowercase}
+.stage{position:relative;min-height:560px;height:min(58vw,620px);background:#000;border:1px solid var(--ink);border-radius:var(--r-md);overflow:hidden}.stage-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.34}.stage:after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.12);pointer-events:none}
+#modelStage{position:absolute;inset:0;z-index:2}#orbital-scene-canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.stage-head{position:absolute;z-index:3;left:18px;top:18px;right:18px;display:flex;justify-content:space-between;align-items:flex-start;color:#fff}.stage-head .mono{color:#bdbdbd}.bracket{width:18px;height:18px;border-left:1px solid #fff;border-top:1px solid #fff}.bracket.tr{border-left:0;border-top:0;border-right:1px solid #fff;border-bottom:1px solid #fff}.stage-foot{position:absolute;z-index:3;left:18px;right:18px;bottom:18px;display:flex;justify-content:space-between;gap:20px;color:#fff}.stage-foot .mono{color:#bdbdbd}.model-switch{display:flex;gap:4px}.model-switch button{width:28px;height:28px;background:rgba(0,0,0,.72);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:4px;font-family:var(--mono);font-size:9px}.model-switch button:hover{border-color:var(--blue);color:var(--blue)}
+.data-rail{border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong);overflow:hidden;white-space:nowrap;background:var(--surface)}.data-rail div{display:inline-block;animation:marquee 34s linear infinite}.data-rail span{display:inline-block;padding:12px 28px;font-family:var(--mono);font-size:10px;color:var(--muted)}.data-rail b{color:var(--ink);font-weight:500}@keyframes marquee{to{transform:translateX(-50%)}}
+section{padding:112px 0;border-bottom:1px solid var(--line)}.section-head{display:grid;grid-template-columns:.72fr 1.28fr;gap:64px;margin-bottom:56px;align-items:start}.kicker{font-family:var(--mono);font-size:10px;color:var(--muted);margin:0 0 18px}.kicker b{color:var(--blue);font-weight:500}.section-head h2{font-size:clamp(36px,5vw,68px);line-height:.98;letter-spacing:-.06em;font-weight:500;margin:0;max-width:12ch}.section-head p{font-size:15px;line-height:1.7;color:#444;max-width:62ch;margin:0}.section-head p code{font-family:var(--mono);font-size:.86em;background:#f0f0f0;border:1px solid var(--line);padding:2px 5px;border-radius:4px}
+.pipeline{padding-top:80px}.video-grid{display:grid;grid-template-columns:1.38fr .62fr;grid-template-rows:minmax(220px,1fr) minmax(220px,1fr) 150px;gap:8px}.slot{position:relative;overflow:hidden;border:1px solid var(--line-strong);background:#000;min-height:0}.slot.large{grid-row:1/3}.slot.agent{grid-column:1/3}.slot video,.slot img{width:100%;height:100%;object-fit:cover;display:block}.slot video{position:absolute;inset:0}.slot:after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.18);pointer-events:none}.slot-label{position:absolute;z-index:2;left:14px;bottom:14px;right:14px;display:flex;justify-content:space-between;gap:16px;color:#fff;font-family:var(--mono);font-size:10px}.slot-label span:last-child{color:#bdbdbd}.slot-label .state{color:var(--blue)}
+.ruled-head{display:grid;grid-template-columns:72px 1.2fr .7fr .7fr 2fr;border-bottom:1px solid var(--line-strong);padding:0 0 10px;font-family:var(--mono);font-size:10px;color:var(--muted)}.source-row{display:grid;grid-template-columns:72px 1.2fr .7fr .7fr 2fr;gap:12px;border-bottom:1px solid var(--line);padding:16px 0;align-items:center;transition:background .15s var(--ease)}.source-row:hover{background:#f2f2f2}.source-row .idx{font-family:var(--mono);font-size:10px;color:var(--blue)}.source-row b{font-size:14px;font-weight:500}.source-row span{font-family:var(--mono);font-size:10px;color:var(--muted)}.source-row a{font-family:var(--mono);font-size:10px;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.source-row a:hover{color:var(--blue)}
+.storage{background:#000;color:var(--white);border-bottom:1px solid #000;position:relative;padding:64px 0;overflow:hidden}.storage:before{content:"";position:absolute;inset:0;background:url("__POSTER_MATERIAL__") center/cover no-repeat;opacity:.13;filter:grayscale(1) contrast(1.2)}.storage .wrap{position:relative;display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}.storage h2{font-size:clamp(36px,5vw,64px);line-height:.98;letter-spacing:-.06em;font-weight:500;margin:18px 0 0}.quota-number{font-size:clamp(64px,10vw,140px);line-height:.82;letter-spacing:-.08em;font-weight:500;margin:0}.quota-number span{font-size:.24em;letter-spacing:-.02em;color:#999}.meter{height:2px;background:#333;margin:28px 0 16px}.meter i{display:block;height:100%;width:__USEDPCT__%;background:var(--blue)}.storage .mono{color:#aaa}.storage .blue{color:#4da3ff}.storage-note{max-width:58ch;line-height:1.7}
+.model-head{display:grid;grid-template-columns:48px 2fr .7fr .8fr 1.4fr .5fr;border-bottom:1px solid var(--line-strong);padding:0 0 10px;font-family:var(--mono);font-size:10px;color:var(--muted)}.model-row{display:grid;grid-template-columns:48px 2fr .7fr .8fr 1.4fr .5fr;gap:12px;border-bottom:1px solid var(--line);padding:14px 0;align-items:center;transition:background .15s var(--ease)}.model-row:hover{background:#f2f2f2}.model-row .idx{font-family:var(--mono);font-size:10px;color:var(--blue)}.model-row b{font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.model-row span{font-family:var(--mono);font-size:10px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.catbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}.catbar input,.catbar select{height:38px;background:var(--surface);border:1px solid var(--line);color:var(--ink);padding:0 12px;border-radius:var(--r-sm);font-family:var(--mono);font-size:11px;outline:none;min-width:150px}.catbar input:focus,.catbar select:focus{border-color:var(--blue)}.catbar label{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;color:var(--muted);padding:0 8px}.catgrid{border-top:1px solid var(--line-strong);max-height:560px;overflow:auto}.asset-row{display:grid;grid-template-columns:minmax(220px,2fr) minmax(180px,1.5fr) .55fr .75fr .65fr .5fr;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:12px 0;font-size:12px}.asset-row:hover{background:#f2f2f2}.asset-row b{font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.asset-row span{font-family:var(--mono);font-size:10px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.asset-row .lic{color:var(--ink)}.asset-row .mode{color:var(--blue)}
+.price-row{display:grid;grid-template-columns:1fr .6fr 2fr .8fr;gap:24px;align-items:center;border-top:1px solid var(--line-strong);padding:28px 0}.price-row:last-of-type{border-bottom:1px solid var(--line-strong)}.price-row.featured{background:var(--ink);color:#fff;padding:28px;border-color:var(--ink)}.price-row h3{font-size:24px;letter-spacing:-.04em;font-weight:500;margin:0}.price-row .amt{font-size:28px;letter-spacing:-.05em;font-weight:500}.price-row ul{list-style:none;display:flex;gap:20px;flex-wrap:wrap;padding:0;margin:0;font-family:var(--mono);font-size:10px;color:inherit;opacity:.82}.price-row.featured ul{opacity:.9}.price-row .btn{justify-self:end}
+footer{padding:40px 0 64px}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line-strong);padding-top:24px}.footer-row .mono{color:var(--muted)}
+@view-transition{navigation:auto}::view-transition-old(root),::view-transition-new(root){animation-duration:.22s}
+@media(max-width:1000px){.hero{grid-template-columns:1fr;padding-top:72px}.stage{min-height:440px;height:52vw}.section-head,.storage .wrap{grid-template-columns:1fr;gap:28px}.video-grid{grid-template-columns:1fr 1fr;grid-template-rows:260px 260px 150px}.slot.large{grid-row:auto;grid-column:1/3}.slot.agent{grid-column:1/3}.ruled-head,.source-row{grid-template-columns:48px 1.2fr .7fr .7fr 1.4fr}.model-head,.model-row{grid-template-columns:40px 1.6fr .6fr .7fr 1fr .5fr}.asset-row{grid-template-columns:minmax(180px,1.5fr) 1fr .55fr .7fr .6fr}.asset-row span:nth-child(6){display:none}.price-row{grid-template-columns:1fr .5fr 1.4fr}.price-row .btn{grid-column:1/4;justify-self:start}}
+@media(max-width:680px){.navlinks{display:none}.nav-status{display:none}.hero{padding-top:48px}.stage{min-height:360px;height:80vw}.spec-strip{grid-template-columns:1fr 1fr}.spec:nth-child(2){border-right:0}.spec:nth-child(1),.spec:nth-child(2){border-bottom:1px solid var(--line)}section{padding:72px 0}.section-head{display:block}.section-head p{margin-top:22px}.video-grid{grid-template-columns:1fr;grid-template-rows:repeat(4,220px)}.slot.large,.slot.agent{grid-column:auto}.ruled-head,.source-row{grid-template-columns:36px 1.2fr .7fr}.source-row span:nth-child(4),.source-row a,.ruled-head span:nth-child(4),.ruled-head span:nth-child(5){display:none}.model-head,.model-row{grid-template-columns:36px 1.4fr .6fr .7fr}.model-row span:nth-child(5),.model-row span:nth-child(6),.model-head span:nth-child(5),.model-head span:nth-child(6){display:none}.storage{padding:48px 0}.catbar input,.catbar select{min-width:calc(50% - 4px)}.asset-row{grid-template-columns:1fr .6fr .7fr}.asset-row span:nth-child(2),.asset-row span:nth-child(5),.asset-row span:nth-child(6){display:none}.price-row{grid-template-columns:1fr}.price-row .btn{grid-column:auto}.progress,.cursor{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.line span{transform:none}.cursor,.progress{display:none}}
 </style>
-<script type="importmap">
-{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.187.0/examples/jsm/"}}
-</script>
 </head>
 <body>
-<canvas id="bg"></canvas><div class="grid-bg"></div><div class="noise"></div><div class="cursor" id="cursor"></div>
-<nav><a class="brand" href="#top"><span class="tri"></span> ORBITAL</a><div class="navlinks"><a href="#models">Models</a><a href="#sources">Sources</a><a href="#catalog">Catalog</a><a href="#pricing">Pricing</a><a class="live" href="__WORKER__/health">● Live</a></div><a class="btn primary" href="#catalog">Explore →</a></nav>
-<div class="wrap" id="top">
-  <header class="hero">
-    <div>
-      <div class="kicker">Spatial asset infrastructure / 2026</div>
-      <h1>Ship the<br><span class="grad">impossible.</span></h1>
-      <p class="lede">GLB, glTF, Gaussian splats, GLSL, dotLottie and UI decoration — indexed for humans and agents, served from GitHub + Cloudflare R2, with entitlement-gated premium downloads.</p>
-      <div class="ctas"><a class="btn primary magnetic" href="#catalog">Browse catalogue →</a><a class="btn magnetic" href="__WORKER__/llms.txt">Agent endpoint ↗</a></div>
-      <div class="stats">
-        <div class="stat"><b data-count="__TOTAL__">0</b><span>catalogue rows</span></div>
-        <div class="stat"><b data-count="__GITHUB__">0</b><span>GitHub-served</span></div>
-        <div class="stat"><b data-count="__R2__">0</b><span>R2 objects</span></div>
-        <div class="stat"><b>__USEDGIB__ GiB</b><span>R2 used</span></div>
+<canvas id="bg-webgl" aria-hidden="true"></canvas><div class="cursor" id="cursor" aria-hidden="true"></div><div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+<nav>
+  <a class="brand" href="#top" aria-label="ORBITAL home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 22 21H2Z" fill="currentColor"/></svg><span>ORBITAL</span></a>
+  <div class="navlinks"><a href="#pipeline">Pipeline</a><a href="#sources">Sources</a><a href="#models">Models</a><a href="#catalog">Catalogue</a><a href="#pricing">Pricing</a></div>
+  <div style="display:flex;align-items:center;gap:16px"><div class="nav-status"><i></i><span>__USEDGIB__ / 9.8 GiB</span></div><a class="btn" href="#catalog">Open index</a></div>
+</nav>
+
+<main class="site">
+  <div class="wrap">
+    <header class="hero" id="top">
+      <div class="hero-copy">
+        <div class="release mono" data-load><span>release 19.11.2026 · three.js 0.187.0 · WebGL2</span></div>
+        <h1 data-load><span class="line"><span>An asset layer</span></span><span class="line"><span>for the <em>spatial web.</em></span></span></h1>
+        <p class="lede">Not a moodboard. A provenance-first catalogue of GLB, glTF, GLSL, dotLottie and UI assets with SPDX rights, SHA-256, GitHub raw delivery, R2 storage and agent-readable metadata. <code>__TOTAL__</code> rows are live; <code>__GITHUB__</code> hero assets are served from the repo.</p>
+        <div class="ctas" data-load><a class="btn blue" href="#catalog">Browse __TOTAL__ assets</a><a class="btn secondary" href="__WORKER__/catalog.json">Read catalog.json ↗</a><a class="btn secondary" href="#pipeline">View motion plan</a></div>
+        <div class="spec-strip">
+          <div class="spec"><b data-count="__TOTAL__">0</b><span>catalogue rows</span></div>
+          <div class="spec"><b data-count="__GITHUB__">0</b><span>github-served files</span></div>
+          <div class="spec"><b data-count="__R2__">0</b><span>r2 asset objects</span></div>
+          <div class="spec"><b>__USEDGIB__ GiB</b><span>r2 used / 9.8 GiB</span></div>
+        </div>
+      </div>
+      <div class="stage" aria-label="WebGL procedural model viewer">
+        <img class="stage-poster" src="__POSTER_HERO__" alt=""/>
+        <div id="modelStage"></div>
+        <div class="stage-head"><div class="mono">orbital / 00 — deploy monolith<br/>procedural · primitive-first · skillfish</div><div class="bracket tr" aria-hidden="true"></div></div>
+        <div class="stage-foot"><div class="mono" id="sceneStatus">initialising WebGL2…</div><div style="display:flex;align-items:center;gap:14px"><span class="mono" id="sceneCoords">0.00 / 0.00</span><div class="model-switch" id="modelSwitch" aria-label="Model selector"></div></div></div>
+      </div>
+    </header>
+  </div>
+
+  <div class="data-rail" aria-hidden="true"><div>__TICKER__</div></div>
+
+  <section class="pipeline" id="pipeline">
+    <div class="wrap">
+      <div class="section-head"><div><p class="kicker"><b>01</b> / motion pipeline</p><h2>Real frames, not filler.</h2></div><p>Four loops are planned below. Generated poster frames are already committed; drop the matching MP4s into <code>website/media/</code> and the page will HEAD-probe them and autoplay only what exists. WebGL remains the live hero; video is used as material evidence, not a background gimmick.</p></div>
+      <div class="video-grid">
+        <div class="slot large"><video muted loop playsinline preload="none" poster="__POSTER_HERO__" data-src="media/hero-loop.mp4"></video><div class="slot-label"><span>01 / hero monolith · 8s loop</span><span class="state" data-video-state>poster</span></div></div>
+        <div class="slot"><video muted loop playsinline preload="none" poster="__POSTER_ORBIT__" data-src="media/asset-orbit.mp4"></video><div class="slot-label"><span>02 / asset orbit · 7s loop</span><span class="state" data-video-state>poster</span></div></div>
+        <div class="slot"><video muted loop playsinline preload="none" poster="__POSTER_MATERIAL__" data-src="media/material-loop.mp4"></video><div class="slot-label"><span>03 / material scan · 6s loop</span><span class="state" data-video-state>poster</span></div></div>
+        <div class="slot agent"><video muted loop playsinline preload="none" poster="__POSTER_AGENT__" data-src="media/agent-loop.mp4"></video><div class="slot-label"><span>04 / agent index · 8s loop</span><span class="state" data-video-state>poster</span></div></div>
       </div>
     </div>
-    <div class="orb-wrap">
-      <div class="orb"></div><div class="cube"><i></i><i></i><i></i></div>
-      <div id="viewer"><div class="viewer-switch" id="modelSwitch"></div><div class="viewer-tag" id="viewerTag">three.js · WebGL fallback ready</div></div>
-    </div>
-  </header>
-</div>
-<div class="ticker"><div>__TICKER__</div></div>
-<div class="wrap">
-  <section id="models">
-    <div class="shead reveal"><div><div class="kicker">01 / HERO MODELS</div><h2>Real GLBs, served from GitHub.</h2></div><p>CC0 and per-model-verified assets committed under <code>website/models/</code>. The optional viewer uses pinned <code>three@0.187.0</code>; a WebGL2 shader and CSS fallback keep the page alive when CDNs are blocked.</p></div>
-    <div class="model-grid">__MODEL_CARDS__</div>
   </section>
+
   <section id="sources">
-    <div class="shead reveal"><div><div class="kicker">02 / DEEP SOURCES</div><h2>Commercial-safe, dug deeper.</h2></div><p>We verified licences before ingestion. Adobe/Mixamo/Substance 3D and mixed-licence example bundles were excluded because standalone redistribution is restricted.</p></div>
-    <div class="source-grid">__SOURCE_CARDS__</div>
-  </section>
-  <section id="storage">
-    <div class="shead reveal"><div><div class="kicker">03 / STORAGE GUARDRAIL</div><h2>9.8 GiB. Strictly under.</h2></div><p>Exact bucket usage is measured by paginating the R2 objects API. New small hero assets go to GitHub; large binaries stay in R2 or remain link-only.</p></div>
-    <div class="storage reveal">
-      <div><div class="meter"><i style="width:__USEDPCT__%"></i></div><small>__STORAGE_NOTE__</small></div>
-      <div class="cards"><div class="card"><span class="num">R2</span><h3>__USEDGIB__ / 9.8 GiB</h3><p>__HEADROOM__ GiB headroom. <code>scripts/r2_quota.py</code> fails CI if the cap is reached.</p><span class="tag">exact API measurement</span></div><div class="card"><span class="num">GITHUB</span><h3>__GITHUB__ files</h3><p>Small GLBs, glTF primitives and GLSL shaders served from <code>raw.githubusercontent.com</code>.</p><span class="tag">repo &lt; 1 GB guidance</span></div><div class="card"><span class="num">AGENTS</span><h3>Free read-only</h3><p>llms.txt, OpenAPI, agent card, MCP server card, SKILL.md and rate-limit docs stay public.</p><span class="tag">paid downloads gated</span></div></div>
+    <div class="wrap">
+      <div class="section-head"><div><p class="kicker"><b>02</b> / source audit</p><h2>Rights before renders.</h2></div><p>Adobe Substance 3D Assets and Mixamo allow commercial use inside larger works but restrict standalone redistribution, so they are not downloadable catalogue items here. Poly Haven and Smithsonian stay link-only where API or per-item checks matter. Every other imported row carries a verified SPDX gate.</p></div>
+      <div class="ruled-head"><span>no.</span><span>source</span><span>licence</span><span>mode</span><span>verified url</span></div>
+      <div class="source-list">__SOURCE_CARDS__</div>
     </div>
   </section>
+
+  <section class="storage" id="storage">
+    <div class="wrap">
+      <div><p class="kicker mono"><b>03</b> / r2 guardrail</p><h2>Exact bytes, no guessing.</h2><p class="storage-note mono">The cap is enforced against the entire bucket, including pre-existing academic PDFs. <code>scripts/r2_quota.py</code> is a build-stopper.</p></div>
+      <div><div class="quota-number">__USEDGIB__<span> GiB</span></div><div class="meter"><i></i></div><div class="mono">__STORAGE_NOTE__</div><div style="display:flex;gap:28px;margin-top:28px;flex-wrap:wrap"><div><div class="quota-number" style="font-size:42px">__HEADROOM__<span> GiB</span></div><div class="mono">headroom</div></div><div><div class="quota-number" style="font-size:42px">__USEDPCT__<span>%</span></div><div class="mono">of strict 9.8 GiB cap</div></div></div></div>
+    </div>
+  </section>
+
+  <section id="models">
+    <div class="wrap">
+      <div class="section-head"><div><p class="kicker"><b>04</b> / model index</p><h2>Primitive-first, then GLB.</h2></div><p>The hero object follows the installed <code>threejs-3d-modeler</code> skill: shared materials, named meshes, readable silhouette, metadata in <code>userData</code>, and no heavy imports. The local three.js bundle switches to four committed CC0 GLBs on demand.</p></div>
+      <div class="model-head"><span>no.</span><span>asset</span><span>format</span><span>licence</span><span>source repo</span><span>size</span></div>
+      <div class="model-list">__MODEL_CARDS__</div>
+    </div>
+  </section>
+
   <section id="catalog">
-    <div class="shead reveal"><div><div class="kicker">04 / LIVE CATALOGUE</div><h2>__TOTAL__ assets, indexed.</h2></div><p>Generated from <code>catalog/catalog.json</code>. Every row carries SPDX licence, attribution, SHA-256, source URL and either a GitHub raw URL or an R2 key.</p></div>
-    <div class="catbar reveal"><input id="q" placeholder="Search asset name…"/><select id="fcat"><option value="">All categories</option></select><select id="ffmt"><option value="">All formats</option></select><select id="flic"><option value="">All licences</option></select><label><input type="checkbox" id="ffree" checked/> free / OSS only</label></div>
-    <div class="catgrid" id="catgrid"></div><div style="margin-top:16px"><button class="btn" id="moreBtn">Show more ↓</button> <span id="shown" style="font:10px var(--mono);color:var(--muted);margin-left:12px"></span></div>
+    <div class="wrap">
+      <div class="section-head"><div><p class="kicker"><b>05</b> / live catalogue</p><h2>__TOTAL__ rows, indexed.</h2></div><p>The browser below reads the same generated payload as the agent surface. Filters are functional; free/OSS-only is the default. Rows expose mode, licence, byte size and source rather than hiding the data behind cards.</p></div>
+      <div class="catbar"><input id="q" placeholder="Search asset name…" aria-label="Search assets"/><select id="fcat" aria-label="Category"><option value="">All categories</option></select><select id="ffmt" aria-label="Format"><option value="">All formats</option></select><select id="flic" aria-label="Licence"><option value="">All licences</option></select><label><input type="checkbox" id="ffree" checked/> free / OSS only</label></div>
+      <div class="catgrid" id="catgrid"></div>
+      <div style="display:flex;align-items:center;gap:16px;margin-top:18px"><button class="btn secondary" id="moreBtn" type="button">Show more</button><span class="mono" id="shown"></span></div>
+    </div>
   </section>
+
   <section id="pricing">
-    <div class="shead reveal"><div><div class="kicker">05 / HYBRID MONETISATION</div><h2>Free, per-item, plans.</h2></div><p>Illustrative pricing from the earlier plan. Free read-only agents; paid downloads require an entitlement token.</p></div>
-    <div class="pricing"><div class="price"><h3>Explorer</h3><div class="amt">$0</div><ul><li>Agent search + metadata</li><li>Watermarked previews</li><li>Free OSS / CC0 items</li><li>Install snippets</li></ul><a class="btn" href="#catalog">Start free</a></div><div class="price featured"><h3>Studio</h3><div class="amt">$29<span style="font-size:14px">/mo</span></div><ul><li>120 credits / month</li><li>Premium per-item downloads</li><li>Commercial licences</li><li>Priority agent quota</li></ul><a class="btn primary magnetic" href="#catalog">Get Studio →</a></div><div class="price"><h3>Per item</h3><div class="amt">from $9</div><ul><li>One-time purchase</li><li>Personal / Commercial / Extended</li><li>SHA-256 + provenance</li><li>Short-lived signed URL</li></ul><a class="btn" href="#catalog">Browse items</a></div></div>
+    <div class="wrap">
+      <div class="section-head"><div><p class="kicker"><b>06</b> / hybrid access</p><h2>Free reads. Paid files.</h2></div><p>Illustrative commercial model from the project plan: free read-only agents, permanently free OSS items, per-item licences and subscriptions. Paid downloads remain entitlement-gated by the Worker; no checkout is live yet.</p></div>
+      <div class="price-row"><h3>Explorer</h3><div class="amt">$0</div><ul><li>agent search</li><li>metadata + licence</li><li>watermarked preview</li><li>install snippets</li></ul><a class="btn secondary" href="#catalog">Browse free</a></div>
+      <div class="price-row featured"><h3>Studio</h3><div class="amt">$29/mo</div><ul><li>120 credits</li><li>premium downloads</li><li>commercial licence</li><li>priority quota</li></ul><a class="btn blue" href="#catalog">Select Studio</a></div>
+      <div class="price-row"><h3>Per item</h3><div class="amt">from $9</div><ul><li>one-time purchase</li><li>personal / commercial / extended</li><li>SHA-256 provenance</li><li>signed URL</li></ul><a class="btn secondary" href="#catalog">View items</a></div>
+    </div>
   </section>
-</div>
-<footer><div class="wrap footer-row"><span>ORBITAL / 2026-current web-native asset layer</span><span>__WORKER__</span><span>three.js 0.187.0 · WebGL2 · R2 Worker proxy</span></div></footer>
+</main>
+
+<footer><div class="wrap footer-row"><span class="mono">ORBITAL / 19.11.2026 / static storefront + catalogue foundation</span><span class="mono"><a href="__WORKER__/llms.txt">llms.txt</a> · <a href="__WORKER__/openapi.json">openapi.json</a> · <a href="__WORKER__/health">health</a></span><span class="mono">__WORKER__</span></div></footer>
+
 <script src="catalog-data.js"></script>
 <script id="catalog-inline" type="application/json">__INLINE__</script>
 <script id="orbital-models" type="application/json">__MODELS_JSON__</script>
 <script>
 (function(){
- const cur=document.getElementById('cursor');
- document.addEventListener('pointermove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});
- document.querySelectorAll('a,button,.card,.model,.asset').forEach(el=>{el.addEventListener('mouseenter',()=>cur.classList.add('big'));el.addEventListener('mouseleave',()=>cur.classList.remove('big'))});
- const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.12});
- document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
- document.querySelectorAll('[data-count]').forEach(e=>{const n=+e.dataset.count;let s=0,step=Math.max(1,Math.ceil(n/60));const t=setInterval(()=>{s+=step;if(s>=n){s=n;clearInterval(t)}e.textContent=s.toLocaleString()},18)});
- // dependency-free WebGL2 animated grid background
- const c=document.getElementById('bg'),gl=c.getContext('webgl2',{alpha:true,antialias:false});
- if(gl){const vs=`#version 300 es\nin vec2 p;void main(){gl_Position=vec4(p,0,1)}`;const fs=`#version 300 es\nprecision highp float;out vec4 o;uniform vec2 r;uniform float t;void main(){vec2 uv=(gl_FragCoord.xy/r)*2.-1.;uv.x*=r.x/r.y;float d=length(uv);float a=atan(uv.y,uv.x);float w=sin(a*8.+t*.5)*.5+.5;vec3 col=mix(vec3(.02,.02,.03),vec3(.09,.13,.28),w*(1.-d)*.5);float g=abs(fract(uv.x*4.+t*.06)-.5)*abs(fract(uv.y*4.-t*.04)-.5);col+=vec3(.35,.55,1.)*smoothstep(.48,.5,g)*.06;o=vec4(col,1.)}`;function sh(t,s){const x=gl.createShader(t);gl.shaderSource(x,s);gl.compileShader(x);return x}const pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);gl.useProgram(pr);const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]),gl.STATIC_DRAW);const loc=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);const rt=gl.getUniformLocation(pr,'r'),tt=gl.getUniformLocation(pr,'t');function draw(){c.width=innerWidth;c.height=innerHeight;gl.viewport(0,0,c.width,c.height);gl.uniform2f(rt,c.width,c.height);gl.uniform1f(tt,performance.now()/1000);gl.drawArrays(gl.TRIANGLES,0,6);requestAnimationFrame(draw)}draw()}
- // catalogue browser
+ const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const cursor=document.getElementById('cursor');
+ if(!reduce&&cursor){addEventListener('pointermove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'});document.querySelectorAll('a,button,video,.source-row,.model-row').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('big'));el.addEventListener('mouseleave',()=>cursor.classList.remove('big'))})}
+ // one orchestrated load pass, not a scroll-fade on every section
+ document.querySelectorAll('[data-load]').forEach((el,i)=>{if(reduce)return;el.animate([{opacity:0,transform:'translateY(12px)'},{opacity:1,transform:'none'}],{duration:620,delay:120+i*90,easing:'cubic-bezier(.16,1,.3,1)',fill:'both'})});
+ // real-number count-ups, only where data is exact
+ const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,n=+el.dataset.count;if(reduce){el.textContent=n.toLocaleString();io.unobserve(el);return}const st=performance.now(),d=900;const tick=t=>{const p=Math.min(1,(t-st)/d),v=Math.floor(n*(1-Math.pow(1-p,3)));el.textContent=v.toLocaleString();if(p<1)requestAnimationFrame(tick)};requestAnimationFrame(tick);io.unobserve(el)}),{threshold:.4});
+ document.querySelectorAll('[data-count]').forEach(el=>io.observe(el));
+ // view transitions for in-page navigation
+ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');if(!id||id==='#')return;const target=document.querySelector(id);if(!target)return;e.preventDefault();history.replaceState(null,'',id);const go=()=>target.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});document.startViewTransition?document.startViewTransition(go):go()}));
+ const progress=document.getElementById('progressBar');let maxScroll=1;const measure=()=>{maxScroll=Math.max(1,document.documentElement.scrollHeight-innerHeight)};measure();addEventListener('resize',measure);addEventListener('scroll',()=>{if(progress)progress.style.height=(scrollY/maxScroll*100)+'%';window.__orbitalScroll=scrollY/maxScroll},{passive:true});
+ // dependency-free WebGL2 background, driven by pointer + scroll
+ const c=document.getElementById('bg-webgl');const gl=c?.getContext('webgl2',{alpha:false,antialias:false});
+ if(gl){const vs=`#version 300 es\nin vec2 p;void main(){gl_Position=vec4(p,0.0,1.0)}`;const fs=`#version 300 es\nprecision highp float;out vec4 o;uniform vec2 r;uniform float t;uniform vec2 m;uniform float s;void main(){vec2 uv=(gl_FragCoord.xy/r)*2.0-1.0;uv.x*=r.x/r.y;vec2 p=uv*2.2;p.y+=s*0.55;vec2 q=(m-0.5)*vec2(r.x/r.y,1.0)*2.0;float gx=abs(fract(p.x*3.0+t*0.012)-0.5);float gy=abs(fract(p.y*3.0-t*0.009)-0.5);float grid=(1.0-smoothstep(0.0,0.012,min(gx,gy)))*0.14;float tri=abs(sin(p.x*2.15+t*0.04)+sin(p.y*1.85-t*0.03));float contour=(1.0-smoothstep(0.0,0.024,tri))*0.045;float d=length(p-q);float ring=(1.0-smoothstep(0.0,0.012,abs(d-0.86)))*0.09;vec3 bg=vec3(0.980);vec3 ink=vec3(0.09);vec3 blue=vec3(0.0,0.439,0.953);vec3 col=mix(bg,ink,grid+contour);col=mix(col,blue,ring*0.38);o=vec4(col,1.0)}`;
+  const sh=(type,src)=>{const x=gl.createShader(type);gl.shaderSource(x,src);gl.compileShader(x);return x};const pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);gl.useProgram(pr);
+  const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]),gl.STATIC_DRAW);const loc=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);const ur=gl.getUniformLocation(pr,'r'),ut=gl.getUniformLocation(pr,'t'),um=gl.getUniformLocation(pr,'m'),us=gl.getUniformLocation(pr,'s');const mouse={x:.5,y:.5};addEventListener('pointermove',e=>{mouse.x=e.clientX/innerWidth;mouse.y=1-e.clientY/innerHeight},{passive:true});
+  const draw=ms=>{const dpr=Math.min(devicePixelRatio||1,1.5),w=Math.round(innerWidth*dpr),h=Math.round(innerHeight*dpr);if(c.width!==w||c.height!==h){c.width=w;c.height=h;gl.viewport(0,0,w,h)}gl.uniform2f(ur,w,h);gl.uniform1f(ut,reduce?0:ms/1000);gl.uniform2f(um,mouse.x,mouse.y);gl.uniform1f(us,window.__orbitalScroll||0);gl.drawArrays(gl.TRIANGLES,0,6)};
+  if(reduce)draw(0);else{let last=0;const loop=ms=>{if(!document.hidden){if(ms-last>32){draw(ms);last=ms}}requestAnimationFrame(loop)};requestAnimationFrame(loop)}
+ }
+ // video slots: poster remains honest until an MP4 exists
+ document.querySelectorAll('video[data-src]').forEach(async v=>{const label=v.parentElement?.querySelector('[data-video-state]');try{const r=await fetch(v.dataset.src,{method:'HEAD'});if(r.ok){v.src=v.dataset.src;v.load();v.play().catch(()=>{});if(label)label.textContent='video live'}else if(label)label.textContent='poster'}catch{if(label)label.textContent='poster'}});
+ // catalogue browser as ruled rows
  const D=JSON.parse(document.getElementById('catalog-inline').textContent),S=D.sample,grid=document.getElementById('catgrid'),q=document.getElementById('q'),fc=document.getElementById('fcat'),ff=document.getElementById('ffmt'),fl=document.getElementById('flic'),fr=document.getElementById('ffree');
- const uniq=k=>[...new Set(S.map(x=>x[k]).filter(Boolean))].sort();uniq('c').forEach(v=>fc.insertAdjacentHTML('beforeend',`<option>${v}</option>`));uniq('f').forEach(v=>ff.insertAdjacentHTML('beforeend',`<option>${v}</option>`));uniq('l').forEach(v=>fl.insertAdjacentHTML('beforeend',`<option>${v}</option>`));
- let limit=48;function render(){const term=q.value.toLowerCase(),c=fc.value,f=ff.value,l=fl.value,free=fr.checked;const rows=S.filter(x=>(!term||x.n.toLowerCase().includes(term))&&(!c||x.c===c)&&(!f||x.f===f)&&(!l||x.l===l)&&(!free||/CC0|MIT|Public|see seed/i.test(x.l)));grid.innerHTML=rows.slice(0,limit).map(x=>`<div class="asset"><b title="${x.n}">${x.n}</b><span class="c">${x.c}</span><div class="row"><span>${x.f}</span><span>${x.l}</span></div><div class="row" style="margin-top:8px"><span>${x.m}</span><span>${x.b?(x.b/1024).toFixed(0)+' KB':'index'}</span></div></div>`).join('')||'<p style="color:var(--muted);font-size:13px">No matches — clear a filter.</p>';document.getElementById('shown').textContent=`showing ${Math.min(limit,rows.length)} of ${rows.length} matching · ${D.totals.assets.toLocaleString()} total`} [q,fc,ff,fl,fr].forEach(e=>e.addEventListener('input',render));document.getElementById('moreBtn').addEventListener('click',()=>{limit+=48;render()});render();
+ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const uniq=k=>[...new Set(S.map(x=>x[k]).filter(Boolean))].sort();uniq('c').forEach(v=>fc.insertAdjacentHTML('beforeend',`<option>${esc(v)}</option>`));uniq('f').forEach(v=>ff.insertAdjacentHTML('beforeend',`<option>${esc(v)}</option>`));uniq('l').forEach(v=>fl.insertAdjacentHTML('beforeend',`<option>${esc(v)}</option>`));let limit=40;
+ function render(){const term=q.value.toLowerCase(),c=fc.value,f=ff.value,l=fl.value,free=fr.checked;const rows=S.filter(x=>(!term||x.n.toLowerCase().includes(term))&&(!c||x.c===c)&&(!f||x.f===f)&&(!l||x.l===l)&&(!free||/CC0|MIT|Public|see seed/i.test(x.l)));grid.innerHTML=rows.slice(0,limit).map((x,i)=>`<div class="asset-row"><b title="${esc(x.n)}">${esc(x.n)}</b><span>${esc(x.c)}</span><span>${esc(x.f)}</span><span class="lic">${esc(x.l)}</span><span class="mode">${esc(x.m)}</span><span>${x.b?(x.b/1024).toFixed(0)+' KB':'index'}</span></div>`).join('')||'<p class="mono" style="padding:18px 0">No matches — clear a filter.</p>';document.getElementById('shown').textContent=`${Math.min(limit,rows.length)} of ${rows.length} matching · ${D.totals.assets.toLocaleString()} total in catalog.json`}[q,fc,ff,fl,fr].forEach(e=>e.addEventListener('input',render));document.getElementById('moreBtn').addEventListener('click',()=>{limit+=40;render()});render();
 })();
 </script>
-<script type="module">
-// Optional three.js GLB viewer. External CDN is blocked in the in-app preview; the WebGL2/CSS fallback above still renders.
-try{
- const THREE=await import('three');const {GLTFLoader}=await import('three/addons/loaders/GLTFLoader.js');const {OrbitControls}=await import('three/addons/controls/OrbitControls.js');
- const models=JSON.parse(document.getElementById('orbital-models').textContent);
- const host=document.getElementById('viewer'),tag=document.getElementById('viewerTag'),sw=document.getElementById('modelSwitch');
- const scene=new THREE.Scene();scene.background=null;const cam=new THREE.PerspectiveCamera(38,1,.1,100);cam.position.set(0,.35,2.6);const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));host.prepend(renderer.domElement);
- scene.add(new THREE.HemisphereLight(0xffffff,0x223355,2.1));const key=new THREE.DirectionalLight(0xffffff,2.4);key.position.set(2,3,2);scene.add(key);const rim=new THREE.PointLight(0x8b5cff,3,8);rim.position.set(-2,1,-1);scene.add(rim);
- const controls=new OrbitControls(cam,renderer.domElement);controls.enableDamping=true;controls.autoRotate=true;controls.autoRotateSpeed=1.2;
- let current=null;const loader=new GLTFLoader();
- async function load(i){const m=models[i];if(!m)return;tag.textContent='loading · '+m.name;try{const g=await loader.loadAsync(m.url);if(current)scene.remove(current);current=g.scene;const box=new THREE.Box3().setFromObject(current),size=box.getSize(new THREE.Vector3()),s=1.6/Math.max(size.x,size.y,size.z||1);current.scale.setScalar(s);const center=box.getCenter(new THREE.Vector3());current.position.sub(center.multiplyScalar(s));scene.add(current);tag.textContent=m.name+' · '+m.license+' · drag to orbit'}catch(e){tag.textContent='CDN blocked · WebGL2 fallback active'}}
- models.slice(0,4).forEach((m,i)=>{const b=document.createElement('button');b.textContent=i+1;b.title=m.name;b.onclick=()=>load(i);sw.appendChild(b)});
- function resize(){const r=host.getBoundingClientRect();renderer.setSize(r.width,r.height,false);cam.aspect=r.width/r.height;cam.updateProjectionMatrix()}addEventListener('resize',resize);resize();load(0);
- (function loop(){requestAnimationFrame(loop);controls.update();renderer.render(scene,cam)})();
-}catch(e){document.getElementById('viewerTag').textContent='WebGL2 + CSS fallback · three.js CDN unavailable'}
-</script>
+<script type="module" src="js/orbital-scene.js"></script>
 </body>
 </html>
