@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Generate the browsable storefront + agent discovery files from catalog.json."""
-import os, json, html, re, shutil
+import os, json, html, re, shutil, urllib.parse
 
 ROOT = "/home/user/orbital-marketplace"
 WEB = f"{ROOT}/website"
@@ -8,13 +8,21 @@ PUB = f"{WEB}/public"
 doc = json.load(open(f"{ROOT}/catalog/catalog.json"))
 assets = doc["assets"]
 counts = doc["counts"]
+BASE = open(f"{ROOT}/worker/url.txt").read().strip()  # deployed R2 Worker proxy
+PREVIEW_EXT = {".webp", ".png", ".jpg", ".jpeg", ".svg", ".html", ".css", ".js", ".json", ".md", ".txt", ".xml"}
+for a in assets:
+    k = a.get("r2_key")
+    if k:
+        a["public_url"] = BASE + "/download/" + urllib.parse.quote(k, safe="")
+        a["preview_url"] = BASE + "/preview/" + urllib.parse.quote(k, safe="") if os.path.splitext(k)[1].lower() in PREVIEW_EXT else None
+json.dump(doc, open(f"{ROOT}/catalog/catalog.json", "w"), indent=2, ensure_ascii=False)
 uploaded = sum(1 for a in assets if a.get("r2_etag") or a.get("r2_archive_uploaded"))
 
 # ---------------------------------------------------------------- compact inline catalogue
 def compact(a):
     return {"id": a["id"], "n": a["name"][:46], "c": a["category_path"], "f": a["format"],
             "l": a["license"], "m": a["mode"], "b": a["bytes"], "u": a.get("r2_url") or "",
-            "s": a["source_url"][:120]}
+            "s": a["source_url"][:120], "p": a.get("public_url") or ""}
 
 # representative sample: interleave across top categories so filters show variety
 by_cat = {}
@@ -118,7 +126,7 @@ open(f"{WEB}/index.html", "w").write(src)
 os.makedirs(f"{PUB}/.well-known/mcp", exist_ok=True)
 os.makedirs(f"{PUB}/skills/orbital-assets", exist_ok=True)
 os.makedirs(f"{PUB}/docs", exist_ok=True)
-BASE = "https://orbital.example"  # replace with the real domain on deploy
+# BASE is set above from worker/url.txt
 
 files = {}
 files["llms.txt"] = f"""# ORBITAL — 3D, motion & UI-decoration asset marketplace

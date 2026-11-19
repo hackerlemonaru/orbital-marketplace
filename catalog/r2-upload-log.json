@@ -21629,6 +21629,1066 @@
       "etag": "965377f56b2881c937ab9e3789048488",
       "size": 981,
       "key": "assets/seed/seed-assets/ui/uiverse-patterns-csemszepp_silent-cow-55.html"
+    },
+    "assets/nasa/e806cf8b_3D_Models_Satellite_Kit_Satellite_Kit_body_3.glb.glb": {
+      "etag": "9bfa495c6801e6af7c8a8fe1b689b7bc",
+      "size": 4944,
+      "key": "assets/nasa/e806cf8b_3D_Models_Satellite_Kit_Satellite_Kit_body_3.glb.glb"
+    },
+    "assets/nasa/0f51c953_3D_Models_ESAS_Crew_Module_ESAS_Crew_Module.glb.glb": {
+      "etag": "cf2c89a6543d44c248b8ac1707bee121",
+      "size": 7664,
+      "key": "assets/nasa/0f51c953_3D_Models_ESAS_Crew_Module_ESAS_Crew_Module.glb.glb"
+    },
+    "assets/nasa/4c25eae1_3D_Models_Satellite_Kit_Satellite_Kit_wings_2.glb.glb": {
+      "etag": "acc505d1ba5864dce6d40920f713dd25",
+      "size": 8172,
+      "key": "assets/nasa/4c25eae1_3D_Models_Satellite_Kit_Satellite_Kit_wings_2.glb.glb"
+    },
+    "assets/nasa/160cae63_3D_Models_Satellite_Kit_Satellite_Kit_body_1.glb.glb": {
+      "etag": "2e47434957acfadd765196934688d445",
+      "size": 2916,
+      "key": "assets/nasa/160cae63_3D_Models_Satellite_Kit_Satellite_Kit_body_1.glb.glb"
+    },
+    "assets/nasa/20eb6999_3D_Models_Satellite_Kit_Satellite_Kit_radio_2.glb.glb": {
+      "etag": "358c8190aaf9043c1cbe328f25af8d61",
+      "size": 8752,
+      "key": "assets/nasa/20eb6999_3D_Models_Satellite_Kit_Satellite_Kit_radio_2.glb.glb"
+    },
+    "assets/nasa/f4a5ca30_3D_Models_Satellite_Kit_Satellite_Kit_body_2.glb.glb": {
+      "etag": "ec65ecd296677ec6bb702f047f2decbd",
+      "size": 5256,
+      "key": "assets/nasa/f4a5ca30_3D_Models_Satellite_Kit_Satellite_Kit_body_2.glb.glb"
+    },
+    "assets/nasa/09b0976f_3D_Models_Satellite_Kit_Satellite_Kit_radio_1.glb.glb": {
+      "etag": "d1c9d4353396997854ea655fcaab6da0",
+      "size": 8436,
+      "key": "assets/nasa/09b0976f_3D_Models_Satellite_Kit_Satellite_Kit_radio_1.glb.glb"
+    },
+    "assets/nasa/90bccb86_3D_Models_Satellite_Kit_Satellite_Kit_wings_1.glb.glb": {
+      "etag": "ecb84325b97c91cc2061b5657b845798",
+      "size": 4860,
+      "key": "assets/nasa/90bccb86_3D_Models_Satellite_Kit_Satellite_Kit_wings_1.glb.glb"
+    },
+    "assets/nasa/bf2b6714_3D_Models_Satellite_Kit_Satellite_Kit_radio_3.glb.glb": {
+      "etag": "de245edd2b6b2fa774e5e80ea229e9b9",
+      "size": 9012,
+      "key": "assets/nasa/bf2b6714_3D_Models_Satellite_Kit_Satellite_Kit_radio_3.glb.glb"
+    },
+    "assets/nasa/80588757_3D_Models_Hammer_Hammer.glb.glb": {
+      "etag": "c1aafdad299b69b7c8fd9a6859137bee",
+      "size": 10912,
+      "key": "assets/nasa/80588757_3D_Models_Hammer_Hammer.glb.glb"
+    },
+    "assets/nasa/2f4f2dc7_3D_Models_Kepler_B_Kepler_B_.glb.glb": {
+      "etag": "61621130c7b40828a11cf6a6a516e8cb",
+      "size": 9656,
+      "key": "assets/nasa/2f4f2dc7_3D_Models_Kepler_B_Kepler_B_.glb.glb"
+    },
+    "assets/nasa/2bd94204_3D_Models_Mir_Mir.glb.glb": {
+      "etag": "94cc0cb05e085cf60fb64051f8113a51",
+      "size": 20884,
+      "key": "assets/nasa/2bd94204_3D_Models_Mir_Mir.glb.glb"
+    },
+    "assets/nasa/6189d14e_3D_Models_Space_Shuttle_B_Space_Shuttle_B_.glb.glb": {
+      "etag": "8839f62127e18c522301a9c6c9bfd599",
+      "size": 11348,
+      "key": "assets/nasa/6189d14e_3D_Models_Space_Shuttle_B_Space_Shuttle_B_.glb.glb"
+    },
+    "assets/nasa/ba8d365d_3D_Models_Satellite_Kit_Satellite_Kit_wings_3.glb.glb": {
+      "etag": "04935acb453739f1e0e0f6951c80b4b3",
+      "size": 14820,
+      "key": "assets/nasa/ba8d365d_3D_Models_Satellite_Kit_Satellite_Kit_wings_3.glb.glb"
+    },
+    "assets/nasa/1f1ad481_3D_Models_Mars_Reconnaissance_Orbiter_MRO_B_Mars_Reconnaissance_Orbiter_MRO_B_.glb.glb": {
+      "etag": "94c215eabad0492fc81c4351cf5f1520",
+      "size": 16544,
+      "key": "assets/nasa/1f1ad481_3D_Models_Mars_Reconnaissance_Orbiter_MRO_B_Mars_Reconnaissance_Orbiter_MRO_B_.glb.glb"
+    },
+    "assets/nasa/493a98e9_3D_Models_Base_Station_Base_Station.glb.glb": {
+      "etag": "0a6d7bba8071ac2b20a573d665bbb876",
+      "size": 21752,
+      "key": "assets/nasa/493a98e9_3D_Models_Base_Station_Base_Station.glb.glb"
+    },
+    "assets/nasa/04397218_covery_and_Climate_Experiment_GRACE_A_Gravity_Recovery_and_Climate_Experiment_GRACE_A_.glb.glb": {
+      "etag": "fe1362360c1e44b0eda27d9b4c837dbb",
+      "size": 22620,
+      "key": "assets/nasa/04397218_covery_and_Climate_Experiment_GRACE_A_Gravity_Recovery_and_Climate_Experiment_GRACE_A_.glb.glb"
+    },
+    "assets/nasa/ac67cf1a_3D_Models_SeaStar_SeaStar.glb.glb": {
+      "etag": "cbe3ffd69139368c9791ec56c1c23e86",
+      "size": 24048,
+      "key": "assets/nasa/ac67cf1a_3D_Models_SeaStar_SeaStar.glb.glb"
+    },
+    "assets/nasa/fce22bb4_3D_Models_Space_Shuttle_C_Space_Shuttle_C_.glb.glb": {
+      "etag": "25a685932ba203cebe59be0df60574d2",
+      "size": 26132,
+      "key": "assets/nasa/fce22bb4_3D_Models_Space_Shuttle_C_Space_Shuttle_C_.glb.glb"
+    },
+    "assets/nasa/44a30e9d_3D_Models_Wrench_Wrench.glb.glb": {
+      "etag": "eca58771a193c96c9f801328e13eac7e",
+      "size": 30720,
+      "key": "assets/nasa/44a30e9d_3D_Models_Wrench_Wrench.glb.glb"
+    },
+    "assets/nasa/879ee819_3D_Models_Ratchet_Ratchet.glb.glb": {
+      "etag": "ae764a8e1986ec5a92387fa5934da356",
+      "size": 33508,
+      "key": "assets/nasa/879ee819_3D_Models_Ratchet_Ratchet.glb.glb"
+    },
+    "assets/nasa/bf88b5dc_3D_Models_International_Space_Station_ISS_A_International_Space_Station_ISS_A_.glb.glb": {
+      "etag": "c6bef79bc2894fa2bf269c7aaccdf37f",
+      "size": 39708,
+      "key": "assets/nasa/bf88b5dc_3D_Models_International_Space_Station_ISS_A_International_Space_Station_ISS_A_.glb.glb"
+    },
+    "assets/nasa/e9acc8c3_3D_Models_Argo_Argo.glb.glb": {
+      "etag": "51e8e1b9f9f11e33da3e05d2742e9ac0",
+      "size": 42572,
+      "key": "assets/nasa/e9acc8c3_3D_Models_Argo_Argo.glb.glb"
+    },
+    "assets/nasa/96d312d5_3D_Models_Tall_Dish_Tall_Dish_turntable_.glb.glb": {
+      "etag": "a8302e4d144b96d3ec6a869b465d628f",
+      "size": 50680,
+      "key": "assets/nasa/96d312d5_3D_Models_Tall_Dish_Tall_Dish_turntable_.glb.glb"
+    },
+    "assets/nasa/c052931b_3D_Models_Mars_Global_Surveyor_Mars_Global_Surveyor_MOI_.glb.glb": {
+      "etag": "e71bfee2fff18abd444900386816908a",
+      "size": 53352,
+      "key": "assets/nasa/c052931b_3D_Models_Mars_Global_Surveyor_Mars_Global_Surveyor_MOI_.glb.glb"
+    },
+    "assets/nasa/1f8aa2cc_3D_Models_Grease_Gun_Grease_gun.glb.glb": {
+      "etag": "fc3a3f2688eb6e585fa51c6e46a59e6c",
+      "size": 48596,
+      "key": "assets/nasa/1f8aa2cc_3D_Models_Grease_Gun_Grease_gun.glb.glb"
+    },
+    "assets/nasa/a137375c_3D_Models_Mars_Global_Surveyor_Mars_Global_Surveyor_mapping_.glb.glb": {
+      "etag": "d33dc15d5b60070311fc7da80b8d45e8",
+      "size": 55184,
+      "key": "assets/nasa/a137375c_3D_Models_Mars_Global_Surveyor_Mars_Global_Surveyor_mapping_.glb.glb"
+    },
+    "assets/nasa/65085c94_Mars_Exploration_Rover_-_Opportunity_MER-B_Mars_Exploration_Rover_-_Opportunity_MER-B_.glb.glb": {
+      "etag": "600185fc4ce6b81c625d06f4c26b163d",
+      "size": 36668,
+      "key": "assets/nasa/65085c94_Mars_Exploration_Rover_-_Opportunity_MER-B_Mars_Exploration_Rover_-_Opportunity_MER-B_.glb.glb"
+    },
+    "assets/nasa/4035a698_3D_Models_High_Energy_Transient_Explorer_High_Energy_Transient_Explorer.glb.glb": {
+      "etag": "b3ccf7544808970aa78ec1658e931cb8",
+      "size": 61836,
+      "key": "assets/nasa/4035a698_3D_Models_High_Energy_Transient_Explorer_High_Energy_Transient_Explorer.glb.glb"
+    },
+    "assets/nasa/5af0badd_3D_Models_Gamma_Ray_Observatory_Gamma_Ray_Observatory.glb.glb": {
+      "etag": "aefb3c27c0bb32d770eadea982bc49aa",
+      "size": 65368,
+      "key": "assets/nasa/5af0badd_3D_Models_Gamma_Ray_Observatory_Gamma_Ray_Observatory.glb.glb"
+    },
+    "assets/nasa/37c0a373_3D_Models_Radar_Satellite-1_RADARSAT-1_Radar_Satellite-1_RADARSAT-1_.glb.glb": {
+      "etag": "e59bf62d6e3c797fca2ca903b5ceb9d7",
+      "size": 68148,
+      "key": "assets/nasa/37c0a373_3D_Models_Radar_Satellite-1_RADARSAT-1_Radar_Satellite-1_RADARSAT-1_.glb.glb"
+    },
+    "assets/nasa/e7435d86_tellite_for_Scientific_Applications_SAC-C_Satellite_for_Scientific_Applications_SAC-C_.glb.glb": {
+      "etag": "676bc725a4bd51809c5b68a0fcaedf68",
+      "size": 73608,
+      "key": "assets/nasa/e7435d86_tellite_for_Scientific_Applications_SAC-C_Satellite_for_Scientific_Applications_SAC-C_.glb.glb"
+    },
+    "assets/nasa/c4dc70d6_3D_Models_Mars_Global_Surveyor_Mars_Global_Surveyor_launch_.glb.glb": {
+      "etag": "d491588883d6ceb0c93a02d4f883563e",
+      "size": 58252,
+      "key": "assets/nasa/c4dc70d6_3D_Models_Mars_Global_Surveyor_Mars_Global_Surveyor_launch_.glb.glb"
+    },
+    "assets/nasa/662535d6_3D_Models_Solar_and_Heliospheric_Observatory_Solar_and_Heliospheric_Observatory.glb.glb": {
+      "etag": "7ed49b01dedfbf69ad5c46109c897b2f",
+      "size": 83268,
+      "key": "assets/nasa/662535d6_3D_Models_Solar_and_Heliospheric_Observatory_Solar_and_Heliospheric_Observatory.glb.glb"
+    },
+    "assets/nasa/1ef03840_3D_Models_GeoTailSAT_GeoTailSAT.glb.glb": {
+      "etag": "1dbfa80bb3888c1ec8cc33bfc53ab107",
+      "size": 91504,
+      "key": "assets/nasa/1ef03840_3D_Models_GeoTailSAT_GeoTailSAT.glb.glb"
+    },
+    "assets/nasa/2b3ee1f7_s_Tracking_and_Data_Relay_Satellites_TDRS_A_Tracking_and_Data_Relay_Satellites_TDRS_A_.glb.glb": {
+      "etag": "db4d854c35d2a545bcf2d718138f6b15",
+      "size": 96792,
+      "key": "assets/nasa/2b3ee1f7_s_Tracking_and_Data_Relay_Satellites_TDRS_A_Tracking_and_Data_Relay_Satellites_TDRS_A_.glb.glb"
+    },
+    "assets/nasa/4d2c8f45_3D_Models_Ares_1_A_Ares_1_A_.glb.glb": {
+      "etag": "0f9076111674aef11540fe2225fc56c1",
+      "size": 98128,
+      "key": "assets/nasa/4d2c8f45_3D_Models_Ares_1_A_Ares_1_A_.glb.glb"
+    },
+    "assets/nasa/ced7cd9f_3D_Models_Skylab_Skylab.glb.glb": {
+      "etag": "89c621a31e18aba0dc1f23034023523f",
+      "size": 98396,
+      "key": "assets/nasa/ced7cd9f_3D_Models_Skylab_Skylab.glb.glb"
+    },
+    "assets/nasa/47809f5a_3D_Models_Polar_Polar.glb.glb": {
+      "etag": "2bae9c862ccabacfd217abcd8e4b6e09",
+      "size": 98592,
+      "key": "assets/nasa/47809f5a_3D_Models_Polar_Polar.glb.glb"
+    },
+    "assets/nasa/1c7c057a_3D_Models_Spartan_201_Spartan_201.glb.glb": {
+      "etag": "336d435311d5ac92f28ecd40bda87c14",
+      "size": 137564,
+      "key": "assets/nasa/1c7c057a_3D_Models_Spartan_201_Spartan_201.glb.glb"
+    },
+    "assets/nasa/632312c6__Space_Climate_Observatory_DSCOVR_Triana_Deep_Space_Climate_Observatory_DSCOVR_Triana_.glb.glb": {
+      "etag": "11da7e4c090c465a99fce67518f87c2a",
+      "size": 112488,
+      "key": "assets/nasa/632312c6__Space_Climate_Observatory_DSCOVR_Triana_Deep_Space_Climate_Observatory_DSCOVR_Triana_.glb.glb"
+    },
+    "assets/nasa/0ed652b1_3D_Models_Ares_1_B_Ares_1_B_.glb.glb": {
+      "etag": "d88055cd731b01505c52c0379e52196f",
+      "size": 99136,
+      "key": "assets/nasa/0ed652b1_3D_Models_Ares_1_B_Ares_1_B_.glb.glb"
+    },
+    "assets/nasa/71d4f849_3D_Models_Total_Ozone_Mapping_Spectrometer_TOMS_Total_Ozone_Mapping_Spectrometer_TOMS_.glb.glb": {
+      "etag": "ba033e71927c741b2bd5c11e765561e4",
+      "size": 98620,
+      "key": "assets/nasa/71d4f849_3D_Models_Total_Ozone_Mapping_Spectrometer_TOMS_Total_Ozone_Mapping_Spectrometer_TOMS_.glb.glb"
+    },
+    "assets/nasa/5a53bdbe_3D_Models_Infrared_Camera_Infrared_Camera.glb.glb": {
+      "etag": "7afb354f3c0b94f71087288ac57f52ed",
+      "size": 145640,
+      "key": "assets/nasa/5a53bdbe_3D_Models_Infrared_Camera_Infrared_Camera.glb.glb"
+    },
+    "assets/nasa/91e42ff9_3D_Models_Explorer_Jupiter-C_Rocket_Explorer_Jupiter-C_Rocket.glb.glb": {
+      "etag": "d3c4949d536af6ec033ff984ff731ce7",
+      "size": 149372,
+      "key": "assets/nasa/91e42ff9_3D_Models_Explorer_Jupiter-C_Rocket_Explorer_Jupiter-C_Rocket.glb.glb"
+    },
+    "assets/nasa/d4bf96a7_3D_Models_Cluster_Cluster.glb.glb": {
+      "etag": "1328256144361b230d53e780eba15644",
+      "size": 148336,
+      "key": "assets/nasa/d4bf96a7_3D_Models_Cluster_Cluster.glb.glb"
+    },
+    "assets/nasa/89e06ef9_3D_Models_Mobile_Launcher_Mobile_Launcher_pad_only_.glb.glb": {
+      "etag": "16faf8f28e34df641e60bce601a0ef89",
+      "size": 149408,
+      "key": "assets/nasa/89e06ef9_3D_Models_Mobile_Launcher_Mobile_Launcher_pad_only_.glb.glb"
+    },
+    "assets/nasa/cced6a38_3D_Models_Landsat_7_Landsat_7.glb.glb": {
+      "etag": "73f613f073a44b121eacf01ef49454ed",
+      "size": 160156,
+      "key": "assets/nasa/cced6a38_3D_Models_Landsat_7_Landsat_7.glb.glb"
+    },
+    "assets/nasa/8c994bb5_bmillimeter_Wave_Astronomy_Satellite_SWAS_Submillimeter_Wave_Astronomy_Satellite_SWAS_.glb.glb": {
+      "etag": "1c5b1f69c2da95a5b392854b21336c97",
+      "size": 150296,
+      "key": "assets/nasa/8c994bb5_bmillimeter_Wave_Astronomy_Satellite_SWAS_Submillimeter_Wave_Astronomy_Satellite_SWAS_.glb.glb"
+    },
+    "assets/nasa/4ca2fa07_3D_Models_Voyager_Probe_B_Voyager_Probe_B_antenna_.glb.glb": {
+      "etag": "717a68747106a63e8fb1e80eef425e4d",
+      "size": 166352,
+      "key": "assets/nasa/4ca2fa07_3D_Models_Voyager_Probe_B_Voyager_Probe_B_antenna_.glb.glb"
+    },
+    "assets/nasa/bfe510f2_els_Tropical_Rainfall_Measuring_Mission_TRMM_Tropical_Rainfall_Measuring_Mission_TRMM_.glb.glb": {
+      "etag": "c0644ba626ef7d8ba5ce707287f7a830",
+      "size": 195804,
+      "key": "assets/nasa/bfe510f2_els_Tropical_Rainfall_Measuring_Mission_TRMM_Tropical_Rainfall_Measuring_Mission_TRMM_.glb.glb"
+    },
+    "assets/nasa/fa66d4cc_3D_Models_Mobile_Launcher_Mobile_Launcher_assembled_.glb.glb": {
+      "etag": "8aed3232c489aba628b991495da2cf7b",
+      "size": 198480,
+      "key": "assets/nasa/fa66d4cc_3D_Models_Mobile_Launcher_Mobile_Launcher_assembled_.glb.glb"
+    },
+    "assets/nasa/b59466a4_3D_Models_JSC_Mission_Control_Room_JSC_Mission_Control_Room.glb.glb": {
+      "etag": "2acb0851009141fa5629dbad1ad0aa95",
+      "size": 185220,
+      "key": "assets/nasa/b59466a4_3D_Models_JSC_Mission_Control_Room_JSC_Mission_Control_Room.glb.glb"
+    },
+    "assets/nasa/748ef5a3_siting_Exoplanet_Survey_Satellite_TESS_A_Transiting_Exoplanet_Survey_Satellite_TESS_A_.glb.glb": {
+      "etag": "ea45cfc4b068a37c5dea813167470188",
+      "size": 206576,
+      "key": "assets/nasa/748ef5a3_siting_Exoplanet_Survey_Satellite_TESS_A_Transiting_Exoplanet_Survey_Satellite_TESS_A_.glb.glb"
+    },
+    "assets/nasa/c6e9c282_3D_Models_Headquarters_Building_Headquarters_Building.glb.glb": {
+      "etag": "e21ff925ff75f0ca50674cddca6ec7bf",
+      "size": 212508,
+      "key": "assets/nasa/c6e9c282_3D_Models_Headquarters_Building_Headquarters_Building.glb.glb"
+    },
+    "assets/nasa/804504f0_3D_Models_TOPEX-Poseidon_TOPEX-Poseidon.glb.glb": {
+      "etag": "c2b882da4e28dc7b3def93c8ebf8118d",
+      "size": 214264,
+      "key": "assets/nasa/804504f0_3D_Models_TOPEX-Poseidon_TOPEX-Poseidon.glb.glb"
+    },
+    "assets/nasa/b6793245_s_Tracking_and_Data_Relay_Satellites_TRDS_E_Tracking_and_Data_Relay_Satellites_TRDS_E_.glb.glb": {
+      "etag": "cbefa6cb8d25a2374d37b4ee780446e6",
+      "size": 216892,
+      "key": "assets/nasa/b6793245_s_Tracking_and_Data_Relay_Satellites_TRDS_E_Tracking_and_Data_Relay_Satellites_TRDS_E_.glb.glb"
+    },
+    "assets/nasa/8c025af7_3D_Models_Swift_Swift.glb.glb": {
+      "etag": "fe57e1d652a1b3518c879d1d3d86e3fc",
+      "size": 211404,
+      "key": "assets/nasa/8c025af7_3D_Models_Swift_Swift.glb.glb"
+    },
+    "assets/nasa/091ce0ab_3D_Models_Earth_Observing-1_EO-1_Earth_Observing-1_EO-1_.glb.glb": {
+      "etag": "01f45b51b39cbecf9206aee45bd8a3ff",
+      "size": 224580,
+      "key": "assets/nasa/091ce0ab_3D_Models_Earth_Observing-1_EO-1_Earth_Observing-1_EO-1_.glb.glb"
+    },
+    "assets/nasa/fb6c77fb_3D_Models_HESSI-RHESSI_HESSI-RHESSI.glb.glb": {
+      "etag": "ed33452198ce752902d1ad9791203a3e",
+      "size": 230764,
+      "key": "assets/nasa/fb6c77fb_3D_Models_HESSI-RHESSI_HESSI-RHESSI.glb.glb"
+    },
+    "assets/nasa/d09a98b9_3D_Models_Helmet_Helmet.glb.glb": {
+      "etag": "e9e9cd6eba841100d5da8d2abd5e1e19",
+      "size": 232496,
+      "key": "assets/nasa/d09a98b9_3D_Models_Helmet_Helmet.glb.glb"
+    },
+    "assets/nasa/beafe0b5_3D_Models_Wind_Wind.glb.glb": {
+      "etag": "c02f5f38948f9bfc73e147cfe2782991",
+      "size": 233988,
+      "key": "assets/nasa/beafe0b5_3D_Models_Wind_Wind.glb.glb"
+    },
+    "assets/nasa/7dbef750__Dust_Environment_Explorer_LADEE_Lunar_Atmosphere_and_Dust_Environment_Explorer_LADEE_.glb.glb": {
+      "etag": "201110c51d8669fe4a40989964353252",
+      "size": 235468,
+      "key": "assets/nasa/7dbef750__Dust_Environment_Explorer_LADEE_Lunar_Atmosphere_and_Dust_Environment_Explorer_LADEE_.glb.glb"
+    },
+    "assets/nasa/3432302b_3D_Models_Tall_Dish_Tall_Dish_post_.glb.glb": {
+      "etag": "b7012a835f43495d7f9d8082ce857c89",
+      "size": 244516,
+      "key": "assets/nasa/3432302b_3D_Models_Tall_Dish_Tall_Dish_post_.glb.glb"
+    },
+    "assets/nasa/39c0e932_D_Models_Far_Ultraviolet_Spectroscopic_Explorer_Far_Ultraviolet_Spectroscopic_Explorer.glb.glb": {
+      "etag": "933f8801388152ecfdc21d461eee9f82",
+      "size": 236704,
+      "key": "assets/nasa/39c0e932_D_Models_Far_Ultraviolet_Spectroscopic_Explorer_Far_Ultraviolet_Spectroscopic_Explorer.glb.glb"
+    },
+    "assets/nasa/5795968c_3D_Models_Galileo_Galileo.glb.glb": {
+      "etag": "4c88940bc974870b484361594a10293c",
+      "size": 248532,
+      "key": "assets/nasa/5795968c_3D_Models_Galileo_Galileo.glb.glb"
+    },
+    "assets/nasa/4284684a_3D_Models_Constellation-X_Constellation-X.glb.glb": {
+      "etag": "eed38cdc3f9471e6c6d76bbb33f6ca0f",
+      "size": 249696,
+      "key": "assets/nasa/4284684a_3D_Models_Constellation-X_Constellation-X.glb.glb"
+    },
+    "assets/nasa/7d908d08_3D_Models_Solar_Sail_Concept_Solar_Sail_Concept.glb.glb": {
+      "etag": "8aa18257bb9fb250ce25242c1152489c",
+      "size": 235524,
+      "key": "assets/nasa/7d908d08_3D_Models_Solar_Sail_Concept_Solar_Sail_Concept.glb.glb"
+    },
+    "assets/nasa/6d482e26_3D_Models_CloudSat_A_CloudSat_A_.glb.glb": {
+      "etag": "1c6b5e1c1566d95285f5d3f4472543ff",
+      "size": 267656,
+      "key": "assets/nasa/6d482e26_3D_Models_CloudSat_A_CloudSat_A_.glb.glb"
+    },
+    "assets/nasa/f43fe0bf_3D_Models_Hinode_Solar-B_Hinode_Solar-B_.glb.glb": {
+      "etag": "b80137b201b69b1b697c11fb285ce940",
+      "size": 276248,
+      "key": "assets/nasa/f43fe0bf_3D_Models_Hinode_Solar-B_Hinode_Solar-B_.glb.glb"
+    },
+    "assets/nasa/51aa5f57_3D_Models_Juno_B_Juno_B_.glb.glb": {
+      "etag": "570755d032d677ac8e1aff56ffdd7d06",
+      "size": 262360,
+      "key": "assets/nasa/51aa5f57_3D_Models_Juno_B_Juno_B_.glb.glb"
+    },
+    "assets/nasa/d9091038_e_Remote_Manipulator_System_Canadarm_Space_Shuttle_Remote_Manipulator_System_Canadarm_.glb.glb": {
+      "etag": "3599eb0d7e57120c19e7f3b2093b59cb",
+      "size": 271276,
+      "key": "assets/nasa/d9091038_e_Remote_Manipulator_System_Canadarm_Space_Shuttle_Remote_Manipulator_System_Canadarm_.glb.glb"
+    },
+    "assets/nasa/fb67694e_3D_Models_Spitzer_Space_Telescope_Spitzer_Space_Telescope.glb.glb": {
+      "etag": "7a382fa55c3b7ddfe7e2a7dea948e727",
+      "size": 251388,
+      "key": "assets/nasa/fb67694e_3D_Models_Spitzer_Space_Telescope_Spitzer_Space_Telescope.glb.glb"
+    },
+    "assets/nasa/a2f7e7b4_3D_Models_Orbiting_Carbon_Observatory_OCO_2_Orbiting_Carbon_Observatory_OCO_2.glb.glb": {
+      "etag": "cb43b2ee0235bc25f00a684126a86958",
+      "size": 280060,
+      "key": "assets/nasa/a2f7e7b4_3D_Models_Orbiting_Carbon_Observatory_OCO_2_Orbiting_Carbon_Observatory_OCO_2.glb.glb"
+    },
+    "assets/nasa/651ffaa6_3D_Models_Wide_Field_Planetary_Camera_Wide_Field_Planetary_Camera.glb.glb": {
+      "etag": "d9c204e6654c68e93e7531435cb471fc",
+      "size": 289468,
+      "key": "assets/nasa/651ffaa6_3D_Models_Wide_Field_Planetary_Camera_Wide_Field_Planetary_Camera.glb.glb"
+    },
+    "assets/nasa/5b7e67a1_r_Interferometer_Space_Antenna_LISA_2006_Laser_Interferometer_Space_Antenna_LISA_2006_.glb.glb": {
+      "etag": "971713ff0bbf76a9482d0d45f59d8a03",
+      "size": 300608,
+      "key": "assets/nasa/5b7e67a1_r_Interferometer_Space_Antenna_LISA_2006_Laser_Interferometer_Space_Antenna_LISA_2006_.glb.glb"
+    },
+    "assets/polygonal-mind/9cfc7706_projects_MomusPark_eyes_haunted_01_Art.glb.glb": {
+      "etag": "8baf34579a2f4a7cfe7ae4b820d752d2",
+      "size": 42440,
+      "key": "assets/polygonal-mind/9cfc7706_projects_MomusPark_eyes_haunted_01_Art.glb.glb"
+    },
+    "assets/nasa/49cc7741_3D_Models_Firefly_Firefly.glb.glb": {
+      "etag": "b309927d4a03e77c7ec5bd740ad16fc0",
+      "size": 293692,
+      "key": "assets/nasa/49cc7741_3D_Models_Firefly_Firefly.glb.glb"
+    },
+    "assets/nasa/e191f125_3D_Models_Voyager_Probe_A_Voyager_Probe_A_.glb.glb": {
+      "etag": "75139af786aa3d63bd83bfe1c8671c94",
+      "size": 285936,
+      "key": "assets/nasa/e191f125_3D_Models_Voyager_Probe_A_Voyager_Probe_A_.glb.glb"
+    },
+    "assets/polygonal-mind/c6e449a7_projects_aero-system_Aero_Ground_Hexagon_Art.glb.glb": {
+      "etag": "b3f57e9e045bb0d2a6ccd35132a33a1e",
+      "size": 10176,
+      "key": "assets/polygonal-mind/c6e449a7_projects_aero-system_Aero_Ground_Hexagon_Art.glb.glb"
+    },
+    "assets/polygonal-mind/3804ebce_projects_abm_MomusLogo01_Art.glb.glb": {
+      "etag": "38ccba6015c69ea76b985ab12a1f18e5",
+      "size": 20156,
+      "key": "assets/polygonal-mind/3804ebce_projects_abm_MomusLogo01_Art.glb.glb"
+    },
+    "assets/polygonal-mind/109eb3e0_projects_avatar-garden_Palette01.glb.glb": {
+      "etag": "86d2ccb540bf83ae1d8387c6afae9626",
+      "size": 10528,
+      "key": "assets/polygonal-mind/109eb3e0_projects_avatar-garden_Palette01.glb.glb"
+    },
+    "assets/nasa/6a860c99_3D_Models_1999_RQ36_asteroid_1999_RQ36_asteroid.glb.glb": {
+      "etag": "88dd9226932cd6f2223a84fc4e81c8b9",
+      "size": 329596,
+      "key": "assets/nasa/6a860c99_3D_Models_1999_RQ36_asteroid_1999_RQ36_asteroid.glb.glb"
+    },
+    "assets/polygonal-mind/1bd991c7_projects_avatar-show_Pencil.glb.glb": {
+      "etag": "db94b5e9f369c00e0a510c22e0e0c08a",
+      "size": 55960,
+      "key": "assets/polygonal-mind/1bd991c7_projects_avatar-show_Pencil.glb.glb"
+    },
+    "assets/polygonal-mind/d052aed3_projects_ca-world_Sign_07_Exit.glb.glb": {
+      "etag": "c62fddc575d60f56ae7df20f887a2728",
+      "size": 7956,
+      "key": "assets/polygonal-mind/d052aed3_projects_ca-world_Sign_07_Exit.glb.glb"
+    },
+    "assets/nasa/88ec128a_3D_Models_Aeronomy_of_Ice_in_the_Mesosphere_Aeronomy_of_Ice_in_the_Mesosphere.glb.glb": {
+      "etag": "e6f57ac0cc6f3e6ed7be2f40fde6c99d",
+      "size": 323372,
+      "key": "assets/nasa/88ec128a_3D_Models_Aeronomy_of_Ice_in_the_Mesosphere_Aeronomy_of_Ice_in_the_Mesosphere.glb.glb"
+    },
+    "assets/polygonal-mind/f4fa19e6_projects_christmas_Fence.glb.glb": {
+      "etag": "da87fc6bc3309b898d1bc1b492a9200e",
+      "size": 45072,
+      "key": "assets/polygonal-mind/f4fa19e6_projects_christmas_Fence.glb.glb"
+    },
+    "assets/polygonal-mind/4ffdd480_projects_chromatic-chaos_Terrain.glb.glb": {
+      "etag": "e9594ec1cde869d068a1d74535b35727",
+      "size": 35432,
+      "key": "assets/polygonal-mind/4ffdd480_projects_chromatic-chaos_Terrain.glb.glb"
+    },
+    "assets/polygonal-mind/babdfd18_projects_crystal-crossroads_Dune_Sand.glb.glb": {
+      "etag": "1d6df0a5ca931360a18899ce160db38f",
+      "size": 13164,
+      "key": "assets/polygonal-mind/babdfd18_projects_crystal-crossroads_Dune_Sand.glb.glb"
+    },
+    "assets/polygonal-mind/8f3e5be2_projects_lunar-year_UpperLights02.glb.glb": {
+      "etag": "1d40fc6bdc99ff60567d8b705baa09b1",
+      "size": 1776,
+      "key": "assets/polygonal-mind/8f3e5be2_projects_lunar-year_UpperLights02.glb.glb"
+    },
+    "assets/polygonal-mind/6d484c67_projects_medieval-fair_Coin_PolygonalMind.glb.glb": {
+      "etag": "a54260c024df90f0bd4c87b618f2577e",
+      "size": 146200,
+      "key": "assets/polygonal-mind/6d484c67_projects_medieval-fair_Coin_PolygonalMind.glb.glb"
+    },
+    "assets/polygonal-mind/4f6a0304_projects_tomb-chaser-2_Decoration02_Art.glb.glb": {
+      "etag": "2fee3f4a73f70f4bb4db8c9182d72b89",
+      "size": 54476,
+      "key": "assets/polygonal-mind/4f6a0304_projects_tomb-chaser-2_Decoration02_Art.glb.glb"
+    },
+    "assets/polygonal-mind/452172e9_projects_tomb-chaser-1_Spiderweb_Art.glb.glb": {
+      "etag": "38b736327ba9b461c7f1b90e72bf5529",
+      "size": 40436,
+      "key": "assets/polygonal-mind/452172e9_projects_tomb-chaser-1_Spiderweb_Art.glb.glb"
+    },
+    "assets/polygonal-mind/d7015e96_projects_cryptoavatars-retro-booth_Computer_Screen.glb.glb": {
+      "etag": "d33bf415d24f5383ba785179237f243c",
+      "size": 964320,
+      "key": "assets/polygonal-mind/d7015e96_projects_cryptoavatars-retro-booth_Computer_Screen.glb.glb"
+    },
+    "assets/polygonal-mind/2175e0c3_projects_towers_BlockChain_Bridge_Fragment_Art.glb.glb": {
+      "etag": "cfde53aa9f6242c76db9c974d1ca9c52",
+      "size": 9196,
+      "key": "assets/polygonal-mind/2175e0c3_projects_towers_BlockChain_Bridge_Fragment_Art.glb.glb"
+    },
+    "assets/polygonal-mind/3280a1bc_projects_trash-polka_InteriorFloor.glb.glb": {
+      "etag": "6e9e437228b008b4de56265e5513f0d7",
+      "size": 1968,
+      "key": "assets/polygonal-mind/3280a1bc_projects_trash-polka_InteriorFloor.glb.glb"
+    },
+    "assets/polygonal-mind/9adb8d6f_projects_transit_Track_01_Tap_Art.glb.glb": {
+      "etag": "90b8e0fce5db7a6b1685a1766cad6c8a",
+      "size": 325300,
+      "key": "assets/polygonal-mind/9adb8d6f_projects_transit_Track_01_Tap_Art.glb.glb"
+    },
+    "assets/polygonal-mind/37cdd4ed_projects_xyz_055_Searlygon_Art.glb.glb": {
+      "etag": "859ca03bac7016761e44e7b6a595c845",
+      "size": 65856,
+      "key": "assets/polygonal-mind/37cdd4ed_projects_xyz_055_Searlygon_Art.glb.glb"
+    },
+    "assets/polygonal-mind/814a43fc_projects_MomusPark_eyes_haunted_02_Art.glb.glb": {
+      "etag": "6293096e2ad19bfdd2f8c4e3793b622b",
+      "size": 42440,
+      "key": "assets/polygonal-mind/814a43fc_projects_MomusPark_eyes_haunted_02_Art.glb.glb"
+    },
+    "assets/polygonal-mind/9f44f1f5_projects_aero-system_Aero_Station_Mini_Platform_Art.glb.glb": {
+      "etag": "6d284d6aaba82e34a4ae4e4448642d0e",
+      "size": 86612,
+      "key": "assets/polygonal-mind/9f44f1f5_projects_aero-system_Aero_Station_Mini_Platform_Art.glb.glb"
+    },
+    "assets/polygonal-mind/47f7ddaf_projects_avatar-garden_LogoPolygonal01.glb.glb": {
+      "etag": "828374447405566b4fc4b6b7adf764c8",
+      "size": 18560,
+      "key": "assets/polygonal-mind/47f7ddaf_projects_avatar-garden_LogoPolygonal01.glb.glb"
+    },
+    "assets/polygonal-mind/0b131b1e_projects_christmas_Lights01.glb.glb": {
+      "etag": "69643374da79ee7529aa29e28b179d99",
+      "size": 115888,
+      "key": "assets/polygonal-mind/0b131b1e_projects_christmas_Lights01.glb.glb"
+    },
+    "assets/polygonal-mind/99a7ce93_projects_avatar-show_Table_Futuristic.glb.glb": {
+      "etag": "85c61b49d098205253ef99420afa8c1e",
+      "size": 223168,
+      "key": "assets/polygonal-mind/99a7ce93_projects_avatar-show_Table_Futuristic.glb.glb"
+    },
+    "assets/polygonal-mind/d4e204fc_projects_abm_HoloBush01_Art.glb.glb": {
+      "etag": "48dfe8428556dbd5d783f52b7ea4280b",
+      "size": 66348,
+      "key": "assets/polygonal-mind/d4e204fc_projects_abm_HoloBush01_Art.glb.glb"
+    },
+    "assets/polygonal-mind/d847ee71_projects_crystal-crossroads_Crystal_Base.glb.glb": {
+      "etag": "492c224983c9ac7d6decbd8b6593cd21",
+      "size": 24224,
+      "key": "assets/polygonal-mind/d847ee71_projects_crystal-crossroads_Crystal_Base.glb.glb"
+    },
+    "assets/polygonal-mind/23fa796f_projects_ca-world_AvatarBust_01.glb.glb": {
+      "etag": "2682ccc406b5f31b3404804c8974caec",
+      "size": 11120,
+      "key": "assets/polygonal-mind/23fa796f_projects_ca-world_AvatarBust_01.glb.glb"
+    },
+    "assets/polygonal-mind/55b3a194_projects_chromatic-chaos_Frame_Program_Retro_01.glb.glb": {
+      "etag": "dec9f9b08274c655085c74938ea6d6a1",
+      "size": 67572,
+      "key": "assets/polygonal-mind/55b3a194_projects_chromatic-chaos_Frame_Program_Retro_01.glb.glb"
+    },
+    "assets/polygonal-mind/26d5599d_projects_lunar-year_PortalFade02.glb.glb": {
+      "etag": "7bc698a613c42e45bafc19e0eb694c43",
+      "size": 124248,
+      "key": "assets/polygonal-mind/26d5599d_projects_lunar-year_PortalFade02.glb.glb"
+    },
+    "assets/polygonal-mind/48fb73bb_projects_tomb-chaser-1_FireTorch02_Art.glb.glb": {
+      "etag": "2ecda6b66bc7f3db8ec7f84f21ed86ab",
+      "size": 40492,
+      "key": "assets/polygonal-mind/48fb73bb_projects_tomb-chaser-1_FireTorch02_Art.glb.glb"
+    },
+    "assets/polygonal-mind/db01dbd0_projects_tomb-chaser-2_Decoration01_Art.glb.glb": {
+      "etag": "314cb5e61e6c2ce97686c91a5c93dd22",
+      "size": 63272,
+      "key": "assets/polygonal-mind/db01dbd0_projects_tomb-chaser-2_Decoration01_Art.glb.glb"
+    },
+    "assets/polygonal-mind/41bf5708_projects_towers_LoveDeath_Bird_Art.glb.glb": {
+      "etag": "0eee1ace272d6347db6529b32a5c495c",
+      "size": 13748,
+      "key": "assets/polygonal-mind/41bf5708_projects_towers_LoveDeath_Bird_Art.glb.glb"
+    },
+    "assets/polygonal-mind/90130180_projects_medieval-fair_Beer.glb.glb": {
+      "etag": "b62685c6de936423c70540faf525372e",
+      "size": 246796,
+      "key": "assets/polygonal-mind/90130180_projects_medieval-fair_Beer.glb.glb"
+    },
+    "assets/polygonal-mind/a4fad5c5_projects_trash-polka_Structure02.glb.glb": {
+      "etag": "0429d4f91c9d48f2459ba0c1f57d1f40",
+      "size": 2232,
+      "key": "assets/polygonal-mind/a4fad5c5_projects_trash-polka_Structure02.glb.glb"
+    },
+    "assets/polygonal-mind/b95a2e09_projects_xyz_002_Squaresquid_Art.glb.glb": {
+      "etag": "d679d20b83b7b2f067216c08e1cb433d",
+      "size": 71428,
+      "key": "assets/polygonal-mind/b95a2e09_projects_xyz_002_Squaresquid_Art.glb.glb"
+    },
+    "assets/polygonal-mind/5ee7de4f_projects_cryptoavatars-retro-booth_Sticker_04.glb.glb": {
+      "etag": "1367404eaf2f05511def9ae95693301c",
+      "size": 1142884,
+      "key": "assets/polygonal-mind/5ee7de4f_projects_cryptoavatars-retro-booth_Sticker_04.glb.glb"
+    },
+    "assets/polygonal-mind/6c207faa_projects_MomusPark_eyes_haunted_03_Art.glb.glb": {
+      "etag": "20d1d68306f2f72bb9dc224ca47c82b8",
+      "size": 42440,
+      "key": "assets/polygonal-mind/6c207faa_projects_MomusPark_eyes_haunted_03_Art.glb.glb"
+    },
+    "assets/polygonal-mind/9d3eec6a_projects_abm_HoloBush02_Art.glb.glb": {
+      "etag": "7d2aa2f5c22837bec0519c18e5c2be57",
+      "size": 66352,
+      "key": "assets/polygonal-mind/9d3eec6a_projects_abm_HoloBush02_Art.glb.glb"
+    },
+    "assets/polygonal-mind/ecb9d135_projects_aero-system_Aero_Door_01.glb.glb": {
+      "etag": "92580d7706968b416d1c10ea3e39d912",
+      "size": 96584,
+      "key": "assets/polygonal-mind/ecb9d135_projects_aero-system_Aero_Door_01.glb.glb"
+    },
+    "assets/polygonal-mind/18894c30_projects_ca-world_Floor_02.glb.glb": {
+      "etag": "ec7c9f1c86dbc0bb5328d5e430597890",
+      "size": 39788,
+      "key": "assets/polygonal-mind/18894c30_projects_ca-world_Floor_02.glb.glb"
+    },
+    "assets/polygonal-mind/d87f7d84_projects_avatar-show_Seat.glb.glb": {
+      "etag": "2b1192aa004e9452edcf38fa453c9fb6",
+      "size": 312620,
+      "key": "assets/polygonal-mind/d87f7d84_projects_avatar-show_Seat.glb.glb"
+    },
+    "assets/polygonal-mind/218a0ed8_projects_avatar-garden_Brush01.glb.glb": {
+      "etag": "f7d158cd4d2a635374ebd3d15b3e7dcc",
+      "size": 70916,
+      "key": "assets/polygonal-mind/218a0ed8_projects_avatar-garden_Brush01.glb.glb"
+    },
+    "assets/polygonal-mind/f02c3dbe_projects_transit_Train_Track_01.glb.glb": {
+      "etag": "76c63250003156c1ad29d9c4601ae15d",
+      "size": 329604,
+      "key": "assets/polygonal-mind/f02c3dbe_projects_transit_Train_Track_01.glb.glb"
+    },
+    "assets/polygonal-mind/28bddafc_projects_christmas_MiniTree.glb.glb": {
+      "etag": "cb6d0a823cba802ae4e8c1edd7d64c14",
+      "size": 116496,
+      "key": "assets/polygonal-mind/28bddafc_projects_christmas_MiniTree.glb.glb"
+    },
+    "assets/polygonal-mind/724eaf2c_projects_chromatic-chaos_Frame_Program_Retro_04.glb.glb": {
+      "etag": "6f611a512e4f918ff6c926148f0febb2",
+      "size": 175072,
+      "key": "assets/polygonal-mind/724eaf2c_projects_chromatic-chaos_Frame_Program_Retro_04.glb.glb"
+    },
+    "assets/polygonal-mind/cddb8c21_projects_crystal-crossroads_Crystal_Small_01.glb.glb": {
+      "etag": "74993d3aee7db8f6ddb777cf1525b4b1",
+      "size": 130680,
+      "key": "assets/polygonal-mind/cddb8c21_projects_crystal-crossroads_Crystal_Small_01.glb.glb"
+    },
+    "assets/polygonal-mind/9ab5e921_projects_cryptoavatars-retro-booth_Sticker_06.glb.glb": {
+      "etag": "daf580e7e096868b2a0c10515cda572c",
+      "size": 1143084,
+      "key": "assets/polygonal-mind/9ab5e921_projects_cryptoavatars-retro-booth_Sticker_06.glb.glb"
+    },
+    "assets/polygonal-mind/a2398d37_projects_tomb-chaser-1_FireTorch01_Art.glb.glb": {
+      "etag": "710b2f7112c0922808985d3423280f4b",
+      "size": 40496,
+      "key": "assets/polygonal-mind/a2398d37_projects_tomb-chaser-1_FireTorch01_Art.glb.glb"
+    },
+    "assets/polygonal-mind/66f0bc46_projects_lunar-year_PortalFade01.glb.glb": {
+      "etag": "9a2376e07c933a0e72df9e1c3bb5700c",
+      "size": 124252,
+      "key": "assets/polygonal-mind/66f0bc46_projects_lunar-year_PortalFade01.glb.glb"
+    },
+    "assets/polygonal-mind/a8cb81c1_projects_towers_LoveDeath_Cage_Art.glb.glb": {
+      "etag": "a8b050ff395d0e597ae73b8fcdcb4afa",
+      "size": 26116,
+      "key": "assets/polygonal-mind/a8cb81c1_projects_towers_LoveDeath_Cage_Art.glb.glb"
+    },
+    "assets/polygonal-mind/9c3bb57c_projects_tomb-chaser-2_Mist02_Art.glb.glb": {
+      "etag": "eb5676e0e5069960d75ca7cd80afd1db",
+      "size": 159788,
+      "key": "assets/polygonal-mind/9c3bb57c_projects_tomb-chaser-2_Mist02_Art.glb.glb"
+    },
+    "assets/polygonal-mind/1282f432_projects_medieval-fair_Speaker.glb.glb": {
+      "etag": "33974bdc5f51bc2374513b364e24e2ba",
+      "size": 247412,
+      "key": "assets/polygonal-mind/1282f432_projects_medieval-fair_Speaker.glb.glb"
+    },
+    "assets/polygonal-mind/f884fe1b_projects_trash-polka_Structure03.glb.glb": {
+      "etag": "95d70ea4d63b88c2f8fe6b71c7c6ff3a",
+      "size": 2232,
+      "key": "assets/polygonal-mind/f884fe1b_projects_trash-polka_Structure03.glb.glb"
+    },
+    "assets/polygonal-mind/e921c2f3_projects_xyz_031_Snailus_Art.glb.glb": {
+      "etag": "487bc5d50e2c60b3969ed82869e1836f",
+      "size": 74428,
+      "key": "assets/polygonal-mind/e921c2f3_projects_xyz_031_Snailus_Art.glb.glb"
+    },
+    "assets/polygonal-mind/8ef984ab_projects_MomusPark_eyes_haunted_04_Art.glb.glb": {
+      "etag": "954aa7a4c722e6d888c13cb6e19764f6",
+      "size": 42440,
+      "key": "assets/polygonal-mind/8ef984ab_projects_MomusPark_eyes_haunted_04_Art.glb.glb"
+    },
+    "assets/polygonal-mind/7cc14c41_projects_abm_HoloBush03_Art.glb.glb": {
+      "etag": "b22c93df8f802831a8ed3f10adac51ac",
+      "size": 66352,
+      "key": "assets/polygonal-mind/7cc14c41_projects_abm_HoloBush03_Art.glb.glb"
+    },
+    "assets/polygonal-mind/14d16017_projects_aero-system_Aero_Lampost_01.glb.glb": {
+      "etag": "bc216864067cc82270086a5baa93d616",
+      "size": 105260,
+      "key": "assets/polygonal-mind/14d16017_projects_aero-system_Aero_Lampost_01.glb.glb"
+    },
+    "assets/polygonal-mind/11edba92_projects_transit_Tower_Station_Sign_Art.glb.glb": {
+      "etag": "dd1e2abb451135993fd555f6308b6c40",
+      "size": 532004,
+      "key": "assets/polygonal-mind/11edba92_projects_transit_Tower_Station_Sign_Art.glb.glb"
+    },
+    "assets/polygonal-mind/89b8c404_projects_avatar-garden_Sunflare01.glb.glb": {
+      "etag": "d585483fd4142f3e540e3d460b23d8be",
+      "size": 157528,
+      "key": "assets/polygonal-mind/89b8c404_projects_avatar-garden_Sunflare01.glb.glb"
+    },
+    "assets/polygonal-mind/50a150e8_projects_avatar-show_Stage_Structure_Skylight.glb.glb": {
+      "etag": "8dababd348795c7b3414f88e3f6957b9",
+      "size": 320160,
+      "key": "assets/polygonal-mind/50a150e8_projects_avatar-show_Stage_Structure_Skylight.glb.glb"
+    },
+    "assets/polygonal-mind/31c003db_projects_christmas_Candle.glb.glb": {
+      "etag": "539b367badf3190ee3476bdba7617ce1",
+      "size": 116652,
+      "key": "assets/polygonal-mind/31c003db_projects_christmas_Candle.glb.glb"
+    },
+    "assets/polygonal-mind/519de798_projects_ca-world_Head_logo_01.glb.glb": {
+      "etag": "7c1a348f5ad2ef57a8ad16ab81016a29",
+      "size": 346052,
+      "key": "assets/polygonal-mind/519de798_projects_ca-world_Head_logo_01.glb.glb"
+    },
+    "assets/polygonal-mind/0c1eb7fc_projects_chromatic-chaos_Frame_Program_Retro_03.glb.glb": {
+      "etag": "795a3a0a8cf361da79aaed5856a7163c",
+      "size": 175076,
+      "key": "assets/polygonal-mind/0c1eb7fc_projects_chromatic-chaos_Frame_Program_Retro_03.glb.glb"
+    },
+    "assets/polygonal-mind/003cff15_projects_crystal-crossroads_Crystal_Small_02.glb.glb": {
+      "etag": "01bb0874e7c93d864b808054f57ddff0",
+      "size": 131972,
+      "key": "assets/polygonal-mind/003cff15_projects_crystal-crossroads_Crystal_Small_02.glb.glb"
+    },
+    "assets/polygonal-mind/6d8ed5ef_projects_tomb-chaser-1_FireTorch03_Art.glb.glb": {
+      "etag": "26c04d772ad3edec24b6b1de56f8bed0",
+      "size": 40636,
+      "key": "assets/polygonal-mind/6d8ed5ef_projects_tomb-chaser-1_FireTorch03_Art.glb.glb"
+    },
+    "assets/polygonal-mind/7e8b2130_projects_lunar-year_InteriorLight01.glb.glb": {
+      "etag": "2548f997fa08781f466de421f05fa9f0",
+      "size": 222888,
+      "key": "assets/polygonal-mind/7e8b2130_projects_lunar-year_InteriorLight01.glb.glb"
+    },
+    "assets/polygonal-mind/e8d53c32_projects_towers_Colony_Egg_Art.glb.glb": {
+      "etag": "b3da3a152b43853cf6f5410c255b7be6",
+      "size": 27324,
+      "key": "assets/polygonal-mind/e8d53c32_projects_towers_Colony_Egg_Art.glb.glb"
+    },
+    "assets/polygonal-mind/b0361508_projects_trash-polka_Light05.glb.glb": {
+      "etag": "9c906f88f820dc99856cc0bc8164dca3",
+      "size": 2280,
+      "key": "assets/polygonal-mind/b0361508_projects_trash-polka_Light05.glb.glb"
+    },
+    "assets/polygonal-mind/83bfd6df_projects_medieval-fair_Sausage.glb.glb": {
+      "etag": "cedc9cb4a7f1b8c8d9806e2cca513dac",
+      "size": 249692,
+      "key": "assets/polygonal-mind/83bfd6df_projects_medieval-fair_Sausage.glb.glb"
+    },
+    "assets/polygonal-mind/3e3ebaad_projects_tomb-chaser-2_Mist01_Art.glb.glb": {
+      "etag": "f180843f42b7ac63c3b55199c2e41439",
+      "size": 165388,
+      "key": "assets/polygonal-mind/3e3ebaad_projects_tomb-chaser-2_Mist01_Art.glb.glb"
+    },
+    "assets/polygonal-mind/849a5cfe_projects_xyz_007_Starplant_Art.glb.glb": {
+      "etag": "f3c28d888b7a7c62d615eb199d66f74b",
+      "size": 77124,
+      "key": "assets/polygonal-mind/849a5cfe_projects_xyz_007_Starplant_Art.glb.glb"
+    },
+    "assets/polygonal-mind/d1dee13d_projects_MomusPark_eyes_haunted_05_Art.glb.glb": {
+      "etag": "e7a681b384155562a220638354857648",
+      "size": 42604,
+      "key": "assets/polygonal-mind/d1dee13d_projects_MomusPark_eyes_haunted_05_Art.glb.glb"
+    },
+    "assets/polygonal-mind/0ab45d9f_projects_cryptoavatars-retro-booth_Sticker_08.glb.glb": {
+      "etag": "12227ab1aec2760267d5c6094d530568",
+      "size": 1143084,
+      "key": "assets/polygonal-mind/0ab45d9f_projects_cryptoavatars-retro-booth_Sticker_08.glb.glb"
+    },
+    "assets/polygonal-mind/26f7d4fb_projects_abm_PMLogo01_Art.glb.glb": {
+      "etag": "67c058ae2e5e7fa4d40317876dfc9f36",
+      "size": 86060,
+      "key": "assets/polygonal-mind/26f7d4fb_projects_abm_PMLogo01_Art.glb.glb"
+    },
+    "assets/polygonal-mind/8d6063aa_projects_avatar-garden_Shell01.glb.glb": {
+      "etag": "e0df4a33d17774a2aedcb1ab39a6e45f",
+      "size": 188312,
+      "key": "assets/polygonal-mind/8d6063aa_projects_avatar-garden_Shell01.glb.glb"
+    },
+    "assets/polygonal-mind/20bd8977_projects_aero-system_Aero_Ground_Hexagons_01_Art.glb.glb": {
+      "etag": "811985d5155d8aab9ff95a663621188f",
+      "size": 113324,
+      "key": "assets/polygonal-mind/20bd8977_projects_aero-system_Aero_Ground_Hexagons_01_Art.glb.glb"
+    },
+    "assets/polygonal-mind/267bffa7_projects_avatar-show_Sofa.glb.glb": {
+      "etag": "c3f59e7abb0dc2ba79756b956bc847cd",
+      "size": 333088,
+      "key": "assets/polygonal-mind/267bffa7_projects_avatar-show_Sofa.glb.glb"
+    },
+    "assets/polygonal-mind/ea7548cf_projects_transit_Tower_Station_Fence_Art.glb.glb": {
+      "etag": "8b946a1a814474ccca11572431a7983b",
+      "size": 583272,
+      "key": "assets/polygonal-mind/ea7548cf_projects_transit_Tower_Station_Fence_Art.glb.glb"
+    },
+    "assets/polygonal-mind/c93fea10_projects_ca-world_Stool_01.glb.glb": {
+      "etag": "989599b0357433f826f1952b43278ac9",
+      "size": 409036,
+      "key": "assets/polygonal-mind/c93fea10_projects_ca-world_Stool_01.glb.glb"
+    },
+    "assets/polygonal-mind/5e086481_projects_chromatic-chaos_Icon_CMD_01.glb.glb": {
+      "etag": "9fea913dc5cd1b94580e90b9cbee5189",
+      "size": 175088,
+      "key": "assets/polygonal-mind/5e086481_projects_chromatic-chaos_Icon_CMD_01.glb.glb"
+    },
+    "assets/polygonal-mind/600abeef_projects_lunar-year_InteriorLight02.glb.glb": {
+      "etag": "d5c06f8da123bc5a8fd10b9779758a9d",
+      "size": 222892,
+      "key": "assets/polygonal-mind/600abeef_projects_lunar-year_InteriorLight02.glb.glb"
+    },
+    "assets/polygonal-mind/4ea04cf5_projects_crystal-crossroads_Crystal_Small_04.glb.glb": {
+      "etag": "0b780610bd288e742a2322b395a68622",
+      "size": 131976,
+      "key": "assets/polygonal-mind/4ea04cf5_projects_crystal-crossroads_Crystal_Small_04.glb.glb"
+    },
+    "assets/polygonal-mind/7a420af8_projects_medieval-fair_Pretzel.glb.glb": {
+      "etag": "4bd7c1e72d02f786e1b9160fc5e10a90",
+      "size": 270352,
+      "key": "assets/polygonal-mind/7a420af8_projects_medieval-fair_Pretzel.glb.glb"
+    },
+    "assets/polygonal-mind/5cd79ef7_projects_christmas_Star.glb.glb": {
+      "etag": "c3756def668922bfa6deb77c57d72e2e",
+      "size": 116848,
+      "key": "assets/polygonal-mind/5cd79ef7_projects_christmas_Star.glb.glb"
+    },
+    "assets/polygonal-mind/8dd30eff_projects_tomb-chaser-1_GodBastet_Art.glb.glb": {
+      "etag": "0279f77eca72924348489e8e5eaf5dc1",
+      "size": 214736,
+      "key": "assets/polygonal-mind/8dd30eff_projects_tomb-chaser-1_GodBastet_Art.glb.glb"
+    },
+    "assets/polygonal-mind/318d2e8a_projects_cryptoavatars-retro-booth_Sticker_05.glb.glb": {
+      "etag": "6d238510d289f663e27871044ea2f34a",
+      "size": 1143088,
+      "key": "assets/polygonal-mind/318d2e8a_projects_cryptoavatars-retro-booth_Sticker_05.glb.glb"
+    },
+    "assets/polygonal-mind/02106116_projects_tomb-chaser-2_Column02_Art.glb.glb": {
+      "etag": "dbc30ab19f721752304026858c906c40",
+      "size": 205912,
+      "key": "assets/polygonal-mind/02106116_projects_tomb-chaser-2_Column02_Art.glb.glb"
+    },
+    "assets/polygonal-mind/133aad86_projects_towers_BlockChain_Step_Art.glb.glb": {
+      "etag": "8798bf8dba554ad96f9f8339a2b089c2",
+      "size": 54856,
+      "key": "assets/polygonal-mind/133aad86_projects_towers_BlockChain_Step_Art.glb.glb"
+    },
+    "assets/polygonal-mind/e5199fcc_projects_trash-polka_Light06.glb.glb": {
+      "etag": "2d51e83e08bcf53b919cd2505ce2d164",
+      "size": 3220,
+      "key": "assets/polygonal-mind/e5199fcc_projects_trash-polka_Light06.glb.glb"
+    },
+    "assets/polygonal-mind/bd1c5656_projects_MomusPark_Momus_collection_sign_01.glb.glb": {
+      "etag": "6e6579fefb79cb10b8f681a777135efa",
+      "size": 44324,
+      "key": "assets/polygonal-mind/bd1c5656_projects_MomusPark_Momus_collection_sign_01.glb.glb"
+    },
+    "assets/polygonal-mind/47911f10_projects_xyz_051_Cacturnion_Art.glb.glb": {
+      "etag": "9c50cd56ddef80a4a17e8cc14ecbf943",
+      "size": 78552,
+      "key": "assets/polygonal-mind/47911f10_projects_xyz_051_Cacturnion_Art.glb.glb"
+    },
+    "assets/polygonal-mind/16ca9e3f_projects_aero-system_Aero_Ground_Hexagons_02_Art.glb.glb": {
+      "etag": "57208031e4601f5479f73feeac9d3da4",
+      "size": 129496,
+      "key": "assets/polygonal-mind/16ca9e3f_projects_aero-system_Aero_Ground_Hexagons_02_Art.glb.glb"
+    },
+    "assets/polygonal-mind/40e2bdd3_projects_abm_EntranceDoor02_Art.glb.glb": {
+      "etag": "29c95fa068ae2413adf12ae8d966f215",
+      "size": 206684,
+      "key": "assets/polygonal-mind/40e2bdd3_projects_abm_EntranceDoor02_Art.glb.glb"
+    },
+    "assets/polygonal-mind/adde917a_projects_transit_Plant_02_Art.glb.glb": {
+      "etag": "1a466750caeb3cf9d69fd9573a7d9c5f",
+      "size": 585600,
+      "key": "assets/polygonal-mind/adde917a_projects_transit_Plant_02_Art.glb.glb"
+    },
+    "assets/polygonal-mind/1fe6e533_projects_avatar-garden_Star01.glb.glb": {
+      "etag": "d74b625d5b4111fbc042e52771f5f636",
+      "size": 189728,
+      "key": "assets/polygonal-mind/1fe6e533_projects_avatar-garden_Star01.glb.glb"
+    },
+    "assets/polygonal-mind/2a22e110_projects_avatar-show_Lamp_Stand.glb.glb": {
+      "etag": "cde520d46dd121b8d74bb3b4fe233234",
+      "size": 354052,
+      "key": "assets/polygonal-mind/2a22e110_projects_avatar-show_Lamp_Stand.glb.glb"
+    },
+    "assets/polygonal-mind/02c99649_projects_christmas_CandyCane.glb.glb": {
+      "etag": "e39ecae0ab19807a0f7d4b2082295abf",
+      "size": 117508,
+      "key": "assets/polygonal-mind/02c99649_projects_christmas_CandyCane.glb.glb"
+    },
+    "assets/polygonal-mind/0abc80fa_projects_ca-world_Bench_02.glb.glb": {
+      "etag": "5a905223f885354322005512189ed418",
+      "size": 412948,
+      "key": "assets/polygonal-mind/0abc80fa_projects_ca-world_Bench_02.glb.glb"
+    },
+    "assets/polygonal-mind/ca030df6_projects_chromatic-chaos_Icon_Folder_01.glb.glb": {
+      "etag": "f1cbe517878a62f7928e9d82a25eeeb7",
+      "size": 175088,
+      "key": "assets/polygonal-mind/ca030df6_projects_chromatic-chaos_Icon_Folder_01.glb.glb"
+    },
+    "assets/polygonal-mind/66a03666_projects_crystal-crossroads_Crystal_Small_03.glb.glb": {
+      "etag": "23505624a20a6a98f83dd69205dedf17",
+      "size": 131980,
+      "key": "assets/polygonal-mind/66a03666_projects_crystal-crossroads_Crystal_Small_03.glb.glb"
+    },
+    "assets/polygonal-mind/9156ac04_projects_lunar-year_InteriorLight03.glb.glb": {
+      "etag": "f55fbc4d5816ec1b74904dc4477ec2d1",
+      "size": 222892,
+      "key": "assets/polygonal-mind/9156ac04_projects_lunar-year_InteriorLight03.glb.glb"
+    },
+    "assets/polygonal-mind/40fd43b3_projects_towers_Tower_Pot_Art.glb.glb": {
+      "etag": "b93b8e444aff8333a9cc31f4deff0727",
+      "size": 136480,
+      "key": "assets/polygonal-mind/40fd43b3_projects_towers_Tower_Pot_Art.glb.glb"
+    },
+    "assets/polygonal-mind/a01b7760_projects_tomb-chaser-1_GodAnubis_Art.glb.glb": {
+      "etag": "16a3f9d35885471fa797d3d5066aa8f9",
+      "size": 222224,
+      "key": "assets/polygonal-mind/a01b7760_projects_tomb-chaser-1_GodAnubis_Art.glb.glb"
+    },
+    "assets/polygonal-mind/88229f81_projects_medieval-fair_Pants.glb.glb": {
+      "etag": "42fec17117eac994589f7e9da3247bc6",
+      "size": 347040,
+      "key": "assets/polygonal-mind/88229f81_projects_medieval-fair_Pants.glb.glb"
+    },
+    "assets/polygonal-mind/7763d50f_projects_tomb-chaser-2_Column01_Art.glb.glb": {
+      "etag": "2d00773623f857045e2de050f583977b",
+      "size": 216684,
+      "key": "assets/polygonal-mind/7763d50f_projects_tomb-chaser-2_Column01_Art.glb.glb"
+    },
+    "assets/polygonal-mind/b21d22ab_projects_trash-polka_Lateral02.glb.glb": {
+      "etag": "9f204ba46150ca4dd80b59f33ebc7f78",
+      "size": 3544,
+      "key": "assets/polygonal-mind/b21d22ab_projects_trash-polka_Lateral02.glb.glb"
+    },
+    "assets/polygonal-mind/bc3d3c72_projects_xyz_043_Firellama_Art.glb.glb": {
+      "etag": "31ee301a83dd4d4876b20f13c6bc8a60",
+      "size": 79360,
+      "key": "assets/polygonal-mind/bc3d3c72_projects_xyz_043_Firellama_Art.glb.glb"
+    },
+    "assets/polygonal-mind/40b536bc_projects_transit_Bench_01.glb.glb": {
+      "etag": "b59cffd85cbfdbcdd85d6dda9c691e8f",
+      "size": 585748,
+      "key": "assets/polygonal-mind/40b536bc_projects_transit_Bench_01.glb.glb"
+    },
+    "assets/polygonal-mind/d726a8ba_projects_MomusPark_MOMUS_Logo_Top.glb.glb": {
+      "etag": "e9da5d865957125bff9185f00a5d3122",
+      "size": 48480,
+      "key": "assets/polygonal-mind/d726a8ba_projects_MomusPark_MOMUS_Logo_Top.glb.glb"
+    },
+    "assets/polygonal-mind/3fd7cf8b_projects_abm_EntranceDoor01_Art.glb.glb": {
+      "etag": "d722e1fbcff5bbf186dd378274ce9eb9",
+      "size": 215836,
+      "key": "assets/polygonal-mind/3fd7cf8b_projects_abm_EntranceDoor01_Art.glb.glb"
+    },
+    "assets/polygonal-mind/7ef281b4_projects_avatar-garden_PaintEasel01.glb.glb": {
+      "etag": "434d2345511392042647d9612b7bbd6f",
+      "size": 293724,
+      "key": "assets/polygonal-mind/7ef281b4_projects_avatar-garden_PaintEasel01.glb.glb"
+    },
+    "assets/polygonal-mind/6c52fbdf_projects_cryptoavatars-retro-booth_Sticker_07.glb.glb": {
+      "etag": "6b65aeb3334ba5361c5ebe088de9bb2e",
+      "size": 1143120,
+      "key": "assets/polygonal-mind/6c52fbdf_projects_cryptoavatars-retro-booth_Sticker_07.glb.glb"
+    },
+    "assets/polygonal-mind/3b562008_projects_christmas_SockXmas.glb.glb": {
+      "etag": "e26f58f6649d8665b38310840097c35c",
+      "size": 117760,
+      "key": "assets/polygonal-mind/3b562008_projects_christmas_SockXmas.glb.glb"
+    },
+    "assets/polygonal-mind/ac9834e7_projects_avatar-show_Book.glb.glb": {
+      "etag": "975217bf67787e16f003e0d4d5ce7057",
+      "size": 364460,
+      "key": "assets/polygonal-mind/ac9834e7_projects_avatar-show_Book.glb.glb"
+    },
+    "assets/polygonal-mind/68c4b6f2_projects_chromatic-chaos_Icon_USB_01.glb.glb": {
+      "etag": "999021354cb8ae0e458746cbd1cfe569",
+      "size": 175088,
+      "key": "assets/polygonal-mind/68c4b6f2_projects_chromatic-chaos_Icon_USB_01.glb.glb"
+    },
+    "assets/polygonal-mind/44133f6a_projects_ca-world_Bench_03.glb.glb": {
+      "etag": "80b6ace1c2b8f8c317c51533b02a372c",
+      "size": 413208,
+      "key": "assets/polygonal-mind/44133f6a_projects_ca-world_Bench_03.glb.glb"
+    },
+    "assets/polygonal-mind/9d6ebb4c_projects_aero-system_Aero_Airship_01.glb.glb": {
+      "etag": "8b62e7e3a4f15b41b18ad7a8aa9dc187",
+      "size": 450768,
+      "key": "assets/polygonal-mind/9d6ebb4c_projects_aero-system_Aero_Airship_01.glb.glb"
+    },
+    "assets/polygonal-mind/6133feb6_projects_crystal-crossroads_Pattern_Cylinder.glb.glb": {
+      "etag": "3966a0a7d13a8ce916564229fc08eb35",
+      "size": 137564,
+      "key": "assets/polygonal-mind/6133feb6_projects_crystal-crossroads_Pattern_Cylinder.glb.glb"
+    },
+    "assets/polygonal-mind/f1b82f21_projects_lunar-year_InteriorLight04.glb.glb": {
+      "etag": "b2d5cac467d3d86955b15a9e68a2688c",
+      "size": 222928,
+      "key": "assets/polygonal-mind/f1b82f21_projects_lunar-year_InteriorLight04.glb.glb"
+    },
+    "assets/polygonal-mind/a7ee171b_projects_cryptoavatars-retro-booth_Sticker_02.glb.glb": {
+      "etag": "af80f8e6d235fe11cb7e676f23a20774",
+      "size": 1143132,
+      "key": "assets/polygonal-mind/a7ee171b_projects_cryptoavatars-retro-booth_Sticker_02.glb.glb"
+    },
+    "assets/polygonal-mind/39df54fc_projects_medieval-fair_Path.glb.glb": {
+      "etag": "07662ca97bad924dc2c2427f3dba6d80",
+      "size": 365080,
+      "key": "assets/polygonal-mind/39df54fc_projects_medieval-fair_Path.glb.glb"
+    },
+    "assets/khronos-ccby/UnlitTest.glb": {
+      "etag": "0d4e18e82c687c86d92bde6238f335d8",
+      "size": 3992,
+      "key": "assets/khronos-ccby/UnlitTest.glb"
+    },
+    "assets/khronos-ccby/VertexColorTest.glb": {
+      "etag": "49c3a63dc176dc310ba26de678694cf8",
+      "size": 26220,
+      "key": "assets/khronos-ccby/VertexColorTest.glb"
+    },
+    "assets/khronos-ccby/TextureSettingsTest.glb": {
+      "etag": "e03d2ef2e8af5587ea7156213a9da433",
+      "size": 42840,
+      "key": "assets/khronos-ccby/TextureSettingsTest.glb"
+    },
+    "assets/khronos-ccby/AttenuationTest.glb": {
+      "etag": "392e99d2b7d35f794adac9b27147b9d5",
+      "size": 57532,
+      "key": "assets/khronos-ccby/AttenuationTest.glb"
+    },
+    "assets/khronos-ccby/NegativeScaleTest.glb": {
+      "etag": "6b38bf29feff55166aac2040c49bb840",
+      "size": 62568,
+      "key": "assets/khronos-ccby/NegativeScaleTest.glb"
+    },
+    "assets/khronos-ccby/ClearCoatTest.glb": {
+      "etag": "267bbf58f917f24a596d79ac091ebbfe",
+      "size": 258048,
+      "key": "assets/khronos-ccby/ClearCoatTest.glb"
+    },
+    "assets/khronos-ccby/SpecularTest.glb": {
+      "etag": "cab4946234ce59ddbcef60457a0e84f0",
+      "size": 223376,
+      "key": "assets/khronos-ccby/SpecularTest.glb"
+    },
+    "assets/khronos-ccby/MorphStressTest.glb": {
+      "etag": "5a37c00462d77641ef18d02214bdf46a",
+      "size": 575900,
+      "key": "assets/khronos-ccby/MorphStressTest.glb"
+    },
+    "assets/khronos-ccby/TransmissionRoughnessTest.glb": {
+      "etag": "65c889bdef9913955e7e7b4ca5f10ac0",
+      "size": 393808,
+      "key": "assets/khronos-ccby/TransmissionRoughnessTest.glb"
+    },
+    "assets/khronos-ccby/TextureTransformMultiTest.glb": {
+      "etag": "6f1d3852929e6780236b92e1ced02afa",
+      "size": 388264,
+      "key": "assets/khronos-ccby/TextureTransformMultiTest.glb"
+    },
+    "assets/khronos-ccby/AnisotropyRotationTest.glb": {
+      "etag": "be5bcdd200d1e76595e0bb5513756a1a",
+      "size": 832340,
+      "key": "assets/khronos-ccby/AnisotropyRotationTest.glb"
+    },
+    "assets/khronos-ccby/GlassBrokenWindow.glb": {
+      "etag": "2ef6c819bde24eb328232e708fd3b2c7",
+      "size": 1076624,
+      "key": "assets/khronos-ccby/GlassBrokenWindow.glb"
     }
   },
   "failed": {}

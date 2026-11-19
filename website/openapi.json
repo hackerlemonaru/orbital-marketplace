@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://orbital.example/v1"
+      "url": "https://orbital-assets-proxy.jc-bose.workers.dev/v1"
     }
   ],
   "paths": {

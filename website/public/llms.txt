@@ -5,19 +5,19 @@
 All endpoints are rate limited; read /docs/agent-rate-limits.md before bulk access. Free tier: search, metadata, licence, watermarked previews, install snippets. Paid file downloads require an entitlement.
 
 ## Catalogue
-- [Catalogue JSON](https://orbital.example/catalog.json): 8,435 rows with SPDX licence, SHA-256, source URL, R2 key
-- [Category index](https://orbital.example/catalog.md): 8 families, 66 subcategories
-- [Format & performance spec](https://orbital.example/docs/formats.md): GLB/KTX2, dotLottie, Rive, TSL/WGSL
-- [Licence matrix](https://orbital.example/docs/licenses.md): CC0 / MIT / MIT-0 / CC-BY + attribution rules
+- [Catalogue JSON](https://orbital-assets-proxy.jc-bose.workers.dev/catalog.json): 8,647 rows with SPDX licence, SHA-256, source URL, R2 key
+- [Category index](https://orbital-assets-proxy.jc-bose.workers.dev/catalog.md): 8 families, 66 subcategories
+- [Format & performance spec](https://orbital-assets-proxy.jc-bose.workers.dev/docs/formats.md): GLB/KTX2, dotLottie, Rive, TSL/WGSL
+- [Licence matrix](https://orbital-assets-proxy.jc-bose.workers.dev/docs/licenses.md): CC0 / MIT / MIT-0 / CC-BY + attribution rules
 
 ## Agents
-- [OpenAPI 3.1](https://orbital.example/openapi.json)
-- [MCP server](https://orbital.example/mcp): spec 2026-07-28, Streamable HTTP, OAuth 2.1
-- [Agent card](https://orbital.example/.well-known/agent-card.json)
-- [MCP registry server.json](https://orbital.example/.well-known/mcp/server.json)
-- [Rate limits & 429 contract](https://orbital.example/docs/agent-rate-limits.md)
-- [Product feed (ACP/UCP shape)](https://orbital.example/product-feed.json)
+- [OpenAPI 3.1](https://orbital-assets-proxy.jc-bose.workers.dev/openapi.json)
+- [MCP server](https://orbital-assets-proxy.jc-bose.workers.dev/mcp): spec 2026-07-28, Streamable HTTP, OAuth 2.1
+- [Agent card](https://orbital-assets-proxy.jc-bose.workers.dev/.well-known/agent-card.json)
+- [MCP registry server.json](https://orbital-assets-proxy.jc-bose.workers.dev/.well-known/mcp/server.json)
+- [Rate limits & 429 contract](https://orbital-assets-proxy.jc-bose.workers.dev/docs/agent-rate-limits.md)
+- [Product feed (ACP/UCP shape)](https://orbital-assets-proxy.jc-bose.workers.dev/product-feed.json)
 
 ## Optional
-- [Creator submission guide](https://orbital.example/docs/submit.md)
-- [AGENTS.md](https://orbital.example/AGENTS.md) · [SKILL.md](https://orbital.example/skills/orbital-assets/SKILL.md)
+- [Creator submission guide](https://orbital-assets-proxy.jc-bose.workers.dev/docs/submit.md)
+- [AGENTS.md](https://orbital-assets-proxy.jc-bose.workers.dev/AGENTS.md) · [SKILL.md](https://orbital-assets-proxy.jc-bose.workers.dev/skills/orbital-assets/SKILL.md)

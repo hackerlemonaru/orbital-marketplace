@@ -1,0 +1,11 @@
+name = "orbital-assets-proxy"
+main = "src/worker.js"
+compatibility_date = "2026-11-19"
+
+[[r2_buckets]]
+binding = "ASSETS"
+bucket_name = "jc-bose"
+
+# Secrets are injected only at deploy time; never store them in this file.
+# ASSET_SIGNING_KEY = HMAC key for short-lived premium download URLs
+# ADMIN_TOKEN       = bearer token for the /sign endpoint

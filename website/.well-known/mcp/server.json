@@ -7,11 +7,11 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://orbital.example/mcp"
+      "url": "https://orbital-assets-proxy.jc-bose.workers.dev/mcp"
     }
   ],
   "_meta": {
     "io.orbital/protocolVersion": "2026-07-28",
-    "io.orbital/rateLimits": "https://orbital.example/docs/agent-rate-limits.md"
+    "io.orbital/rateLimits": "https://orbital-assets-proxy.jc-bose.workers.dev/docs/agent-rate-limits.md"
   }
 }

@@ -4,19 +4,19 @@
   "version": "1.0.0",
   "supportedInterfaces": [
     {
-      "url": "https://orbital.example/mcp",
+      "url": "https://orbital-assets-proxy.jc-bose.workers.dev/mcp",
       "protocolBinding": "JSONRPC",
       "protocolVersion": "2026-07-28"
     },
     {
-      "url": "https://orbital.example/v1",
+      "url": "https://orbital-assets-proxy.jc-bose.workers.dev/v1",
       "protocolBinding": "HTTP+JSON",
       "protocolVersion": "1.0"
     }
   ],
   "provider": {
     "organization": "ORBITAL",
-    "url": "https://orbital.example"
+    "url": "https://orbital-assets-proxy.jc-bose.workers.dev"
   },
   "capabilities": {
     "streaming": true,

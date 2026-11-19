@@ -12,13 +12,25 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
+      - name: Install Python deps
+        run: python3 -m pip install --quiet requests
       - name: Validate licence gate
         run: python3 scripts/validate_assets.py
       - name: Regenerate storefront + agent files
         run: python3 scripts/build_website.py
       - name: Sync site + agent files to R2
+        if: ${{ secrets.CF_API_TOKEN != '' && secrets.CF_ACCOUNT_ID != '' && secrets.CF_R2_BUCKET != '' }}
         env:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_R2_BUCKET: ${{ secrets.CF_R2_BUCKET }}
         run: python3 scripts/r2_sync_site.py
+      - name: Deploy R2 Worker proxy
+        if: ${{ secrets.CF_API_TOKEN != '' && secrets.CF_ACCOUNT_ID != '' && secrets.CF_R2_BUCKET != '' && secrets.CF_WORKER_SIGNING_KEY != '' && secrets.CF_WORKER_ADMIN_TOKEN != '' }}
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_R2_BUCKET: ${{ secrets.CF_R2_BUCKET }}
+          CF_WORKER_SIGNING_KEY: ${{ secrets.CF_WORKER_SIGNING_KEY }}
+          CF_WORKER_ADMIN_TOKEN: ${{ secrets.CF_WORKER_ADMIN_TOKEN }}
+        run: python3 scripts/deploy_worker.py
