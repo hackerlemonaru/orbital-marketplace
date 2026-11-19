@@ -30,3 +30,10 @@ asset-corpus/
 *.zip
 !seed-assets/**/*.glb
 !seed-assets/**/*.webp
+# small hero assets deliberately served from GitHub raw
+!website/models/**/*.glb
+!website/models/**/*.gltf
+!website/models/**/*.md
+!website/models/**/*.txt
+!website/shaders/**/*.glsl
+!website/shaders/**/*.txt

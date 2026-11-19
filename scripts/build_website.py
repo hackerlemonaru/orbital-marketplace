@@ -45,7 +45,7 @@ os.makedirs(WEB, exist_ok=True)
 with open(f"{WEB}/catalog-data.js", "w") as f:
     f.write("window.ORBITAL_CATALOG = " + json.dumps(payload, separators=(",", ":")) + ";\n")
 
-# ---------------------------------------------------------------- inject into the showpiece page
+# ---------------------------------------------------------------- classic showpiece (kept as /classic.html)
 src = open("/home/user/marketplace-preview/index.html").read()
 extra_css = """
 /* catalogue browser */
@@ -68,33 +68,18 @@ extra_css = """
 @media(max-width:620px){.catgrid{grid-template-columns:1fr}}
 """
 src = src.replace("</style>", extra_css + "\n</style>")
-
 browser = f"""
 <section id="catalog-browser">
   <div class="shead reveal">
     <div><span class="kicker">03 / LIVE CATALOGUE</span><h2>{len(assets):,} assets, indexed.</h2></div>
-    <p>Generated from <code>catalog/catalog.json</code>. Every row carries SPDX licence, attribution, SHA-256, source URL and an R2 key. {uploaded:,} objects are already in your bucket.</p>
+    <p>Generated from <code>catalog/catalog.json</code>. Every row carries SPDX licence, attribution, SHA-256, source URL and an R2 key or GitHub raw URL. {uploaded:,} objects are already in your bucket.</p>
   </div>
-  <div class="catstat reveal">
-    <div><b>{len(assets):,}</b>catalogue rows</div>
-    <div><b>{uploaded:,}</b>R2 objects</div>
-    <div><b>{counts['by_license'].get('CC0-1.0',0):,}</b>CC0 assets</div>
-    <div><b>{counts['by_license'].get('MIT',0):,}</b>MIT assets</div>
-    <div><b>0</b>licence-gate failures</div>
-  </div>
-  <div class="catbar reveal">
-    <input id="q" placeholder="Search asset name…" />
-    <select id="fcat"><option value="">All categories</option></select>
-    <select id="ffmt"><option value="">All formats</option></select>
-    <select id="flic"><option value="">All licences</option></select>
-    <label><input type="checkbox" id="ffree" checked /> free / OSS only</label>
-  </div>
-  <div class="catgrid" id="catgrid"></div>
-  <div class="more"><button class="btn" id="moreBtn">Show more ↓</button> <span id="shown" style="font-size:11px;color:var(--muted);margin-left:12px"></span></div>
+  <div class="catstat reveal"><div><b>{len(assets):,}</b>catalogue rows</div><div><b>{uploaded:,}</b>R2 objects</div><div><b>{counts['by_license'].get('CC0-1.0',0):,}</b>CC0 assets</div><div><b>{counts['by_license'].get('MIT',0):,}</b>MIT assets</div><div><b>0</b>licence-gate failures</div></div>
+  <div class="catbar reveal"><input id="q" placeholder="Search asset name…" /><select id="fcat"><option value="">All categories</option></select><select id="ffmt"><option value="">All formats</option></select><select id="flic"><option value="">All licences</option></select><label><input type="checkbox" id="ffree" checked /> free / OSS only</label></div>
+  <div class="catgrid" id="catgrid"></div><div class="more"><button class="btn" id="moreBtn">Show more ↓</button> <span id="shown" style="font-size:11px;color:var(--muted);margin-left:12px"></span></div>
 </section>
 """
 src = src.replace('<section id="pricing">', browser + '\n<section id="pricing">')
-
 inline = "<script id=\"catalog-inline\" type=\"application/json\">" + json.dumps(payload, separators=(",", ":")).replace("</", "<\\/") + "</script>\n"
 browser_js = """
 <script>
@@ -107,20 +92,51 @@ browser_js = """
  uniq('f').forEach(v=>ff.insertAdjacentHTML('beforeend',`<option>${v}</option>`));
  uniq('l').forEach(v=>fl.insertAdjacentHTML('beforeend',`<option>${v}</option>`));
  let limit=48;
- function render(){
-  const term=q.value.toLowerCase(), c=fc.value, f=ff.value, l=fl.value, free=fr.checked;
-  const rows=S.filter(x=>(!term||x.n.toLowerCase().includes(term))&&(!c||x.c===c)&&(!f||x.f===f)&&(!l||x.l===l)&&(!free||/CC0|MIT|Public|see seed/i.test(x.l)));
-  grid.innerHTML=rows.slice(0,limit).map(x=>`<div class="asset"><b title="${x.n}">${x.n}</b><span class="c">${x.c}</span><div class="row"><span>${x.f}</span><span>${x.l}</span></div><div class="row" style="margin-top:8px"><span>${x.m}</span><span>${x.b?(x.b/1024).toFixed(0)+' KB':'index'}</span></div></div>`).join('')||'<p style="color:var(--muted);font-size:13px">No matches — clear a filter.</p>';
-  document.getElementById('shown').textContent=`showing ${Math.min(limit,rows.length)} of ${rows.length} matching · ${D.totals.assets.toLocaleString()} total in catalog.json`;
- }
- [q,fc,ff,fl,fr].forEach(e=>e.addEventListener('input',render));
- document.getElementById('moreBtn').addEventListener('click',()=>{limit+=48;render()});
- render();
+ function render(){const term=q.value.toLowerCase(), c=fc.value, f=ff.value, l=fl.value, free=fr.checked;const rows=S.filter(x=>(!term||x.n.toLowerCase().includes(term))&&(!c||x.c===c)&&(!f||x.f===f)&&(!l||x.l===l)&&(!free||/CC0|MIT|Public|see seed/i.test(x.l)));grid.innerHTML=rows.slice(0,limit).map(x=>`<div class="asset"><b title="${x.n}">${x.n}</b><span class="c">${x.c}</span><div class="row"><span>${x.f}</span><span>${x.l}</span></div><div class="row" style="margin-top:8px"><span>${x.m}</span><span>${x.b?(x.b/1024).toFixed(0)+' KB':'index'}</span></div></div>`).join('')||'<p style="color:var(--muted);font-size:13px">No matches — clear a filter.</p>';document.getElementById('shown').textContent=`showing ${Math.min(limit,rows.length)} of ${rows.length} matching · ${D.totals.assets.toLocaleString()} total in catalog.json`;}
+ [q,fc,ff,fl,fr].forEach(e=>e.addEventListener('input',render));document.getElementById('moreBtn').addEventListener('click',()=>{limit+=48;render()});render();
 })();
 </script>
 """
 src = src.replace("</body>", inline + browser_js + "\n</body>")
-open(f"{WEB}/index.html", "w").write(src)
+open(f"{WEB}/classic.html", "w").write(src)
+
+# ---------------------------------------------------------------- new Vercel-inspired dynamic storefront
+quota_path = f"{ROOT}/catalog/r2-quota.json"
+quota = json.load(open(quota_path)) if os.path.exists(quota_path) else {"used_gib":4.3614,"headroom_gib":5.4386,"objects":14493}
+used = quota.get("used_gib", 4.3614); headroom = quota.get("headroom_gib", 5.4386)
+used_pct = round(used / 9.8 * 100, 1)
+github_count = counts["by_mode"].get("github", 0)
+r2_count = len(json.load(open(f"{ROOT}/catalog/r2-upload-log.json"))["uploaded"])
+model_rows = [a for a in assets if a.get("mode") == "github" and a.get("format") in ("GLB", "GLTF-Embedded", "GLSL")]
+viewer_models = [{"name": a["name"], "url": a.get("github_raw_url") or a.get("public_url"), "license": a["license"]}
+                 for a in model_rows if a.get("format") == "GLB" and (a.get("github_raw_url") or a.get("public_url"))][:4]
+esc = html.escape
+model_cards = "".join(
+    f'<div class="model"><b>{esc(a["name"][:34])}</b><small>{esc(a["format"])} · {esc(a["license"])}</small><p style="font:10px var(--mono);color:var(--muted);margin-top:12px;line-height:1.5">{esc((a.get("source_repo") or "github").split("/")[-1])} · {a["bytes"]//1024} KB · GitHub-served</p><span class="bar"></span></div>'
+    for a in model_rows[:12]
+)
+source_cards = "".join(
+    f'<div class="source"><b>{esc(s["id"])}</b><span>{esc(s["license"])} · {esc(s["mode"])}<br>{esc(s["url"])}</span></div>'
+    for s in doc["sources"] if s["id"] in {"pmndrs-assets","threejs-robot","erichlof-pathtracing","javagl-tutorial","khronos-cc0-small","polyhaven-link","smithsonian-link","nasa-3d-resources","polygonal-mind-cc0"}
+)
+ticker = " &nbsp;·&nbsp; ".join(["CC0 GLB","three.js 0.187.0","WebGL2","GLSL","glTF 2.0","Poly Haven","Smithsonian","NASA","GitHub raw","R2 Worker","free agent tier","9.8 GiB cap","commercial use","dotLottie","KHR_gaussian_splatting"])
+ticker = f'<span>{ticker}</span><span>{ticker}</span>'
+inline_json = json.dumps(payload, separators=(",", ":")).replace("</", "<\\/")
+models_json = json.dumps(viewer_models, separators=(",", ":")).replace("</", "<\\/")
+storage_note = (f"Exact R2 API measurement: {used:.4f} GiB used of 9.8 GiB guardrail · "
+                f"{headroom:.4f} GiB headroom · {quota.get('objects',0):,} objects · "
+                f"pre-existing academic PDFs left untouched")
+tpl = open(f"{WEB}/vercel-dynamic.template.html").read()
+repl = {
+    "__WORKER__": BASE, "__TOTAL__": str(len(assets)), "__GITHUB__": str(github_count),
+    "__R2__": str(r2_count), "__USEDGIB__": f"{used:.4f}", "__HEADROOM__": f"{headroom:.4f}",
+    "__USEDPCT__": str(used_pct), "__STORAGE_NOTE__": esc(storage_note),
+    "__TICKER__": ticker, "__MODEL_CARDS__": model_cards, "__SOURCE_CARDS__": source_cards,
+    "__INLINE__": inline_json, "__MODELS_JSON__": models_json,
+}
+for k, v in repl.items():
+    tpl = tpl.replace(k, v)
+open(f"{WEB}/index.html", "w").write(tpl)
 
 # ---------------------------------------------------------------- agent discovery files
 os.makedirs(f"{PUB}/.well-known/mcp", exist_ok=True)

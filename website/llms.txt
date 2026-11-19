@@ -5,7 +5,7 @@
 All endpoints are rate limited; read /docs/agent-rate-limits.md before bulk access. Free tier: search, metadata, licence, watermarked previews, install snippets. Paid file downloads require an entitlement.
 
 ## Catalogue
-- [Catalogue JSON](https://orbital-assets-proxy.jc-bose.workers.dev/catalog.json): 8,647 rows with SPDX licence, SHA-256, source URL, R2 key
+- [Catalogue JSON](https://orbital-assets-proxy.jc-bose.workers.dev/catalog.json): 8,692 rows with SPDX licence, SHA-256, source URL, R2 key
 - [Category index](https://orbital-assets-proxy.jc-bose.workers.dev/catalog.md): 8 families, 66 subcategories
 - [Format & performance spec](https://orbital-assets-proxy.jc-bose.workers.dev/docs/formats.md): GLB/KTX2, dotLottie, Rive, TSL/WGSL
 - [Licence matrix](https://orbital-assets-proxy.jc-bose.workers.dev/docs/licenses.md): CC0 / MIT / MIT-0 / CC-BY + attribution rules

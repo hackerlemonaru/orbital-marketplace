@@ -18,6 +18,13 @@ jobs:
         run: python3 scripts/validate_assets.py
       - name: Regenerate storefront + agent files
         run: python3 scripts/build_website.py
+      - name: R2 quota guard
+        if: ${{ secrets.CF_API_TOKEN != '' && secrets.CF_ACCOUNT_ID != '' && secrets.CF_R2_BUCKET != '' }}
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_R2_BUCKET: ${{ secrets.CF_R2_BUCKET }}
+        run: python3 scripts/r2_quota.py
       - name: Sync site + agent files to R2
         if: ${{ secrets.CF_API_TOKEN != '' && secrets.CF_ACCOUNT_ID != '' && secrets.CF_R2_BUCKET != '' }}
         env:

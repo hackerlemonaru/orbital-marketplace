@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>ORBITAL — spatial assets, shipped</title>
+<meta name="description" content="A Vercel-inspired, super-dynamic storefront for web-native 3D, motion, shader and UI assets."/>
+<style>
+:root{--bg:#050505;--ink:#fafafa;--muted:#8b8b8b;--line:rgba(255,255,255,.12);--panel:rgba(255,255,255,.035);--accent:#fff;--glow1:#5b8cff;--glow2:#b45cff;--glow3:#00e5c0;--mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;--sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button,input,select{font:inherit}::selection{background:#fff;color:#000}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:-3;display:block}
+.grid-bg{position:fixed;inset:0;z-index:-2;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(circle at 50% 30%,#000 0%,transparent 72%);opacity:.34;pointer-events:none}
+.noise{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.cursor{position:fixed;width:12px;height:12px;border:1px solid #fff;border-radius:50%;pointer-events:none;z-index:99;mix-blend-mode:difference;transition:width .2s,height .2s,background .2s;transform:translate(-50%,-50%)}
+.cursor.big{width:46px;height:46px;background:rgba(255,255,255,.14)}
+nav{position:fixed;top:0;left:0;right:0;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;border-bottom:1px solid var(--line);background:rgba(5,5,5,.72);backdrop-filter:blur(18px);z-index:50}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:-.03em;font-size:15px}
+.tri{width:20px;height:18px;background:#fff;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.navlinks{display:flex;gap:26px;font-size:12px;color:var(--muted);font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em}
+.navlinks a:hover{color:#fff}.navlinks .live{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#fff;border-radius:999px;font-size:12px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em;cursor:pointer;transition:transform .2s,border-color .2s,background .2s}
+.btn:hover{border-color:#fff;background:rgba(255,255,255,.1);transform:translateY(-2px)}
+.btn.primary{background:#fff;color:#000;border-color:#fff;font-weight:700}.btn.primary:hover{background:#eaeaea}
+.wrap{width:min(1240px,90vw);margin:0 auto}
+.hero{min-height:100svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:4vw;padding:110px 0 70px;position:relative}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:10px}
+.kicker:before{content:"";width:24px;height:1px;background:#fff}
+h1{font-size:clamp(54px,8vw,112px);line-height:.9;letter-spacing:-.075em;margin:24px 0 22px;font-weight:800}
+h1 .grad{background:linear-gradient(92deg,#fff 10%,var(--glow1) 40%,var(--glow2) 68%,var(--glow3) 92%);-webkit-background-clip:text;background-clip:text;color:transparent;animation:shift 9s ease-in-out infinite alternate}
+@keyframes shift{to{filter:hue-rotate(45deg)}}
+.lede{font-size:clamp(15px,1.5vw,19px);line-height:1.6;color:#bdbdbd;max-width:600px;margin:0 0 34px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.stats{display:flex;gap:34px;margin-top:54px;flex-wrap:wrap}
+.stat b{display:block;font-size:26px;letter-spacing:-.04em}.stat span{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.orb-wrap{position:relative;height:min(62vw,560px);display:grid;place-items:center}
+.orb{width:min(36vw,420px);aspect-ratio:1;border-radius:50%;position:relative;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.9),rgba(91,140,255,.34) 18%,rgba(180,92,255,.16) 42%,transparent 68%);box-shadow:inset 0 0 80px rgba(255,255,255,.12),0 0 120px rgba(91,140,255,.18);animation:float 7s ease-in-out infinite}
+.orb:before,.orb:after{content:"";position:absolute;inset:-9%;border:1px solid rgba(255,255,255,.18);border-radius:50%;transform:rotateX(68deg) rotateZ(0deg);animation:spin 14s linear infinite}
+.orb:after{inset:-20%;border-color:rgba(180,92,255,.18);animation-duration:22s;animation-direction:reverse}
+.cube{position:absolute;width:130px;height:130px;border:1px solid rgba(255,255,255,.45);transform-style:preserve-3d;animation:cubespin 18s linear infinite}
+.cube i{position:absolute;inset:0;border:1px solid rgba(255,255,255,.22);transform:translateZ(65px)}.cube i:nth-child(2){transform:rotateY(90deg) translateZ(65px)}.cube i:nth-child(3){transform:rotateX(90deg) translateZ(65px)}
+@keyframes float{50%{transform:translateY(-18px) scale(1.02)}}@keyframes spin{to{transform:rotateX(68deg) rotateZ(360deg)}}@keyframes cubespin{to{transform:rotateX(360deg) rotateY(720deg)}}
+#viewer{position:absolute;inset:8% 4%;border:1px solid var(--line);border-radius:24px;background:rgba(8,8,10,.55);overflow:hidden;box-shadow:0 30px 100px rgba(0,0,0,.5)}
+#viewer canvas{display:block;width:100%;height:100%}
+.viewer-tag{position:absolute;left:14px;bottom:14px;font:10px var(--mono);text-transform:uppercase;letter-spacing:.12em;color:#fff;background:rgba(0,0,0,.55);padding:8px 12px;border:1px solid var(--line);border-radius:999px;z-index:2}
+.viewer-switch{position:absolute;right:14px;top:14px;display:flex;gap:6px;z-index:2}.viewer-switch button{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:rgba(0,0,0,.55);color:#fff;cursor:pointer;font:10px var(--mono)}
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);padding:14px 0}
+.ticker div{display:inline-block;animation:marquee 28s linear infinite}.ticker span{margin:0 34px}@keyframes marquee{to{transform:translateX(-50%)}}
+section{padding:100px 0;border-bottom:1px solid var(--line)}
+.shead{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:42px}.shead h2{font-size:clamp(34px,5vw,64px);letter-spacing:-.06em;line-height:.95;margin:14px 0 0}.shead p{max-width:440px;color:var(--muted);font-size:14px;line-height:1.65;margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{border:1px solid var(--line);background:var(--panel);border-radius:18px;padding:24px;min-height:180px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s,background .3s}
+.card:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.07)}
+.card:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(91,140,255,.2),transparent 70%);right:-80px;top:-80px;pointer-events:none}
+.card .num{font:10px var(--mono);color:var(--muted);letter-spacing:.12em}.card h3{font-size:20px;letter-spacing:-.03em;margin:34px 0 10px}.card p{font-size:13px;line-height:1.6;color:#aaa;margin:0}
+.tag{display:inline-block;font:10px var(--mono);text-transform:uppercase;letter-spacing:.1em;border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:#d6d6d6;margin-top:14px}
+.model-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.model{border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025);padding:16px;min-height:132px;transition:.25s;position:relative;overflow:hidden}
+.model:hover{border-color:#fff;transform:translateY(-3px)}.model b{display:block;font-size:13px;margin-bottom:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.model small{font:10px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.model .bar{position:absolute;left:0;bottom:0;height:2px;background:linear-gradient(90deg,var(--glow1),var(--glow2),var(--glow3));width:0;transition:width .5s}.model:hover .bar{width:100%}
+.source-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.source{border:1px solid var(--line);border-radius:14px;padding:18px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.01))}
+.source b{font-size:13px}.source span{display:block;font:10px var(--mono);color:var(--muted);margin-top:8px;line-height:1.5}
+.storage{display:grid;grid-template-columns:1fr 1.4fr;gap:30px;align-items:center}
+.meter{height:14px;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:rgba(255,255,255,.03)}.meter i{display:block;height:100%;background:linear-gradient(90deg,#fff,var(--glow1),var(--glow2));width:44.5%}
+.storage small{font:11px var(--mono);color:var(--muted);line-height:1.7;display:block;margin-top:12px}
+.catbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}.catbar input,.catbar select{background:rgba(255,255,255,.04);border:1px solid var(--line);color:#fff;padding:11px 14px;border-radius:10px;font-size:12px;outline:none;min-width:150px}.catbar label{display:inline-flex;align-items:center;gap:8px;font-size:11px;color:var(--muted);padding:0 8px;font-family:var(--mono)}
+.catgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-height:520px;overflow:auto;padding-right:6px}.asset{border:1px solid var(--line);border-radius:12px;padding:14px;background:rgba(255,255,255,.025);transition:.25s}.asset:hover{border-color:#fff;transform:translateY(-2px)}.asset b{font-size:12px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.asset .c{font-size:10px;color:var(--muted);margin:6px 0 10px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.asset .row{display:flex;justify-content:space-between;gap:8px;font:9px var(--mono);text-transform:uppercase;letter-spacing:.06em}.asset .row span:first-child{color:#fff}.asset .row span:last-child{color:var(--muted)}
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.price{border:1px solid var(--line);border-radius:18px;padding:28px;background:var(--panel)}.price.featured{background:#fff;color:#000;border-color:#fff}.price h3{margin:0 0 12px;font-size:18px}.price .amt{font-size:44px;font-weight:800;letter-spacing:-.06em;margin:10px 0 20px}.price ul{list-style:none;padding:0;margin:0 0 24px;font-size:12px;line-height:2;color:inherit;opacity:.78}
+footer{padding:60px 0 90px;color:var(--muted);font:11px var(--mono);text-transform:uppercase;letter-spacing:.1em}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.reveal.on{opacity:1;transform:none}
+@media(max-width:1000px){.hero{grid-template-columns:1fr;padding-top:100px}.orb-wrap{height:420px}.cards,.pricing{grid-template-columns:1fr 1fr}.model-grid,.source-grid,.catgrid{grid-template-columns:1fr 1fr}.storage{grid-template-columns:1fr}}
+@media(max-width:620px){.navlinks{display:none}.cards,.pricing,.model-grid,.source-grid,.catgrid{grid-template-columns:1fr}.shead{display:block}.shead p{margin-top:18px}section{padding:70px 0}.orb-wrap{height:340px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+<script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.187.0/examples/jsm/"}}
+</script>
+</head>
+<body>
+<canvas id="bg"></canvas><div class="grid-bg"></div><div class="noise"></div><div class="cursor" id="cursor"></div>
+<nav><a class="brand" href="#top"><span class="tri"></span> ORBITAL</a><div class="navlinks"><a href="#models">Models</a><a href="#sources">Sources</a><a href="#catalog">Catalog</a><a href="#pricing">Pricing</a><a class="live" href="__WORKER__/health">● Live</a></div><a class="btn primary" href="#catalog">Explore →</a></nav>
+<div class="wrap" id="top">
+  <header class="hero">
+    <div>
+      <div class="kicker">Spatial asset infrastructure / 2026</div>
+      <h1>Ship the<br><span class="grad">impossible.</span></h1>
+      <p class="lede">GLB, glTF, Gaussian splats, GLSL, dotLottie and UI decoration — indexed for humans and agents, served from GitHub + Cloudflare R2, with entitlement-gated premium downloads.</p>
+      <div class="ctas"><a class="btn primary magnetic" href="#catalog">Browse catalogue →</a><a class="btn magnetic" href="__WORKER__/llms.txt">Agent endpoint ↗</a></div>
+      <div class="stats">
+        <div class="stat"><b data-count="__TOTAL__">0</b><span>catalogue rows</span></div>
+        <div class="stat"><b data-count="__GITHUB__">0</b><span>GitHub-served</span></div>
+        <div class="stat"><b data-count="__R2__">0</b><span>R2 objects</span></div>
+        <div class="stat"><b>__USEDGIB__ GiB</b><span>R2 used</span></div>
+      </div>
+    </div>
+    <div class="orb-wrap">
+      <div class="orb"></div><div class="cube"><i></i><i></i><i></i></div>
+      <div id="viewer"><div class="viewer-switch" id="modelSwitch"></div><div class="viewer-tag" id="viewerTag">three.js · WebGL fallback ready</div></div>
+    </div>
+  </header>
+</div>
+<div class="ticker"><div>__TICKER__</div></div>
+<div class="wrap">
+  <section id="models">
+    <div class="shead reveal"><div><div class="kicker">01 / HERO MODELS</div><h2>Real GLBs, served from GitHub.</h2></div><p>CC0 and per-model-verified assets committed under <code>website/models/</code>. The optional viewer uses pinned <code>three@0.187.0</code>; a WebGL2 shader and CSS fallback keep the page alive when CDNs are blocked.</p></div>
+    <div class="model-grid">__MODEL_CARDS__</div>
+  </section>
+  <section id="sources">
+    <div class="shead reveal"><div><div class="kicker">02 / DEEP SOURCES</div><h2>Commercial-safe, dug deeper.</h2></div><p>We verified licences before ingestion. Adobe/Mixamo/Substance 3D and mixed-licence example bundles were excluded because standalone redistribution is restricted.</p></div>
+    <div class="source-grid">__SOURCE_CARDS__</div>
+  </section>
+  <section id="storage">
+    <div class="shead reveal"><div><div class="kicker">03 / STORAGE GUARDRAIL</div><h2>9.8 GiB. Strictly under.</h2></div><p>Exact bucket usage is measured by paginating the R2 objects API. New small hero assets go to GitHub; large binaries stay in R2 or remain link-only.</p></div>
+    <div class="storage reveal">
+      <div><div class="meter"><i style="width:__USEDPCT__%"></i></div><small>__STORAGE_NOTE__</small></div>
+      <div class="cards"><div class="card"><span class="num">R2</span><h3>__USEDGIB__ / 9.8 GiB</h3><p>__HEADROOM__ GiB headroom. <code>scripts/r2_quota.py</code> fails CI if the cap is reached.</p><span class="tag">exact API measurement</span></div><div class="card"><span class="num">GITHUB</span><h3>__GITHUB__ files</h3><p>Small GLBs, glTF primitives and GLSL shaders served from <code>raw.githubusercontent.com</code>.</p><span class="tag">repo &lt; 1 GB guidance</span></div><div class="card"><span class="num">AGENTS</span><h3>Free read-only</h3><p>llms.txt, OpenAPI, agent card, MCP server card, SKILL.md and rate-limit docs stay public.</p><span class="tag">paid downloads gated</span></div></div>
+    </div>
+  </section>
+  <section id="catalog">
+    <div class="shead reveal"><div><div class="kicker">04 / LIVE CATALOGUE</div><h2>__TOTAL__ assets, indexed.</h2></div><p>Generated from <code>catalog/catalog.json</code>. Every row carries SPDX licence, attribution, SHA-256, source URL and either a GitHub raw URL or an R2 key.</p></div>
+    <div class="catbar reveal"><input id="q" placeholder="Search asset name…"/><select id="fcat"><option value="">All categories</option></select><select id="ffmt"><option value="">All formats</option></select><select id="flic"><option value="">All licences</option></select><label><input type="checkbox" id="ffree" checked/> free / OSS only</label></div>
+    <div class="catgrid" id="catgrid"></div><div style="margin-top:16px"><button class="btn" id="moreBtn">Show more ↓</button> <span id="shown" style="font:10px var(--mono);color:var(--muted);margin-left:12px"></span></div>
+  </section>
+  <section id="pricing">
+    <div class="shead reveal"><div><div class="kicker">05 / HYBRID MONETISATION</div><h2>Free, per-item, plans.</h2></div><p>Illustrative pricing from the earlier plan. Free read-only agents; paid downloads require an entitlement token.</p></div>
+    <div class="pricing"><div class="price"><h3>Explorer</h3><div class="amt">$0</div><ul><li>Agent search + metadata</li><li>Watermarked previews</li><li>Free OSS / CC0 items</li><li>Install snippets</li></ul><a class="btn" href="#catalog">Start free</a></div><div class="price featured"><h3>Studio</h3><div class="amt">$29<span style="font-size:14px">/mo</span></div><ul><li>120 credits / month</li><li>Premium per-item downloads</li><li>Commercial licences</li><li>Priority agent quota</li></ul><a class="btn primary magnetic" href="#catalog">Get Studio →</a></div><div class="price"><h3>Per item</h3><div class="amt">from $9</div><ul><li>One-time purchase</li><li>Personal / Commercial / Extended</li><li>SHA-256 + provenance</li><li>Short-lived signed URL</li></ul><a class="btn" href="#catalog">Browse items</a></div></div>
+  </section>
+</div>
+<footer><div class="wrap footer-row"><span>ORBITAL / 2026-current web-native asset layer</span><span>__WORKER__</span><span>three.js 0.187.0 · WebGL2 · R2 Worker proxy</span></div></footer>
+<script src="catalog-data.js"></script>
+<script id="catalog-inline" type="application/json">__INLINE__</script>
+<script id="orbital-models" type="application/json">__MODELS_JSON__</script>
+<script>
+(function(){
+ const cur=document.getElementById('cursor');
+ document.addEventListener('pointermove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});
+ document.querySelectorAll('a,button,.card,.model,.asset').forEach(el=>{el.addEventListener('mouseenter',()=>cur.classList.add('big'));el.addEventListener('mouseleave',()=>cur.classList.remove('big'))});
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.12});
+ document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+ document.querySelectorAll('[data-count]').forEach(e=>{const n=+e.dataset.count;let s=0,step=Math.max(1,Math.ceil(n/60));const t=setInterval(()=>{s+=step;if(s>=n){s=n;clearInterval(t)}e.textContent=s.toLocaleString()},18)});
+ // dependency-free WebGL2 animated grid background
+ const c=document.getElementById('bg'),gl=c.getContext('webgl2',{alpha:true,antialias:false});
+ if(gl){const vs=`#version 300 es\nin vec2 p;void main(){gl_Position=vec4(p,0,1)}`;const fs=`#version 300 es\nprecision highp float;out vec4 o;uniform vec2 r;uniform float t;void main(){vec2 uv=(gl_FragCoord.xy/r)*2.-1.;uv.x*=r.x/r.y;float d=length(uv);float a=atan(uv.y,uv.x);float w=sin(a*8.+t*.5)*.5+.5;vec3 col=mix(vec3(.02,.02,.03),vec3(.09,.13,.28),w*(1.-d)*.5);float g=abs(fract(uv.x*4.+t*.06)-.5)*abs(fract(uv.y*4.-t*.04)-.5);col+=vec3(.35,.55,1.)*smoothstep(.48,.5,g)*.06;o=vec4(col,1.)}`;function sh(t,s){const x=gl.createShader(t);gl.shaderSource(x,s);gl.compileShader(x);return x}const pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);gl.useProgram(pr);const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]),gl.STATIC_DRAW);const loc=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);const rt=gl.getUniformLocation(pr,'r'),tt=gl.getUniformLocation(pr,'t');function draw(){c.width=innerWidth;c.height=innerHeight;gl.viewport(0,0,c.width,c.height);gl.uniform2f(rt,c.width,c.height);gl.uniform1f(tt,performance.now()/1000);gl.drawArrays(gl.TRIANGLES,0,6);requestAnimationFrame(draw)}draw()}
+ // catalogue browser
+ const D=JSON.parse(document.getElementById('catalog-inline').textContent),S=D.sample,grid=document.getElementById('catgrid'),q=document.getElementById('q'),fc=document.getElementById('fcat'),ff=document.getElementById('ffmt'),fl=document.getElementById('flic'),fr=document.getElementById('ffree');
+ const uniq=k=>[...new Set(S.map(x=>x[k]).filter(Boolean))].sort();uniq('c').forEach(v=>fc.insertAdjacentHTML('beforeend',`<option>${v}</option>`));uniq('f').forEach(v=>ff.insertAdjacentHTML('beforeend',`<option>${v}</option>`));uniq('l').forEach(v=>fl.insertAdjacentHTML('beforeend',`<option>${v}</option>`));
+ let limit=48;function render(){const term=q.value.toLowerCase(),c=fc.value,f=ff.value,l=fl.value,free=fr.checked;const rows=S.filter(x=>(!term||x.n.toLowerCase().includes(term))&&(!c||x.c===c)&&(!f||x.f===f)&&(!l||x.l===l)&&(!free||/CC0|MIT|Public|see seed/i.test(x.l)));grid.innerHTML=rows.slice(0,limit).map(x=>`<div class="asset"><b title="${x.n}">${x.n}</b><span class="c">${x.c}</span><div class="row"><span>${x.f}</span><span>${x.l}</span></div><div class="row" style="margin-top:8px"><span>${x.m}</span><span>${x.b?(x.b/1024).toFixed(0)+' KB':'index'}</span></div></div>`).join('')||'<p style="color:var(--muted);font-size:13px">No matches — clear a filter.</p>';document.getElementById('shown').textContent=`showing ${Math.min(limit,rows.length)} of ${rows.length} matching · ${D.totals.assets.toLocaleString()} total`} [q,fc,ff,fl,fr].forEach(e=>e.addEventListener('input',render));document.getElementById('moreBtn').addEventListener('click',()=>{limit+=48;render()});render();
+})();
+</script>
+<script type="module">
+// Optional three.js GLB viewer. External CDN is blocked in the in-app preview; the WebGL2/CSS fallback above still renders.
+try{
+ const THREE=await import('three');const {GLTFLoader}=await import('three/addons/loaders/GLTFLoader.js');const {OrbitControls}=await import('three/addons/controls/OrbitControls.js');
+ const models=JSON.parse(document.getElementById('orbital-models').textContent);
+ const host=document.getElementById('viewer'),tag=document.getElementById('viewerTag'),sw=document.getElementById('modelSwitch');
+ const scene=new THREE.Scene();scene.background=null;const cam=new THREE.PerspectiveCamera(38,1,.1,100);cam.position.set(0,.35,2.6);const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));host.prepend(renderer.domElement);
+ scene.add(new THREE.HemisphereLight(0xffffff,0x223355,2.1));const key=new THREE.DirectionalLight(0xffffff,2.4);key.position.set(2,3,2);scene.add(key);const rim=new THREE.PointLight(0x8b5cff,3,8);rim.position.set(-2,1,-1);scene.add(rim);
+ const controls=new OrbitControls(cam,renderer.domElement);controls.enableDamping=true;controls.autoRotate=true;controls.autoRotateSpeed=1.2;
+ let current=null;const loader=new GLTFLoader();
+ async function load(i){const m=models[i];if(!m)return;tag.textContent='loading · '+m.name;try{const g=await loader.loadAsync(m.url);if(current)scene.remove(current);current=g.scene;const box=new THREE.Box3().setFromObject(current),size=box.getSize(new THREE.Vector3()),s=1.6/Math.max(size.x,size.y,size.z||1);current.scale.setScalar(s);const center=box.getCenter(new THREE.Vector3());current.position.sub(center.multiplyScalar(s));scene.add(current);tag.textContent=m.name+' · '+m.license+' · drag to orbit'}catch(e){tag.textContent='CDN blocked · WebGL2 fallback active'}}
+ models.slice(0,4).forEach((m,i)=>{const b=document.createElement('button');b.textContent=i+1;b.title=m.name;b.onclick=()=>load(i);sw.appendChild(b)});
+ function resize(){const r=host.getBoundingClientRect();renderer.setSize(r.width,r.height,false);cam.aspect=r.width/r.height;cam.updateProjectionMatrix()}addEventListener('resize',resize);resize();load(0);
+ (function loop(){requestAnimationFrame(loop);controls.update();renderer.render(scene,cam)})();
+}catch(e){document.getElementById('viewerTag').textContent='WebGL2 + CSS fallback · three.js CDN unavailable'}
+</script>
+</body>
+</html>

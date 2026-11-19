@@ -1,0 +1,30 @@
+{
+  "cap_gib": 9.8,
+  "cap_bytes": 10522669875,
+  "used_bytes": 4683012383,
+  "used_gib": 4.3614,
+  "headroom_bytes": 5839657492,
+  "headroom_gib": 5.4386,
+  "objects": 14493,
+  "pages": 15,
+  "by_first_segment_gib": {
+    "Bachelor of Technology (B.Tech.)": 2.444,
+    "Bachelor of Science (B.Sc.)": 0.4627,
+    "Master of Technology (M.Tech.)": 0.2831,
+    "Master of Science (M.Sc)": 0.2175,
+    "assets": 0.2122,
+    "Master of Business Administration (MBA)": 0.1386,
+    "Bachelor of Arts (B.A.)": 0.1224,
+    "thumbs": 0.1065,
+    "Bachelor of Business Administration (BBA)": 0.0971,
+    "Bachelor of Computer Applications (BCA)": 0.0902,
+    "Master of Arts (M.A.)": 0.0696,
+    "Bachelor of Commerce": 0.0628,
+    "Master of Computer Applications (MCA)": 0.0426,
+    "site": 0.0118,
+    "meta": 0.0003,
+    "avatars": 0.0,
+    "_probe": 0.0
+  },
+  "ok": true
+}

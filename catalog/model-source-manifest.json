@@ -1,0 +1,529 @@
+{
+  "generated": "2026-11-19",
+  "sources_verified": [
+    "pmndrs/assets CC0-1.0",
+    "mrdoob/three.js RobotExpressive CC0-1.0",
+    "erichlof/THREE.js-PathTracing-Renderer CC0-1.0",
+    "javagl/gltfTutorialModels CC0 per README",
+    "KhronosGroup/glTF-Sample-Assets per-model CC0-1.0",
+    "Poly Haven CC0 API link-only"
+  ],
+  "files": [
+    {
+      "source_repo": "mrdoob/three.js",
+      "source_branch": "dev",
+      "source_path": "examples/models/gltf/RobotExpressive/RobotExpressive.glb",
+      "dest": "website/models/threejs-robot-expressive.glb",
+      "bytes": 463988,
+      "sha256": "047f5e5fb3bb6d378bd1df16ca6137f2a596c99b3a1b5690b4020c05aaf6f319"
+    },
+    {
+      "source_repo": "pmndrs/assets",
+      "source_branch": "main",
+      "source_path": "LICENSE",
+      "dest": "website/models/LICENSE-pmndrs-assets.txt",
+      "bytes": 7048,
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    },
+    {
+      "source_repo": "pmndrs/assets",
+      "source_branch": "main",
+      "source_path": "src/models/pmndrs.glb",
+      "dest": "website/models/pmndrs-pmndrs.glb",
+      "bytes": 183684,
+      "sha256": "2f3953019da1feffc9cefbe40dee7ac9283bbe06287d325c72fd605a568e14c3"
+    },
+    {
+      "source_repo": "mrdoob/three.js",
+      "source_branch": "dev",
+      "source_path": "examples/models/gltf/RobotExpressive/README.md",
+      "dest": "website/models/README-threejs-robot.txt",
+      "bytes": 364,
+      "sha256": "14687ac4a51d5e013b0fbc5486dabc743f76c1e37b7ca872af74cfb93115b4b2"
+    },
+    {
+      "source_repo": "erichlof/THREE.js-PathTracing-Renderer",
+      "source_branch": "gh-pages",
+      "source_path": "shaders/BVH_Animated_Model_Fragment.glsl",
+      "dest": "website/shaders/BVH_Animated_Model_Fragment.glsl",
+      "bytes": 31225,
+      "sha256": "93369bdc96d766e5281633a45064d0eac64f39402f42ba7fa09fa807fcb75d5a"
+    },
+    {
+      "source_repo": "pmndrs/assets",
+      "source_branch": "main",
+      "source_path": "src/models/suzi.glb",
+      "dest": "website/models/pmndrs-suzi.glb",
+      "bytes": 354688,
+      "sha256": "871cdfa1ccf93a62d757b370319b6e5db5ed5128a0b6cd498ac286aea1a241fe"
+    },
+    {
+      "source_repo": "erichlof/THREE.js-PathTracing-Renderer",
+      "source_branch": "gh-pages",
+      "source_path": "shaders/Arctic_Circle_Fragment.glsl",
+      "dest": "website/shaders/Arctic_Circle_Fragment.glsl",
+      "bytes": 18133,
+      "sha256": "631b8906ffc279e0a545389736e1ba6da6eba6baec915efcd1863d420f139c0b"
+    },
+    {
+      "source_repo": "pmndrs/assets",
+      "source_branch": "main",
+      "source_path": "src/models/bunny.glb",
+      "dest": "website/models/pmndrs-bunny.glb",
+      "bytes": 136604,
+      "sha256": "ffb1955dcb08371db5b701b8eb9d184cc7b6be8605fd6b497e7370a644c5db2c"
+    },
+    {
+      "source_repo": "erichlof/THREE.js-PathTracing-Renderer",
+      "source_branch": "gh-pages",
+      "source_path": "shaders/Geometry_Showcase_Fragment.glsl",
+      "dest": "website/shaders/Geometry_Showcase_Fragment.glsl",
+      "bytes": 21162,
+      "sha256": "99ac3f5698a54b7f7743361695be022d699711e39dd936693dd7f625f59a93cb"
+    },
+    {
+      "source_repo": "javagl/gltfTutorialModels",
+      "source_branch": "master",
+      "source_path": "TriangleWithoutIndices/glTF-Embedded/TriangleWithoutIndices.gltf",
+      "dest": "website/models/tutorial/TriangleWithoutIndices.gltf",
+      "bytes": 1006,
+      "sha256": "acca1103af635808dd8fbb63f5a06ef2099370af46b8add7c4e060359f27998d"
+    },
+    {
+      "source_repo": "javagl/gltfTutorialModels",
+      "source_branch": "master",
+      "source_path": "Triangle/glTF-Embedded/Triangle.gltf",
+      "dest": "website/models/tutorial/Triangle.gltf",
+      "bytes": 1428,
+      "sha256": "e2907e207d0ee9a5ea5e5ac8f3b86338c650645e2045f3bc84f0875bee3e79d3"
+    },
+    {
+      "source_repo": "javagl/gltfTutorialModels",
+      "source_branch": "master",
+      "source_path": "AnimatedTriangle/glTF-Embedded/AnimatedTriangle.gltf",
+      "dest": "website/models/tutorial/AnimatedTriangle.gltf",
+      "bytes": 2756,
+      "sha256": "ff62d3c9c85acfa035763b0541c6427bcf449dc683bc672391e85321268624a5"
+    },
+    {
+      "source_repo": "erichlof/THREE.js-PathTracing-Renderer",
+      "source_branch": "gh-pages",
+      "source_path": "shaders/Volumetric_Rendering_Fragment.glsl",
+      "dest": "website/shaders/Volumetric_Rendering_Fragment.glsl",
+      "bytes": 14670,
+      "sha256": "7a63521870d8f84b384cd5e34dc87bf22070922f2b889cd2b5903f9ea23e3e1f"
+    },
+    {
+      "source_repo": "erichlof/THREE.js-PathTracing-Renderer",
+      "source_branch": "gh-pages",
+      "source_path": "LICENSE",
+      "dest": "website/shaders/LICENSE-pathtracing.txt",
+      "bytes": 7048,
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/BoxVertexColors/metadata.json",
+      "dest": "asset-corpus/deep-sources/khronos-BoxVertexColors-metadata.json",
+      "bytes": 715,
+      "sha256": "4c3128f4cae21188e2a6aea50cebc29d0c755d58a9e691fbe684ae4812814ce3"
+    },
+    {
+      "source_repo": "javagl/gltfTutorialModels",
+      "source_branch": "master",
+      "source_path": "SimpleMeshes/glTF-Embedded/SimpleMeshes.gltf",
+      "dest": "website/models/tutorial/SimpleMeshes.gltf",
+      "bytes": 1872,
+      "sha256": "aa5bd09649d545f9830d665296bbc59ac3c19de846da670aaaf890734850c22a"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/LightVisibility/metadata.json",
+      "dest": "asset-corpus/deep-sources/khronos-LightVisibility-metadata.json",
+      "bytes": 719,
+      "sha256": "45a1b4ad594b78eeb397acf8e004fbe71a8a0a2e50f4eb5c35d8bc2c46b309b9"
+    },
+    {
+      "source_repo": "javagl/gltfTutorialModels",
+      "source_branch": "master",
+      "source_path": "SimpleOpacity/glTF-Embedded-buffer/SimpleOpacity.gltf",
+      "dest": "website/models/tutorial/SimpleOpacity.gltf",
+      "bytes": 9450,
+      "sha256": "14784e0931acaedeff833413646333b6851a1999a9b90e515d0d80faba38707d"
+    },
+    {
+      "source_repo": "javagl/gltfTutorialModels",
+      "source_branch": "master",
+      "source_path": "Cameras/glTF-Embedded/Cameras.gltf",
+      "dest": "website/models/tutorial/Cameras.gltf",
+      "bytes": 2240,
+      "sha256": "c6399d065734c6420d7adddda1ab8f52dc24cb811ed5bfdd0aec05c0ef8e233e"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/BoxVertexColors/glTF-Binary/BoxVertexColors.glb",
+      "dest": "website/models/khronos-BoxVertexColors.glb",
+      "bytes": 1924,
+      "sha256": "9c48227f33b0ba2fbcf23b98ebf60d1c8ae0c6e6c5281e0aa3cc58affee10382"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/CubeVisibility/metadata.json",
+      "dest": "asset-corpus/deep-sources/khronos-CubeVisibility-metadata.json",
+      "bytes": 717,
+      "sha256": "5884bb50ec7b2bdf4f1e4abb4ed0743d5b7f32e084dea32c30954b8f5fc3be01"
+    },
+    {
+      "source_repo": "javagl/gltfTutorialModels",
+      "source_branch": "master",
+      "source_path": "README.md",
+      "dest": "website/models/tutorial/README.md",
+      "bytes": 3653,
+      "sha256": "468032cf62d1a50b43ef4de18fceb5960d2e95289a9706243685aad0a21ec908"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/AnimatedMorphCube/metadata.json",
+      "dest": "asset-corpus/deep-sources/khronos-AnimatedMorphCube-metadata.json",
+      "bytes": 717,
+      "sha256": "53ec35a6148f1fa25936f092a050d821590f597cc3f67050e1b3a9812be4e572"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/Unicode\u2764\u267bTest/metadata.json",
+      "dest": "asset-corpus/deep-sources/khronos-Unicode_Test-metadata.json",
+      "bytes": 677,
+      "sha256": "97eb3125d8d8d5f402f387053a4dc8c293e2fdc0416a7ad4757dcc4af4ac6b27"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/LightVisibility/glTF-Binary/LightVisibility.glb",
+      "dest": "website/models/khronos-LightVisibility.glb",
+      "bytes": 2940,
+      "sha256": "0295dadb5467f4b24d2ebe255c2957446e83c1eea5510e23f22fcedc96330267"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/SimpleInstancing/metadata.json",
+      "dest": "asset-corpus/deep-sources/khronos-SimpleInstancing-metadata.json",
+      "bytes": 701,
+      "sha256": "393640141df6726895e59ac2029f0f6165d8dfe840619f7a9ee11041e8dc5dc8"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/CubeVisibility/glTF-Binary/CubeVisibility.glb",
+      "dest": "website/models/khronos-CubeVisibility.glb",
+      "bytes": 3284,
+      "sha256": "a4a2863c99bf6f2f008558c995ad176979f920bd235190970fb02e1142faac41"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/InterpolationTest/metadata.json",
+      "dest": "asset-corpus/deep-sources/khronos-InterpolationTest-metadata.json",
+      "bytes": 659,
+      "sha256": "f4615f0cfa501c3d5eb6e40ceed90bf2112b4b478be241fb82e7264f38956e91"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/TextureLinearInterpolationTest/metadata.json",
+      "dest": "asset-corpus/deep-sources/khronos-TextureLinearInterpolationTest-metadata.json",
+      "bytes": 733,
+      "sha256": "e2a39fcd02bb5e440d824f2effcda7500d07d18c787fb42e0e65e01a88c5a0de"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/TextureCoordinateTest/metadata.json",
+      "dest": "asset-corpus/deep-sources/khronos-TextureCoordinateTest-metadata.json",
+      "bytes": 695,
+      "sha256": "c1ba8b8b4d8ba56de8a78e55d0b5eeb6dcf2732842c63a4297af15f57311b512"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/SimpleInstancing/glTF-Binary/SimpleInstancing.glb",
+      "dest": "website/models/khronos-SimpleInstancing.glb",
+      "bytes": 7356,
+      "sha256": "1c9425627481346a8c226118f7000db7cd7f80198e9f54331f8b664d16726f3f"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/AnimatedColorsCube/metadata.json",
+      "dest": "asset-corpus/deep-sources/khronos-AnimatedColorsCube-metadata.json",
+      "bytes": 689,
+      "sha256": "20372c1c50da0ad69004ba56c7c78bb9e5fa4e12159ead7c0abec56f9c52a828"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/Unicode\u2764\u267bTest/glTF-Binary/Unicode\u2764\u267bTest.glb",
+      "dest": "website/models/khronos-Unicode_Test.glb",
+      "bytes": 5488,
+      "sha256": "845271aea314a15d13c27ce2e5ce5b44c6b329c6b6fb93b9403e770bdfd7fbb7"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/TextureEncodingTest/metadata.json",
+      "dest": "asset-corpus/deep-sources/khronos-TextureEncodingTest-metadata.json",
+      "bytes": 689,
+      "sha256": "945f33ecd41d050cfc6c821966567e0f121d4a14931fae9db02ae2e8c23c67b3"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/TextureLinearInterpolationTest/glTF-Binary/TextureLinearInterpolationTest.glb",
+      "dest": "website/models/khronos-TextureLinearInterpolationTest.glb",
+      "bytes": 13468,
+      "sha256": "5a7d79bb138f9f732002a988298b5ba44f614064330e94f6ea8c17e38b998440"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/AnimatedMorphCube/glTF-Binary/AnimatedMorphCube.glb",
+      "dest": "website/models/khronos-AnimatedMorphCube.glb",
+      "bytes": 6752,
+      "sha256": "214ee56160a50dbf22543a1d66dbf860986e87f0efac3d89feac1359d0e6aeab"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/InterpolationTest/glTF-Binary/InterpolationTest.glb",
+      "dest": "website/models/khronos-InterpolationTest.glb",
+      "bytes": 7952,
+      "sha256": "a86eb331b4a083715e75fe19a1f747eac5692d5b9ff120f1eaa457c23ba72bca"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/NodeVisibilityTest/metadata.json",
+      "dest": "asset-corpus/deep-sources/khronos-NodeVisibilityTest-metadata.json",
+      "bytes": 672,
+      "sha256": "33dc9ddf802c2306434471d743074a95cd6cbaad26e38e6abfe91e5c5fa63c74"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/TextureCoordinateTest/glTF-Binary/TextureCoordinateTest.glb",
+      "dest": "website/models/khronos-TextureCoordinateTest.glb",
+      "bytes": 14232,
+      "sha256": "fe75a63a0423c9a682bf46c3045b6328ae9c55abefc9a50adf3ec1d6dc6ea3b9"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/AnimatedColorsCube/glTF-Binary/AnimatedColorsCube.glb",
+      "dest": "website/models/khronos-AnimatedColorsCube.glb",
+      "bytes": 15184,
+      "sha256": "995bb9db5bd011b64bc9fc2235c60e5455e2931e509db5e715b4d20afc5ba71e"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/TextureEncodingTest/glTF-Binary/TextureEncodingTest.glb",
+      "dest": "website/models/khronos-TextureEncodingTest.glb",
+      "bytes": 21612,
+      "sha256": "c2f654bdf918e3cce93db3f8d8c1b008b90d3089e756c9b38149e9306b1338f4"
+    },
+    {
+      "source_repo": "KhronosGroup/glTF-Sample-Assets",
+      "source_branch": "main",
+      "source_path": "Models/NodeVisibilityTest/glTF-Binary/NodeVisibilityTest.glb",
+      "dest": "website/models/khronos-NodeVisibilityTest.glb",
+      "bytes": 25904,
+      "sha256": "05410fe9afbe945caa0e78e88fc83a2ef28fabea5d1d42b8182219fce5f7d833"
+    },
+    {
+      "source_repo": "erichlof/THREE.js-PathTracing-Renderer",
+      "source_branch": "gh-pages",
+      "source_path": "shaders/Ocean_And_Sky_Rendering_Fragment.glsl",
+      "dest": "website/shaders/Ocean_And_Sky_Rendering_Fragment.glsl",
+      "bytes": 33071,
+      "sha256": "ecb128b325de1fccb074accab3461822f78b69c3cae8870a1e39b5cf2cefddda"
+    },
+    {
+      "source_repo": "javagl/gltfTutorialModels",
+      "source_branch": "master",
+      "source_path": "SimpleMaterial/glTF-Embedded-buffer/SimpleMaterial.gltf",
+      "dest": "website/models/tutorial/SimpleMaterial.gltf",
+      "bytes": 2888,
+      "sha256": "74e86440afe8a10ab3739dd0fe45164f56e48e8fa8787131e121d2ca01e07279"
+    },
+    {
+      "source_repo": "javagl/gltfTutorialModels",
+      "source_branch": "master",
+      "source_path": "SimpleTexture/glTF-Embedded-buffer/SimpleTexture.gltf",
+      "dest": "website/models/tutorial/SimpleTexture.gltf",
+      "bytes": 5046,
+      "sha256": "e53029f52e149b5d81504a0b70215e3cfcb288cfd79f5c241f983dc7bd32256c"
+    },
+    {
+      "source_repo": "javagl/gltfTutorialModels",
+      "source_branch": "master",
+      "source_path": "SimpleSkin/glTF-Embedded-buffers/SimpleSkin.gltf",
+      "dest": "website/models/tutorial/SimpleSkin.gltf",
+      "bytes": 7593,
+      "sha256": "8b198538203c7eaafe21f23dd3e0a6d37ce2fb7b891544f6c5e96e29cbdc3a6d"
+    }
+  ],
+  "failures": [],
+  "polyhaven_link_only": [
+    {
+      "id": "ArmChair_01",
+      "name": "Arm Chair 01",
+      "categories": [
+        "furniture",
+        "seating"
+      ],
+      "authors": {
+        "Kirill Sannikov": "All"
+      },
+      "url": "https://polyhaven.com/a/ArmChair_01"
+    },
+    {
+      "id": "BarberShopChair_01",
+      "name": "Barber Shop Chair 01",
+      "categories": [
+        "furniture",
+        "seating"
+      ],
+      "authors": {
+        "Fernando Quinn": "All"
+      },
+      "url": "https://polyhaven.com/a/BarberShopChair_01"
+    },
+    {
+      "id": "Barrel_01",
+      "name": "Barrel_01",
+      "categories": [
+        "industrial",
+        "containers"
+      ],
+      "authors": {
+        "Jorge Camacho": "All"
+      },
+      "url": "https://polyhaven.com/a/Barrel_01"
+    },
+    {
+      "id": "Barrel_02",
+      "name": "Barrel 02",
+      "categories": [
+        "industrial",
+        "containers",
+        "collection: the_shed"
+      ],
+      "authors": {
+        "Jorge Camacho": "All"
+      },
+      "url": "https://polyhaven.com/a/Barrel_02"
+    },
+    {
+      "id": "Camera_01",
+      "name": "Camera 01",
+      "categories": [
+        "props",
+        "electronics"
+      ],
+      "authors": {
+        "Rajil Jose Macatangay": "All"
+      },
+      "url": "https://polyhaven.com/a/Camera_01"
+    },
+    {
+      "id": "CashRegister_01",
+      "name": "Cash Register 01",
+      "categories": [
+        "appliances",
+        "props"
+      ],
+      "authors": {
+        "Joe Seabuhr": "All"
+      },
+      "url": "https://polyhaven.com/a/CashRegister_01"
+    },
+    {
+      "id": "Chandelier_01",
+      "name": "Chandelier 01",
+      "categories": [
+        "lighting",
+        "decorative"
+      ],
+      "authors": {
+        "Kirill Sannikov": "All"
+      },
+      "url": "https://polyhaven.com/a/Chandelier_01"
+    },
+    {
+      "id": "Chandelier_02",
+      "name": "Chandelier 02",
+      "categories": [
+        "lighting"
+      ],
+      "authors": {
+        "Kirill Sannikov": "All"
+      },
+      "url": "https://polyhaven.com/a/Chandelier_02"
+    },
+    {
+      "id": "Chandelier_03",
+      "name": "Chandelier 03",
+      "categories": [
+        "lighting",
+        "decorative"
+      ],
+      "authors": {
+        "Kirill Sannikov": "All"
+      },
+      "url": "https://polyhaven.com/a/Chandelier_03"
+    },
+    {
+      "id": "CheeseBox_01",
+      "name": "CheeseBox_01",
+      "categories": [
+        "props",
+        "containers",
+        "collection: the_shed"
+      ],
+      "authors": {
+        "Gabriel Radi\u0107": "All"
+      },
+      "url": "https://polyhaven.com/a/CheeseBox_01"
+    },
+    {
+      "id": "ClassicConsole_01",
+      "name": "Classic Console 01",
+      "categories": [
+        "furniture",
+        "table"
+      ],
+      "authors": {
+        "Kirill Sannikov": "All"
+      },
+      "url": "https://polyhaven.com/a/ClassicConsole_01"
+    },
+    {
+      "id": "ClassicNightstand_01",
+      "name": "Classic Nightstand 01",
+      "categories": [
+        "furniture",
+        "table"
+      ],
+      "authors": {
+        "Kirill Sannikov": "All"
+      },
+      "url": "https://polyhaven.com/a/ClassicNightstand_01"
+    }
+  ]
+}
