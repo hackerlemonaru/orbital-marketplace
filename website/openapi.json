@@ -1,0 +1,134 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "ORBITAL Asset API",
+    "version": "1.0.0",
+    "description": "Read-only agent API for 3D, motion and UI-decoration assets."
+  },
+  "servers": [
+    {
+      "url": "https://orbital.example/v1"
+    }
+  ],
+  "paths": {
+    "/assets": {
+      "get": {
+        "operationId": "search_assets",
+        "summary": "Search the catalogue",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "license",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "default": 20
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Asset page"
+          },
+          "429": {
+            "description": "Quota exceeded"
+          }
+        }
+      }
+    },
+    "/assets/{asset_id}": {
+      "get": {
+        "operationId": "get_asset",
+        "responses": {
+          "200": {
+            "description": "Asset record"
+          }
+        }
+      }
+    },
+    "/assets/{asset_id}/license": {
+      "get": {
+        "operationId": "get_license",
+        "responses": {
+          "200": {
+            "description": "SPDX + attribution"
+          }
+        }
+      }
+    },
+    "/assets/{asset_id}/preview": {
+      "get": {
+        "operationId": "get_preview",
+        "responses": {
+          "200": {
+            "description": "Watermarked preview URL"
+          }
+        }
+      }
+    },
+    "/assets/{asset_id}/install": {
+      "get": {
+        "operationId": "get_install_snippet",
+        "responses": {
+          "200": {
+            "description": "Install snippet"
+          }
+        }
+      }
+    },
+    "/quota": {
+      "get": {
+        "operationId": "check_quota",
+        "responses": {
+          "200": {
+            "description": "Current quota"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "agentKey": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}

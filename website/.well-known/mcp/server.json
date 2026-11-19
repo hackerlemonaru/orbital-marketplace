@@ -1,0 +1,17 @@
+{
+  "$schema": "https://registry.modelcontextprotocol.io/schema/server.json",
+  "name": "io.orbital/assets",
+  "description": "Read-only ORBITAL asset catalogue MCP server",
+  "version": "1.0.0",
+  "status": "active",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://orbital.example/mcp"
+    }
+  ],
+  "_meta": {
+    "io.orbital/protocolVersion": "2026-07-28",
+    "io.orbital/rateLimits": "https://orbital.example/docs/agent-rate-limits.md"
+  }
+}

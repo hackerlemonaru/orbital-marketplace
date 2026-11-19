@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /api/private/
+
+# As a condition of accessing this website, you agree to abide by the following content signals:
+# (a) If a content-signal = yes, you may collect content for the corresponding use.
+# (b) If a content-signal = no, you may not collect content for the corresponding use.
+# search: building a search index and providing search results
+# ai-input: inputting content into one or more AI models (RAG / grounding)
+# ai-train: training or fine-tuning AI models
+Content-Signal: search=yes, ai-input=yes, ai-train=no

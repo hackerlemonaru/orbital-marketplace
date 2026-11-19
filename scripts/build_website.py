@@ -335,6 +335,15 @@ for rel, content in files.items():
 # copy catalog.json to public for agents
 shutil.copy(f"{ROOT}/catalog/catalog.json", f"{PUB}/catalog.json")
 
+# Static-preview mirror: a Next.js `public/` is served at root, so duplicate the
+# agent files at website/ root too for python http.server / any static host.
+for rel in list(files) + ["catalog.json"]:
+    src = os.path.join(PUB, rel)
+    dst = os.path.join(WEB, rel)
+    if os.path.isfile(src):
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        shutil.copy(src, dst)
+
 print("website/index.html:", os.path.getsize(f"{WEB}/index.html"), "bytes")
 print("catalog-data.js:", os.path.getsize(f"{WEB}/catalog-data.js"), "bytes")
 print("public agent files:", len(files) + 1)

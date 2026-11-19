@@ -1,0 +1,71 @@
+{
+  "name": "ORBITAL Asset Agent",
+  "description": "Search, inspect and license web-native 3D, motion and UI assets.",
+  "version": "1.0.0",
+  "supportedInterfaces": [
+    {
+      "url": "https://orbital.example/mcp",
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "2026-07-28"
+    },
+    {
+      "url": "https://orbital.example/v1",
+      "protocolBinding": "HTTP+JSON",
+      "protocolVersion": "1.0"
+    }
+  ],
+  "provider": {
+    "organization": "ORBITAL",
+    "url": "https://orbital.example"
+  },
+  "capabilities": {
+    "streaming": true,
+    "pushNotifications": false
+  },
+  "securitySchemes": {
+    "agentKey": {
+      "httpAuthSecurityScheme": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "securityRequirements": [
+    {
+      "schemes": {
+        "agentKey": {
+          "list": []
+        }
+      }
+    }
+  ],
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "text/markdown"
+  ],
+  "skills": [
+    {
+      "id": "asset-search",
+      "name": "Search assets",
+      "description": "Find assets by category, format, licence and byte budget.",
+      "tags": [
+        "3d",
+        "motion",
+        "catalog"
+      ]
+    },
+    {
+      "id": "license-check",
+      "name": "Check licence",
+      "description": "Return SPDX licence, attribution and AI-training flag.",
+      "tags": [
+        "rights",
+        "compliance"
+      ]
+    }
+  ]
+}
