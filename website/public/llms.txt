@@ -1,0 +1,23 @@
+# ORBITAL — 3D, motion & UI-decoration asset marketplace
+
+> Browser-ready 3D, shader, motion and UI assets with performance budgets, machine-readable licences and a rate-limited agent API. Free read-only access for agents.
+
+All endpoints are rate limited; read /docs/agent-rate-limits.md before bulk access. Free tier: search, metadata, licence, watermarked previews, install snippets. Paid file downloads require an entitlement.
+
+## Catalogue
+- [Catalogue JSON](https://orbital.example/catalog.json): 8,435 rows with SPDX licence, SHA-256, source URL, R2 key
+- [Category index](https://orbital.example/catalog.md): 8 families, 66 subcategories
+- [Format & performance spec](https://orbital.example/docs/formats.md): GLB/KTX2, dotLottie, Rive, TSL/WGSL
+- [Licence matrix](https://orbital.example/docs/licenses.md): CC0 / MIT / MIT-0 / CC-BY + attribution rules
+
+## Agents
+- [OpenAPI 3.1](https://orbital.example/openapi.json)
+- [MCP server](https://orbital.example/mcp): spec 2026-07-28, Streamable HTTP, OAuth 2.1
+- [Agent card](https://orbital.example/.well-known/agent-card.json)
+- [MCP registry server.json](https://orbital.example/.well-known/mcp/server.json)
+- [Rate limits & 429 contract](https://orbital.example/docs/agent-rate-limits.md)
+- [Product feed (ACP/UCP shape)](https://orbital.example/product-feed.json)
+
+## Optional
+- [Creator submission guide](https://orbital.example/docs/submit.md)
+- [AGENTS.md](https://orbital.example/AGENTS.md) · [SKILL.md](https://orbital.example/skills/orbital-assets/SKILL.md)

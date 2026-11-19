@@ -1,0 +1,94 @@
+{
+  "schema_version": "0.1-draft",
+  "generated": "2026-11-19",
+  "status": "research draft - not yet approved product taxonomy",
+  "positioning": "Web-native marketplace for 3D, motion and website-decoration assets. Differentiator: performance-budgeted, browser-first, and natively readable by AI agents behind metered access.",
+  "format_baseline": {
+    "3d_primary": ["GLB / glTF 2.0", "KTX2 / Basis textures", "Draco or EXT_meshopt_compression"],
+    "3d_secondary": ["USDZ for AR Quick Look", "FBX / OBJ / BLEND as optional source files only", "OpenUSD for complex scene interchange"],
+    "3d_2026_new": ["KHR_gaussian_splatting (ratified 2026-09-03)", "KHR_interactivity", "KHR_node_hoverability / selectability / visibility", "KHR_xmp_json_ld for embedded rights"],
+    "renderers": ["Three.js WebGPURenderer + TSL", "WebGL2 fallback required", "React Three Fiber", "Babylon.js", "PlayCanvas", "model-viewer"],
+    "motion": ["dotLottie .lottie (primary)", "Rive .riv", "GSAP / Motion timelines", "WebM or MP4 with alpha", "CSS / View Transitions / ScrollTimeline"],
+    "motion_legacy_only": ["raw Bodymovin .json", "GIF / APNG", "SMIL"],
+    "code": ["React / Next.js + Tailwind TSX", "plain HTML/CSS/JS", "Webflow / Framer", "shadcn registry item"],
+    "images": ["AVIF", "WebP", "SVG", "PNG fallback"]
+  },
+  "categories": [
+    {
+      "id": "3d-objects",
+      "name": "3D Objects & Models",
+      "priority": "P0",
+      "subcategories": ["Hero product models & 360 viewers", "3D icons & small UI objects", "Abstract shapes, blobs, glass & liquid objects", "Characters, mascots & rigged figures", "Environments, dioramas & virtual showrooms", "Modular kits / kitbash", "Scans & photogrammetry", "3D typography & logos", "Low-poly / stylized packs", "Gaussian splats & radiance fields", "AR / WebXR-ready objects", "LOD packs with 2D poster fallbacks"]
+    },
+    {
+      "id": "3d-scenes",
+      "name": "3D Scenes, Viewers & Interaction Kits",
+      "priority": "P0",
+      "subcategories": ["Three.js / R3F scene templates", "Babylon.js / PlayCanvas / TresJS / model-viewer kits", "Product configurators & turntables", "Scroll-driven 3D storytelling", "Camera, orbit & transition rigs", "Hotspots, annotations & guided tours", "glTF Interactivity behavior graphs", "WebXR / spatial showrooms", "GPU particle & compute-shader effects", "Performance presets (LOD, lazy load, reduced motion)"]
+    },
+    {
+      "id": "materials-shaders",
+      "name": "Materials, Shaders & Lighting",
+      "priority": "P0",
+      "subcategories": ["WGSL / TSL shader packs", "Animated background shaders (aurora, noise, gradient mesh, liquid glass)", "Post-processing (bloom, DoF, grain, chromatic displacement)", "PBR material libraries", "HDRI / environment maps & lighting rigs", "CSS / SVG filter no-JS fallbacks", "GLSL packs (legacy compatibility only)"]
+    },
+    {
+      "id": "motion-2d",
+      "name": "2D Motion & Micro-interactions",
+      "priority": "P0",
+      "subcategories": ["dotLottie animation packs", "Rive state machines & data binding", "Lottie state machines / theme tokens", "Hover, press, toggle & magnetic button packs", "Kinetic typography & text reveals", "Loading, empty, success & error states", "Animated icon sets & SVG motion", "Transparent video loops (WebM / HEVC alpha)", "GSAP / Motion / View Transitions recipes", "Optional UI sound feedback (muted by default)"]
+    },
+    {
+      "id": "ui-decoration",
+      "name": "Website Decoration & UI Components",
+      "priority": "P0",
+      "subcategories": ["Hero sections, bento grids, feature blocks, pricing, navbars, footers", "Backgrounds: gradients, grids, dots, beams, stars, noise, mesh gradients", "Cards: 3D tilt, spotlight border, glass, parallax", "Custom cursors & pointer trails", "Page transitions, reveal masks, scroll progress", "Decorative illustration, stickers, organic shapes, scribbles", "Theme packs, design tokens, variable fonts", "shadcn-registry-compatible animated components"]
+    },
+    {
+      "id": "templates",
+      "name": "Full-Page & Project Templates",
+      "priority": "P1",
+      "subcategories": ["SaaS / AI-product landing pages", "E-commerce product storytelling", "Portfolio & agency sites", "Launch / event microsites", "Docs & marketing site kits", "Framework variants (Next.js, Astro, Webflow, Framer, plain HTML)"]
+    },
+    {
+      "id": "ai-agent-native",
+      "name": "AI-Native & Agent-Ready Assets",
+      "priority": "P1",
+      "subcategories": ["Prompt & generation-recipe packs (seed, params, model version)", "AI-generated asset packs with C2PA provenance + disclosure", "SKILL.md install skills for coding agents", "MCP tool manifests & agent-card snippets", "Design-to-code prompt templates", "Machine-readable license bundles (SPDX + schema.org + XMP)", "Agent-installable component bundles"]
+    },
+    {
+      "id": "bundles",
+      "name": "Bundles, Collections & Services",
+      "priority": "P2",
+      "subcategories": ["Industry kits (SaaS launch, commerce, real estate, events)", "Seasonal / trend collections", "Starter libraries for teams", "Custom asset commissions", "Optimization & conversion services", "Creator storefronts"]
+    }
+  ],
+  "do_not_stock": [
+    {"item": "Flash SWF / FLA / SMIL", "why": "Dead runtimes", "replace_with": "dotLottie / Rive / CSS"},
+    {"item": "GIF or APNG as primary animation", "why": "Heavy, no runtime control", "replace_with": ".lottie / .riv / WebM alpha"},
+    {"item": "Raw Bodymovin .json as primary", "why": "Superseded container", "replace_with": "dotLottie .lottie"},
+    {"item": "@lottiefiles/react-lottie-player", "why": "Deprecated package", "replace_with": "@lottiefiles/dotlottie-react"},
+    {"item": "jQuery plugins / PNG sprite sheets", "why": "Legacy DOM era", "replace_with": "React / Web Components + SVG"},
+    {"item": "FBX / OBJ as primary download", "why": "Not web-runtime friendly", "replace_with": "GLB primary, FBX/OBJ optional source"},
+    {"item": "Uncompressed PNG/JPG textures", "why": "Fails mobile budgets", "replace_with": "KTX2 / Basis / AVIF / WebP"},
+    {"item": "GLSL-only shaders with no WebGPU path", "why": "Single-backend", "replace_with": "TSL / WGSL with GLSL variant"},
+    {"item": "WebGL-only scenes without WebGL2/fallback", "why": "Browser coverage still uneven", "replace_with": "Dual renderer + 2D poster fallback"},
+    {"item": "Scrolljacking, autoplay sound, animation without prefers-reduced-motion", "why": "Accessibility + 2026 anti-pattern", "replace_with": "Purposeful motion with reduced-motion variant"},
+    {"item": "AI-generated assets without disclosure or provenance", "why": "Marketplace policy + legal risk", "replace_with": "'Created with AI' label + C2PA + rights flags"},
+    {"item": "Generic game-engine asset dumps", "why": "Off-positioning vs Fab / Unity / CGTrader", "replace_with": "Web-optimized, budget-labeled assets"}
+  ],
+  "required_asset_fields": ["asset_id", "title", "category_path", "version", "creator_id", "formats[]", "file_size_bytes", "checksum_sha256", "polycount_or_layer_count", "texture_resolution", "lod_variants", "renderer_compat[]", "runtime_dependencies[]", "performance_budget", "reduced_motion_variant", "poster_fallback_url", "preview_urls[]", "license_spdx", "allow_ai_training", "ai_generated", "c2pa_manifest_url", "provenance_sha256", "install_snippet", "tags[]", "price", "updated_at"],
+  "agent_access": {
+    "discovery_files": ["/llms.txt", "/llms-full.txt", "/robots.txt with Content Signals", "/.well-known/agent-card.json", "/.well-known/mcp/server.json", "/AGENTS.md", "/skills/*/SKILL.md", "/openapi.json", "/product-feed.json (ACP/UCP)"],
+    "mcp": {"endpoint": "/mcp", "spec": "2026-07-28", "transport": "Streamable HTTP", "auth": "OAuth 2.1 + scoped agent keys", "tools": ["search_assets", "get_asset", "get_license", "get_preview", "get_install_snippet", "check_quota"], "max_tools": 30},
+    "rate_limit_tiers": {
+      "anonymous_ip": {"search_per_hour": 30, "burst_per_min": 10, "downloads": 0},
+      "free_agent_key": {"requests_per_min": 60, "requests_per_day": 1000, "downloads_per_day": 5, "previews": "watermarked"},
+      "paid_agent_key": {"requests_per_min": 120, "requests_per_day": 50000, "downloads_per_day": 100},
+      "enterprise_verified_bot": {"requests_per_min": 1000, "downloads": "negotiated", "auth": "Web Bot Auth RFC 9421 signature"}
+    },
+    "quota_units": {"search": 1, "preview": 2, "download": 10, "generation": 50},
+    "headers": ["RateLimit-Policy (IETF draft-11)", "RateLimit (IETF draft-11)", "legacy X-RateLimit-* for compatibility", "Retry-After on 429"],
+    "global_guardrails": {"per_agent_per_tool": "60 / 5 min", "per_conversation": "500 / hour", "per_tenant": "10000 / hour", "per_tool_global": "100 rps"}
+  }
+}

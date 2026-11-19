@@ -1,0 +1,24 @@
+name: validate-build-sync
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Validate licence gate
+        run: python3 scripts/validate_assets.py
+      - name: Regenerate storefront + agent files
+        run: python3 scripts/build_website.py
+      - name: Sync site + agent files to R2
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_R2_BUCKET: ${{ secrets.CF_R2_BUCKET }}
+        run: python3 scripts/r2_sync_site.py

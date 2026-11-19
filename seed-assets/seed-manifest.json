@@ -1,0 +1,369 @@
+{
+  "schema_version": "0.1",
+  "generated": "2026-11-19",
+  "verification": "licences checked against upstream LICENSE / README / metadata on 2026-11-19",
+  "policy": "Only CC0-1.0, MIT, MIT-0 and CC-BY-4.0 (with attribution) sources are included. No Commons Clause, no NC, no no-resale licences.",
+  "total_files": 36,
+  "assets": [
+    {
+      "file": "3d-models/prototype-kit-number-double-9.glb",
+      "bytes": 20280,
+      "sha256": "145ca85cf288235319e65a99ba8062b7a6e063311b8353cf1a265b495f0f8020",
+      "source": "https://github.com/Hidencod/tge-assets/blob/main/packs/prototype-kit/number-double-9.glb",
+      "license": "CC0-1.0",
+      "category": "3D Objects & Models",
+      "attribution": "Kenney (kenney.nl)",
+      "note": "Prototype Kit \u00b7 converted to GLB with embedded textures by tge-assets"
+    },
+    {
+      "file": "3d-models/prototype-kit-number-double-9.webp",
+      "bytes": 2418,
+      "sha256": "1afb6b77964e5c6e5cdbad037ca11259163d11c8aabc62befecbee480582c4a3",
+      "source": "https://github.com/Hidencod/tge-assets/blob/main/packs/prototype-kit/thumbs/number-double-9.webp",
+      "license": "CC0-1.0",
+      "category": "3D Objects & Models",
+      "attribution": "Kenney (kenney.nl)",
+      "note": "auto-rendered preview thumbnail"
+    },
+    {
+      "file": "3d-models/platformer-kit-sign.glb",
+      "bytes": 20004,
+      "sha256": "9645e3e829fe9078f743cd8e3ff537af33ff27e8c81bf8ccedd671143fc92c1c",
+      "source": "https://github.com/Hidencod/tge-assets/blob/main/packs/platformer-kit/sign.glb",
+      "license": "CC0-1.0",
+      "category": "3D Objects & Models",
+      "attribution": "Kenney (kenney.nl)",
+      "note": "Platformer Kit \u00b7 converted to GLB with embedded textures by tge-assets"
+    },
+    {
+      "file": "3d-models/platformer-kit-sign.webp",
+      "bytes": 2146,
+      "sha256": "c471d18388d0f96638ff97642963370f9ab0e43f456108a8d8334092ca71b408",
+      "source": "https://github.com/Hidencod/tge-assets/blob/main/packs/platformer-kit/thumbs/sign.webp",
+      "license": "CC0-1.0",
+      "category": "3D Objects & Models",
+      "attribution": "Kenney (kenney.nl)",
+      "note": "auto-rendered preview thumbnail"
+    },
+    {
+      "file": "3d-models/nature-kit-fence-bendcenter.glb",
+      "bytes": 20016,
+      "sha256": "07963bccfd2f69aafdeb5165cfb0b20937cb390b9770a38c9b469ffd0f0dd745",
+      "source": "https://github.com/Hidencod/tge-assets/blob/main/packs/nature-kit/fence-bendcenter.glb",
+      "license": "CC0-1.0",
+      "category": "3D Objects & Models",
+      "attribution": "Kenney (kenney.nl)",
+      "note": "Nature Kit \u00b7 converted to GLB with embedded textures by tge-assets"
+    },
+    {
+      "file": "3d-models/nature-kit-fence-bendcenter.webp",
+      "bytes": 1838,
+      "sha256": "7a1b704ae7e6e459a194f6b55273336a8e2246cf6d1aacb4b0a5588aab03d464",
+      "source": "https://github.com/Hidencod/tge-assets/blob/main/packs/nature-kit/thumbs/fence-bendcenter.webp",
+      "license": "CC0-1.0",
+      "category": "3D Objects & Models",
+      "attribution": "Kenney (kenney.nl)",
+      "note": "auto-rendered preview thumbnail"
+    },
+    {
+      "file": "3d-models/car-kit-debris-spoiler-b.glb",
+      "bytes": 20988,
+      "sha256": "d83ab7191dde78d75bfeace4d8b6b63b77f2446deb92c3010fc4fbeb1d8782d7",
+      "source": "https://github.com/Hidencod/tge-assets/blob/main/packs/car-kit/debris-spoiler-b.glb",
+      "license": "CC0-1.0",
+      "category": "3D Objects & Models",
+      "attribution": "Kenney (kenney.nl)",
+      "note": "Car Kit \u00b7 converted to GLB with embedded textures by tge-assets"
+    },
+    {
+      "file": "3d-models/car-kit-debris-spoiler-b.webp",
+      "bytes": 2372,
+      "sha256": "2002477f2b557b15d7a25e3d4594c5c8729a9827d2ea43d90011b7e09851e44c",
+      "source": "https://github.com/Hidencod/tge-assets/blob/main/packs/car-kit/thumbs/debris-spoiler-b.webp",
+      "license": "CC0-1.0",
+      "category": "3D Objects & Models",
+      "attribution": "Kenney (kenney.nl)",
+      "note": "auto-rendered preview thumbnail"
+    },
+    {
+      "file": "3d-models/city-kit-commercial-detail-parasol-a.glb",
+      "bytes": 21348,
+      "sha256": "67e1d464f379fca5327e0f3de0d3085cd69ed02449f86500f6bac030655adceb",
+      "source": "https://github.com/Hidencod/tge-assets/blob/main/packs/city-kit-commercial/detail-parasol-a.glb",
+      "license": "CC0-1.0",
+      "category": "3D Objects & Models",
+      "attribution": "Kenney (kenney.nl)",
+      "note": "City Kit (Commercial) \u00b7 converted to GLB with embedded textures by tge-assets"
+    },
+    {
+      "file": "3d-models/city-kit-commercial-detail-parasol-a.webp",
+      "bytes": 2224,
+      "sha256": "b0796287acf2d81b2a7617375811b23a5b51fea72c52792f2d9adf17a9c275e3",
+      "source": "https://github.com/Hidencod/tge-assets/blob/main/packs/city-kit-commercial/thumbs/detail-parasol-a.webp",
+      "license": "CC0-1.0",
+      "category": "3D Objects & Models",
+      "attribution": "Kenney (kenney.nl)",
+      "note": "auto-rendered preview thumbnail"
+    },
+    {
+      "file": "3d-models/city-kit-suburban-fence.glb",
+      "bytes": 21476,
+      "sha256": "c667eb91c53f46f726814add04325ea8860fe7fee12b92b4041fb64ba5625fa6",
+      "source": "https://github.com/Hidencod/tge-assets/blob/main/packs/city-kit-suburban/fence.glb",
+      "license": "CC0-1.0",
+      "category": "3D Objects & Models",
+      "attribution": "Kenney (kenney.nl)",
+      "note": "City Kit (Suburban) \u00b7 converted to GLB with embedded textures by tge-assets"
+    },
+    {
+      "file": "3d-models/city-kit-suburban-fence.webp",
+      "bytes": 2318,
+      "sha256": "3a63189613b3337d2be7ec53e7909c1d308ac1d1f3c91f35c6635919c73cae88",
+      "source": "https://github.com/Hidencod/tge-assets/blob/main/packs/city-kit-suburban/thumbs/fence.webp",
+      "license": "CC0-1.0",
+      "category": "3D Objects & Models",
+      "attribution": "Kenney (kenney.nl)",
+      "note": "auto-rendered preview thumbnail"
+    },
+    {
+      "file": "motion/activity.lottie",
+      "bytes": 774,
+      "sha256": "e4f4793a794fa97c8789542aac6a99201a851e9c642dd347a124e4f045bbe65d",
+      "source": "https://github.com/useanimations/react-useanimations/blob/main/icons/activity.json",
+      "license": "MIT",
+      "category": "2D Motion & Micro-interactions",
+      "attribution": "useAnimations (useanimations.com)",
+      "note": "repackaged from MIT Lottie JSON into .lottie container; validate in dotLottie player"
+    },
+    {
+      "file": "motion/alertCircle.lottie",
+      "bytes": 877,
+      "sha256": "7d634e0279d3639ec51d5337f52009cac49711bd8ada031c0c1e2375a2bcf98f",
+      "source": "https://github.com/useanimations/react-useanimations/blob/main/icons/alertCircle.json",
+      "license": "MIT",
+      "category": "2D Motion & Micro-interactions",
+      "attribution": "useAnimations (useanimations.com)",
+      "note": "repackaged from MIT Lottie JSON into .lottie container; validate in dotLottie player"
+    },
+    {
+      "file": "motion/heart.lottie",
+      "bytes": 871,
+      "sha256": "dc1a400af5f847018cf4d0d53c8ec4fa04c72aa51eac31df0227f7db27bb975f",
+      "source": "https://github.com/useanimations/react-useanimations/blob/main/icons/heart.json",
+      "license": "MIT",
+      "category": "2D Motion & Micro-interactions",
+      "attribution": "useAnimations (useanimations.com)",
+      "note": "repackaged from MIT Lottie JSON into .lottie container; validate in dotLottie player"
+    },
+    {
+      "file": "motion/settings.lottie",
+      "bytes": 1387,
+      "sha256": "0917de02ea6cc024dffea1e84e6cbfc209dcb07622c4fc50887d50699e1f4128",
+      "source": "https://github.com/useanimations/react-useanimations/blob/main/icons/settings.json",
+      "license": "MIT",
+      "category": "2D Motion & Micro-interactions",
+      "attribution": "useAnimations (useanimations.com)",
+      "note": "repackaged from MIT Lottie JSON into .lottie container; validate in dotLottie player"
+    },
+    {
+      "file": "motion/star.lottie",
+      "bytes": 795,
+      "sha256": "5be7c1f57db1cbf2ed10cbb7bcf37b5d2c9697b8bb883e064171da5610b17de1",
+      "source": "https://github.com/useanimations/react-useanimations/blob/main/icons/star.json",
+      "license": "MIT",
+      "category": "2D Motion & Micro-interactions",
+      "attribution": "useAnimations (useanimations.com)",
+      "note": "repackaged from MIT Lottie JSON into .lottie container; validate in dotLottie player"
+    },
+    {
+      "file": "motion/download.lottie",
+      "bytes": 1568,
+      "sha256": "e235f4731ae21315f9f53a9968df55a2f1d6327fbae960e80551d73c667a52dc",
+      "source": "https://github.com/useanimations/react-useanimations/blob/main/icons/download.json",
+      "license": "MIT",
+      "category": "2D Motion & Micro-interactions",
+      "attribution": "useAnimations (useanimations.com)",
+      "note": "repackaged from MIT Lottie JSON into .lottie container; validate in dotLottie player"
+    },
+    {
+      "file": "motion/checkmark.lottie",
+      "bytes": 744,
+      "sha256": "6d63f804af69234be7367d9a9a8de8647407ca8c963ab5b1e8107603f4168078",
+      "source": "https://github.com/useanimations/react-useanimations/blob/main/icons/checkmark.json",
+      "license": "MIT",
+      "category": "2D Motion & Micro-interactions",
+      "attribution": "useAnimations (useanimations.com)",
+      "note": "repackaged from MIT Lottie JSON into .lottie container; validate in dotLottie player"
+    },
+    {
+      "file": "motion/loading.lottie",
+      "bytes": 953,
+      "sha256": "cc5e293c24f717abced7ea45fa399c33516c7b8c2b8b7899d9c124288f7bf55d",
+      "source": "https://github.com/useanimations/react-useanimations/blob/main/icons/loading.json",
+      "license": "MIT",
+      "category": "2D Motion & Micro-interactions",
+      "attribution": "useAnimations (useanimations.com)",
+      "note": "repackaged from MIT Lottie JSON into .lottie container; validate in dotLottie player"
+    },
+    {
+      "file": "shaders/tslfx-gradient.ts",
+      "bytes": 812,
+      "sha256": "568c99d67773feb9e68afb01dd13225ce519c55c472e842764e0091a1830e5ff",
+      "source": "https://github.com/verekia/tslfx/blob/main/src/shaders/gradient.ts",
+      "license": "MIT",
+      "category": "Materials, Shaders & Lighting",
+      "attribution": "Verekia / TSLFX",
+      "note": "Three.js Shading Language (TSL); WebGPU + WebGL2 fallback"
+    },
+    {
+      "file": "shaders/tslfx-impact.ts",
+      "bytes": 2782,
+      "sha256": "f60d7a31f5f9b0c2c16c42611c11daae92ba556c2deae34463225d9580649cad",
+      "source": "https://github.com/verekia/tslfx/blob/main/src/shaders/impact.ts",
+      "license": "MIT",
+      "category": "Materials, Shaders & Lighting",
+      "attribution": "Verekia / TSLFX",
+      "note": "Three.js Shading Language (TSL); WebGPU + WebGL2 fallback"
+    },
+    {
+      "file": "shaders/tslfx-dot-noise.ts",
+      "bytes": 1182,
+      "sha256": "1214f3d709c1ac9e498f482e366c5b5eac52cdcd673b4e8f8928ddacb480d315",
+      "source": "https://github.com/verekia/tslfx/blob/main/src/shaders/dot-noise.ts",
+      "license": "MIT",
+      "category": "Materials, Shaders & Lighting",
+      "attribution": "Verekia / TSLFX",
+      "note": "Three.js Shading Language (TSL); WebGPU + WebGL2 fallback"
+    },
+    {
+      "file": "shaders/tslfx-shape.ts",
+      "bytes": 3476,
+      "sha256": "2735d91bd56ebc77cd64e938116319e5f60a3beca0a8e8da949abe364cf04c6f",
+      "source": "https://github.com/verekia/tslfx/blob/main/src/shaders/shape.ts",
+      "license": "MIT",
+      "category": "Materials, Shaders & Lighting",
+      "attribution": "Verekia / TSLFX",
+      "note": "Three.js Shading Language (TSL); WebGPU + WebGL2 fallback"
+    },
+    {
+      "file": "shaders/tslfx-util.ts",
+      "bytes": 706,
+      "sha256": "a904db491b849fb2b384adc1f33c60df0a90690888d99afed0f4414f74a14a79",
+      "source": "https://github.com/verekia/tslfx/blob/main/src/shaders/util.ts",
+      "license": "MIT",
+      "category": "Materials, Shaders & Lighting",
+      "attribution": "Verekia / TSLFX",
+      "note": "Three.js Shading Language (TSL); WebGPU + WebGL2 fallback"
+    },
+    {
+      "file": "ui/uiverse-buttons-vinodjangid07_tiny-walrus-86.html",
+      "bytes": 1541,
+      "sha256": "265428705350972b3f437ea3ccbe5669fdf108b4acb3a411a3780050a9ae100f",
+      "source": "https://github.com/uiverse-io/galaxy/blob/main/Buttons/vinodjangid07_tiny-walrus-86.html",
+      "license": "MIT",
+      "category": "Website Decoration & UI Components",
+      "attribution": "Uiverse.io community creator (see file header)",
+      "note": "standalone HTML+CSS element; attribute original creator from the file header"
+    },
+    {
+      "file": "ui/uiverse-cards-0xnihilism_nasty-husky-13.html",
+      "bytes": 2686,
+      "sha256": "bc89d49272628e59931fdffb2974ad0088e1d2a1813d62b788f6062c584f1562",
+      "source": "https://github.com/uiverse-io/galaxy/blob/main/Cards/0xnihilism_nasty-husky-13.html",
+      "license": "MIT",
+      "category": "Website Decoration & UI Components",
+      "attribution": "Uiverse.io community creator (see file header)",
+      "note": "standalone HTML+CSS element; attribute original creator from the file header"
+    },
+    {
+      "file": "ui/uiverse-patterns-csemszepp_silent-cow-55.html",
+      "bytes": 981,
+      "sha256": "4e9ae696da009e73813fe2bc4def1d1158749f1df900a5d44cd7b193fa2de0ef",
+      "source": "https://github.com/uiverse-io/galaxy/blob/main/Patterns/csemszepp_silent-cow-55.html",
+      "license": "MIT",
+      "category": "Website Decoration & UI Components",
+      "attribution": "Uiverse.io community creator (see file header)",
+      "note": "standalone HTML+CSS element; attribute original creator from the file header"
+    },
+    {
+      "file": "ui/uiverse-loaders-RoninLJY_angry-jellyfish-76.html",
+      "bytes": 1514,
+      "sha256": "0cedf0c907bb25e7f829493ee169f268c356ee43f2c6d975f9d72e3192a4e7c9",
+      "source": "https://github.com/uiverse-io/galaxy/blob/main/loaders/RoninLJY_angry-jellyfish-76.html",
+      "license": "MIT",
+      "category": "Website Decoration & UI Components",
+      "attribution": "Uiverse.io community creator (see file header)",
+      "note": "standalone HTML+CSS element; attribute original creator from the file header"
+    },
+    {
+      "file": "ui/uiverse-notifications-Fujitawa_slimy-vampirebat-16.html",
+      "bytes": 3352,
+      "sha256": "c4295ae9f918f4485babeff46395c4009bcfc8575c7f82ec3379b665bfc2dedb",
+      "source": "https://github.com/uiverse-io/galaxy/blob/main/Notifications/Fujitawa_slimy-vampirebat-16.html",
+      "license": "MIT",
+      "category": "Website Decoration & UI Components",
+      "attribution": "Uiverse.io community creator (see file header)",
+      "note": "standalone HTML+CSS element; attribute original creator from the file header"
+    },
+    {
+      "file": "splats/wolf.spz",
+      "bytes": 1907230,
+      "sha256": "009c97d673d7cf81479b2fcd7016d2f64c751e798737f55d897476425e89adb6",
+      "source": "https://github.com/aws-solutions-library-samples/guidance-for-open-source-3d-reconstruction-toolbox-for-gaussian-splats-on-aws/blob/main/source/Gradio/favorites/wolf.spz",
+      "license": "MIT-0",
+      "category": "3D Objects & Models / Gaussian splats",
+      "attribution": "Amazon Web Services (MIT-0, no attribution required)",
+      "note": "sample .spz splat; convert to KHR_gaussian_splatting GLB before publishing"
+    },
+    {
+      "file": "3d-models/cesium-box-ccby.glb",
+      "bytes": 1664,
+      "sha256": "ed52f7192b8311d700ac0ce80644e3852cd01537e4d62241b9acba023da3d54e",
+      "source": "https://github.com/KhronosGroup/glTF-Sample-Models/blob/master/2.0/Box/glTF-Binary/Box.glb",
+      "license": "CC-BY-4.0",
+      "category": "3D Objects & Models",
+      "attribution": "Cesium / Khronos glTF Sample Models",
+      "note": "CC-BY 4.0 \u2014 attribution is mandatory in listing + asset metadata"
+    },
+    {
+      "file": "licenses/CC0-1.0.txt",
+      "bytes": 510,
+      "sha256": "6913dd72bdc20532b7f02d86469058f45d886c9dabf60831275ed16927aa523b",
+      "source": "see source repository",
+      "license": "CC0-1",
+      "category": "various",
+      "attribution": "respective copyright holders",
+      "note": "verbatim upstream licence text"
+    },
+    {
+      "file": "licenses/MIT-uiverse.txt",
+      "bytes": 1067,
+      "sha256": "7feadcd7a611d37a4546c99f63a162bdf65656137828ebcba92e57dccfa368a4",
+      "source": "see source repository",
+      "license": "MIT-uiverse",
+      "category": "various",
+      "attribution": "respective copyright holders",
+      "note": "verbatim upstream licence text"
+    },
+    {
+      "file": "licenses/MIT-useanimations.txt",
+      "bytes": 1103,
+      "sha256": "8df8d669d974995cd174ca0cd72c7fd5275e0da893f81c3dc2e1fed25c034535",
+      "source": "see source repository",
+      "license": "MIT-useanimations",
+      "category": "various",
+      "attribution": "respective copyright holders",
+      "note": "verbatim upstream licence text"
+    },
+    {
+      "file": "licenses/MIT-tslfx.txt",
+      "bytes": 1064,
+      "sha256": "7b901aa107513756632911f57ac1662817c8ff366ad9fa970a5274a7d49ba0cd",
+      "source": "see source repository",
+      "license": "MIT-tslfx",
+      "category": "various",
+      "attribution": "respective copyright holders",
+      "note": "verbatim upstream licence text"
+    }
+  ]
+}

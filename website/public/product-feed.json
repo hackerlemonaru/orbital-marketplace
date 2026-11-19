@@ -1,0 +1,343 @@
+{
+  "spec": "ACP/UCP-shaped (illustrative)",
+  "version": "2026-11-19",
+  "freshness_target_seconds": 900,
+  "items": [
+    {
+      "id": "tge/prototype-kit/animal-bison",
+      "title": "Animal bison",
+      "description": "3D Objects & Models / Low-poly & stylised packs",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/animal-bison",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/animal-bison#thumb",
+      "title": "Animal bison (preview)",
+      "description": "3D Objects & Models / Previews",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/animal-bison#thumb",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/animal-dog",
+      "title": "Animal dog",
+      "description": "3D Objects & Models / Low-poly & stylised packs",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/animal-dog",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/animal-dog#thumb",
+      "title": "Animal dog (preview)",
+      "description": "3D Objects & Models / Previews",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/animal-dog#thumb",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/animal-horse",
+      "title": "Animal horse",
+      "description": "3D Objects & Models / Low-poly & stylised packs",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/animal-horse",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/animal-horse#thumb",
+      "title": "Animal horse (preview)",
+      "description": "3D Objects & Models / Previews",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/animal-horse#thumb",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/button-floor-round-small",
+      "title": "Button floor round small",
+      "description": "3D Objects & Models / Low-poly & stylised packs",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/button-floor-round-small",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/button-floor-round-small#thumb",
+      "title": "Button floor round small (preview)",
+      "description": "3D Objects & Models / Previews",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/button-floor-round-small#thumb",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/button-floor-round",
+      "title": "Button floor round",
+      "description": "3D Objects & Models / Low-poly & stylised packs",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/button-floor-round",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/button-floor-round#thumb",
+      "title": "Button floor round (preview)",
+      "description": "3D Objects & Models / Previews",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/button-floor-round#thumb",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/button-floor-square-small",
+      "title": "Button floor square small",
+      "description": "3D Objects & Models / Low-poly & stylised packs",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/button-floor-square-small",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/button-floor-square-small#thumb",
+      "title": "Button floor square small (preview)",
+      "description": "3D Objects & Models / Previews",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/button-floor-square-small#thumb",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/button-floor-square",
+      "title": "Button floor square",
+      "description": "3D Objects & Models / Low-poly & stylised packs",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/button-floor-square",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/button-floor-square#thumb",
+      "title": "Button floor square (preview)",
+      "description": "3D Objects & Models / Previews",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/button-floor-square#thumb",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/coin",
+      "title": "Coin",
+      "description": "3D Objects & Models / Low-poly & stylised packs",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/coin",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/coin#thumb",
+      "title": "Coin (preview)",
+      "description": "3D Objects & Models / Previews",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/coin#thumb",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/column-low",
+      "title": "Column low",
+      "description": "3D Objects & Models / Low-poly & stylised packs",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/column-low",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/column-low#thumb",
+      "title": "Column low (preview)",
+      "description": "3D Objects & Models / Previews",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/column-low#thumb",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/column-rounded-low",
+      "title": "Column rounded low",
+      "description": "3D Objects & Models / Low-poly & stylised packs",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/column-rounded-low",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/column-rounded-low#thumb",
+      "title": "Column rounded low (preview)",
+      "description": "3D Objects & Models / Previews",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/column-rounded-low#thumb",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/column-rounded",
+      "title": "Column rounded",
+      "description": "3D Objects & Models / Low-poly & stylised packs",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/column-rounded",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/column-rounded#thumb",
+      "title": "Column rounded (preview)",
+      "description": "3D Objects & Models / Previews",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/column-rounded#thumb",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/column-triangle-low",
+      "title": "Column triangle low",
+      "description": "3D Objects & Models / Low-poly & stylised packs",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/column-triangle-low",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    },
+    {
+      "id": "tge/prototype-kit/column-triangle-low#thumb",
+      "title": "Column triangle low (preview)",
+      "description": "3D Objects & Models / Previews",
+      "price": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "license": "CC0-1.0",
+      "url": "https://orbital.example/assets/tge/prototype-kit/column-triangle-low#thumb",
+      "availability": "in_stock",
+      "ai_generated": false,
+      "allow_ai_training": false
+    }
+  ]
+}

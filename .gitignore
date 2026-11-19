@@ -1,0 +1,32 @@
+# secrets — never commit
+.secrets/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.netrc
+.git-credentials
+
+# build / deps
+node_modules/
+.next/
+dist/
+build/
+out/
+.turbo/
+*.tsbuildinfo
+.wrangler/
+
+# large binary corpus lives in R2, not git
+asset-corpus/
+*.glb
+*.gltf
+*.spz
+*.sog
+*.ply
+*.hdr
+*.exr
+*.zip
+!seed-assets/**/*.glb
+!seed-assets/**/*.webp
