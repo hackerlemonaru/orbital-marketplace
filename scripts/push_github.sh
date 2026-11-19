@@ -30,5 +30,5 @@ git remote remove origin 2>/dev/null || true
 git remote add origin "https://github.com/${GITHUB_REPO}.git"
 git config --local "credential.https://github.com.helper" "!${HELPER}"
 git branch -M main
-git push -u origin main --force-with-lease
+git push -u origin main
 echo "pushed to github.com/${GITHUB_REPO} (token not stored in .git/config or printed)"
