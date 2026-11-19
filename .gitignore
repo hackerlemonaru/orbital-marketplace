@@ -37,3 +37,7 @@ asset-corpus/
 !website/models/**/*.txt
 !website/shaders/**/*.glsl
 !website/shaders/**/*.txt
+
+# python caches
+__pycache__/
+*.pyc
