@@ -24,7 +24,7 @@ Licences: CC0-1.0 4,349, MIT 4,142, Public domain + NASA usage guidelines 81, se
 
 - `nasa/NASA-3D-Resources` — 80 small, insignia-screened GLBs under NASA usage guidelines.
 - `ToxSam/cc0-models-Polygonal-Mind` — 120 project-diverse CC0 GLBs + matching PNG previews.
-- `KhronosGroup/glTF-Sample-Assets` — 30 additional per-model CC-BY-4.0 GLBs; NC variants excluded.
+- `KhronosGroup/glTF-Sample-Assets` — 12 additional per-model CC-BY-4.0 GLBs; NC variants, duplicates and >1.5 MB models excluded.
 - Already in wave 1: Kenney/tge, Uiverse, useAnimations, TSLFX, Magic UI, AWS splats, KayKit, 50 Khronos, seed pack.
 
 ## Secrets — hidden, never committed
