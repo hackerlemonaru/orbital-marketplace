@@ -21,13 +21,25 @@ def ctype(p):
             ".md": "text/markdown; charset=utf-8"}.get(os.path.splitext(p)[1].lower(), "application/octet-stream")
 
 jobs = []
-for src, key in [(f"{WEB}/index.html", "site/index.html"), (f"{WEB}/catalog-data.js", "site/catalog-data.js")]:
+for src, key in [(f"{WEB}/index.html", "site/index.html"), (f"{WEB}/classic.html", "site/classic.html"), (f"{WEB}/catalog-data.js", "site/catalog-data.js")]:
     if os.path.exists(src): jobs.append((src, key))
 for base, _, fs in os.walk(PUB):
     for f in fs:
         full = os.path.join(base, f)
         rel = os.path.relpath(full, PUB)
         jobs.append((full, "site/" + rel.replace(os.sep, "/")))
+# GitHub is preferred for new small assets; mirror only tiny hero GLBs/GLSL used by the live site.
+for sub in ("models", "shaders"):
+    d = f"{WEB}/{sub}"
+    if not os.path.isdir(d):
+        continue
+    for base, _, fs in os.walk(d):
+        for f in fs:
+            full = os.path.join(base, f)
+            if os.path.getsize(full) > 500_000:
+                continue
+            key = "site/" + os.path.relpath(full, WEB).replace(os.sep, "/")
+            jobs.append((full, key))
 
 ok = fail = 0
 for src, key in jobs:
