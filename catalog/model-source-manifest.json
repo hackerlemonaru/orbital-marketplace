@@ -125,7 +125,7 @@
       "source_repo": "KhronosGroup/glTF-Sample-Assets",
       "source_branch": "main",
       "source_path": "Models/BoxVertexColors/metadata.json",
-      "dest": "asset-corpus/deep-sources/khronos-BoxVertexColors-metadata.json",
+      "dest": "catalog/deep-sources/khronos-BoxVertexColors-metadata.json",
       "bytes": 715,
       "sha256": "4c3128f4cae21188e2a6aea50cebc29d0c755d58a9e691fbe684ae4812814ce3"
     },
@@ -141,7 +141,7 @@
       "source_repo": "KhronosGroup/glTF-Sample-Assets",
       "source_branch": "main",
       "source_path": "Models/LightVisibility/metadata.json",
-      "dest": "asset-corpus/deep-sources/khronos-LightVisibility-metadata.json",
+      "dest": "catalog/deep-sources/khronos-LightVisibility-metadata.json",
       "bytes": 719,
       "sha256": "45a1b4ad594b78eeb397acf8e004fbe71a8a0a2e50f4eb5c35d8bc2c46b309b9"
     },
@@ -173,7 +173,7 @@
       "source_repo": "KhronosGroup/glTF-Sample-Assets",
       "source_branch": "main",
       "source_path": "Models/CubeVisibility/metadata.json",
-      "dest": "asset-corpus/deep-sources/khronos-CubeVisibility-metadata.json",
+      "dest": "catalog/deep-sources/khronos-CubeVisibility-metadata.json",
       "bytes": 717,
       "sha256": "5884bb50ec7b2bdf4f1e4abb4ed0743d5b7f32e084dea32c30954b8f5fc3be01"
     },
@@ -189,7 +189,7 @@
       "source_repo": "KhronosGroup/glTF-Sample-Assets",
       "source_branch": "main",
       "source_path": "Models/AnimatedMorphCube/metadata.json",
-      "dest": "asset-corpus/deep-sources/khronos-AnimatedMorphCube-metadata.json",
+      "dest": "catalog/deep-sources/khronos-AnimatedMorphCube-metadata.json",
       "bytes": 717,
       "sha256": "53ec35a6148f1fa25936f092a050d821590f597cc3f67050e1b3a9812be4e572"
     },
@@ -197,7 +197,7 @@
       "source_repo": "KhronosGroup/glTF-Sample-Assets",
       "source_branch": "main",
       "source_path": "Models/Unicode\u2764\u267bTest/metadata.json",
-      "dest": "asset-corpus/deep-sources/khronos-Unicode_Test-metadata.json",
+      "dest": "catalog/deep-sources/khronos-Unicode_Test-metadata.json",
       "bytes": 677,
       "sha256": "97eb3125d8d8d5f402f387053a4dc8c293e2fdc0416a7ad4757dcc4af4ac6b27"
     },
@@ -213,7 +213,7 @@
       "source_repo": "KhronosGroup/glTF-Sample-Assets",
       "source_branch": "main",
       "source_path": "Models/SimpleInstancing/metadata.json",
-      "dest": "asset-corpus/deep-sources/khronos-SimpleInstancing-metadata.json",
+      "dest": "catalog/deep-sources/khronos-SimpleInstancing-metadata.json",
       "bytes": 701,
       "sha256": "393640141df6726895e59ac2029f0f6165d8dfe840619f7a9ee11041e8dc5dc8"
     },
@@ -229,7 +229,7 @@
       "source_repo": "KhronosGroup/glTF-Sample-Assets",
       "source_branch": "main",
       "source_path": "Models/InterpolationTest/metadata.json",
-      "dest": "asset-corpus/deep-sources/khronos-InterpolationTest-metadata.json",
+      "dest": "catalog/deep-sources/khronos-InterpolationTest-metadata.json",
       "bytes": 659,
       "sha256": "f4615f0cfa501c3d5eb6e40ceed90bf2112b4b478be241fb82e7264f38956e91"
     },
@@ -237,7 +237,7 @@
       "source_repo": "KhronosGroup/glTF-Sample-Assets",
       "source_branch": "main",
       "source_path": "Models/TextureLinearInterpolationTest/metadata.json",
-      "dest": "asset-corpus/deep-sources/khronos-TextureLinearInterpolationTest-metadata.json",
+      "dest": "catalog/deep-sources/khronos-TextureLinearInterpolationTest-metadata.json",
       "bytes": 733,
       "sha256": "e2a39fcd02bb5e440d824f2effcda7500d07d18c787fb42e0e65e01a88c5a0de"
     },
@@ -245,7 +245,7 @@
       "source_repo": "KhronosGroup/glTF-Sample-Assets",
       "source_branch": "main",
       "source_path": "Models/TextureCoordinateTest/metadata.json",
-      "dest": "asset-corpus/deep-sources/khronos-TextureCoordinateTest-metadata.json",
+      "dest": "catalog/deep-sources/khronos-TextureCoordinateTest-metadata.json",
       "bytes": 695,
       "sha256": "c1ba8b8b4d8ba56de8a78e55d0b5eeb6dcf2732842c63a4297af15f57311b512"
     },
@@ -261,7 +261,7 @@
       "source_repo": "KhronosGroup/glTF-Sample-Assets",
       "source_branch": "main",
       "source_path": "Models/AnimatedColorsCube/metadata.json",
-      "dest": "asset-corpus/deep-sources/khronos-AnimatedColorsCube-metadata.json",
+      "dest": "catalog/deep-sources/khronos-AnimatedColorsCube-metadata.json",
       "bytes": 689,
       "sha256": "20372c1c50da0ad69004ba56c7c78bb9e5fa4e12159ead7c0abec56f9c52a828"
     },
@@ -277,7 +277,7 @@
       "source_repo": "KhronosGroup/glTF-Sample-Assets",
       "source_branch": "main",
       "source_path": "Models/TextureEncodingTest/metadata.json",
-      "dest": "asset-corpus/deep-sources/khronos-TextureEncodingTest-metadata.json",
+      "dest": "catalog/deep-sources/khronos-TextureEncodingTest-metadata.json",
       "bytes": 689,
       "sha256": "945f33ecd41d050cfc6c821966567e0f121d4a14931fae9db02ae2e8c23c67b3"
     },
@@ -309,7 +309,7 @@
       "source_repo": "KhronosGroup/glTF-Sample-Assets",
       "source_branch": "main",
       "source_path": "Models/NodeVisibilityTest/metadata.json",
-      "dest": "asset-corpus/deep-sources/khronos-NodeVisibilityTest-metadata.json",
+      "dest": "catalog/deep-sources/khronos-NodeVisibilityTest-metadata.json",
       "bytes": 672,
       "sha256": "33dc9ddf802c2306434471d743074a95cd6cbaad26e38e6abfe91e5c5fa63c74"
     },

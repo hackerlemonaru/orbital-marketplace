@@ -1,0 +1,147 @@
+[
+  {
+    "id": "ArmChair_01",
+    "name": "Arm Chair 01",
+    "categories": [
+      "furniture",
+      "seating"
+    ],
+    "authors": {
+      "Kirill Sannikov": "All"
+    },
+    "url": "https://polyhaven.com/a/ArmChair_01"
+  },
+  {
+    "id": "BarberShopChair_01",
+    "name": "Barber Shop Chair 01",
+    "categories": [
+      "furniture",
+      "seating"
+    ],
+    "authors": {
+      "Fernando Quinn": "All"
+    },
+    "url": "https://polyhaven.com/a/BarberShopChair_01"
+  },
+  {
+    "id": "Barrel_01",
+    "name": "Barrel_01",
+    "categories": [
+      "industrial",
+      "containers"
+    ],
+    "authors": {
+      "Jorge Camacho": "All"
+    },
+    "url": "https://polyhaven.com/a/Barrel_01"
+  },
+  {
+    "id": "Barrel_02",
+    "name": "Barrel 02",
+    "categories": [
+      "industrial",
+      "containers",
+      "collection: the_shed"
+    ],
+    "authors": {
+      "Jorge Camacho": "All"
+    },
+    "url": "https://polyhaven.com/a/Barrel_02"
+  },
+  {
+    "id": "Camera_01",
+    "name": "Camera 01",
+    "categories": [
+      "props",
+      "electronics"
+    ],
+    "authors": {
+      "Rajil Jose Macatangay": "All"
+    },
+    "url": "https://polyhaven.com/a/Camera_01"
+  },
+  {
+    "id": "CashRegister_01",
+    "name": "Cash Register 01",
+    "categories": [
+      "appliances",
+      "props"
+    ],
+    "authors": {
+      "Joe Seabuhr": "All"
+    },
+    "url": "https://polyhaven.com/a/CashRegister_01"
+  },
+  {
+    "id": "Chandelier_01",
+    "name": "Chandelier 01",
+    "categories": [
+      "lighting",
+      "decorative"
+    ],
+    "authors": {
+      "Kirill Sannikov": "All"
+    },
+    "url": "https://polyhaven.com/a/Chandelier_01"
+  },
+  {
+    "id": "Chandelier_02",
+    "name": "Chandelier 02",
+    "categories": [
+      "lighting"
+    ],
+    "authors": {
+      "Kirill Sannikov": "All"
+    },
+    "url": "https://polyhaven.com/a/Chandelier_02"
+  },
+  {
+    "id": "Chandelier_03",
+    "name": "Chandelier 03",
+    "categories": [
+      "lighting",
+      "decorative"
+    ],
+    "authors": {
+      "Kirill Sannikov": "All"
+    },
+    "url": "https://polyhaven.com/a/Chandelier_03"
+  },
+  {
+    "id": "CheeseBox_01",
+    "name": "CheeseBox_01",
+    "categories": [
+      "props",
+      "containers",
+      "collection: the_shed"
+    ],
+    "authors": {
+      "Gabriel Radi\u0107": "All"
+    },
+    "url": "https://polyhaven.com/a/CheeseBox_01"
+  },
+  {
+    "id": "ClassicConsole_01",
+    "name": "Classic Console 01",
+    "categories": [
+      "furniture",
+      "table"
+    ],
+    "authors": {
+      "Kirill Sannikov": "All"
+    },
+    "url": "https://polyhaven.com/a/ClassicConsole_01"
+  },
+  {
+    "id": "ClassicNightstand_01",
+    "name": "Classic Nightstand 01",
+    "categories": [
+      "furniture",
+      "table"
+    ],
+    "authors": {
+      "Kirill Sannikov": "All"
+    },
+    "url": "https://polyhaven.com/a/ClassicNightstand_01"
+  }
+]
