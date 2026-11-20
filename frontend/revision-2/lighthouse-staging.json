@@ -1,0 +1,9 @@
+{
+  "url": "https://orbital-assets-preprod.jc-bose.workers.dev/",
+  "lighthouseVersion": "12.8.2",
+  "score": 0.96,
+  "LCP_ms": 1935.556,
+  "CLS": 0,
+  "TBT_ms": 196,
+  "note": "One run on public pre-production using mobile emulation and headless Chromium. Local runs varied; 60fps sampled separately."
+}
