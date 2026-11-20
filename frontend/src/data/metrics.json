@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-11-20T17:07:21+00:00",
+  "totalRows": 8692,
+  "assets": 6791,
+  "downloadableFiles": 6769,
+  "previewFiles": 1883,
+  "fixturesHidden": 18,
+  "linkOnly": 22,
+  "sources": 24,
+  "uploadedFiles": 4538,
+  "usedGib": 4.3679,
+  "headroomGib": 5.4321,
+  "capGib": 9.8,
+  "objects": 14581,
+  "usedPct": 44.57
+}

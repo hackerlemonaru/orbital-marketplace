@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fail CI if the catalogue contains a licence-gate violation."""
 import json, sys
-ROOT = "/home/user/orbital-marketplace"
+ROOT = str(__import__("pathlib").Path(__file__).resolve().parent.parent)
 d = json.load(open(f"{ROOT}/catalog/catalog.json"))
 allow = set(d["licence_gate"]["allow"])
 deny = [x.lower() for x in d["licence_gate"]["deny"]]

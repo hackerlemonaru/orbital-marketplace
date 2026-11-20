@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ORBITAL product render</title>
+  <style>
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #F2F3F5; }
+    canvas { display: block; width: 100%; height: 100%; }
+  </style>
+</head>
+<body>
+<script type="module">
+  import * as THREE from 'three';
+  import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+  import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+  const params = new URLSearchParams(location.search);
+  const modelPath = params.get('model') || '/render-assets/robot-expressive.glb';
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, preserveDrawingBuffer: true });
+  renderer.setSize(innerWidth, innerHeight);
+  renderer.setPixelRatio(1);
+  renderer.setClearColor(0xF2F3F5, 1);
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.05;
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  document.body.appendChild(renderer.domElement);
+
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0xF2F3F5);
+  const pmrem = new THREE.PMREMGenerator(renderer);
+  scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+  pmrem.dispose();
+
+  const camera = new THREE.PerspectiveCamera(32, innerWidth / innerHeight, 0.1, 100);
+  camera.position.set(3.7, 2.35, 5.4);
+  camera.lookAt(0, 0.15, 0);
+
+  const hemi = new THREE.HemisphereLight(0xffffff, 0xc7cbd2, 2.3);
+  scene.add(hemi);
+  const key = new THREE.DirectionalLight(0xffffff, 3.1);
+  key.position.set(-3.5, 6.5, 4.5);
+  key.castShadow = true;
+  key.shadow.mapSize.set(2048, 2048);
+  key.shadow.camera.left = -4;
+  key.shadow.camera.right = 4;
+  key.shadow.camera.top = 4;
+  key.shadow.camera.bottom = -4;
+  key.shadow.bias = -0.0002;
+  scene.add(key);
+  const rim = new THREE.PointLight(0x1F6BFF, 2.4, 8);
+  rim.position.set(3.3, 1.4, -2.2);
+  scene.add(rim);
+
+  const ground = new THREE.Mesh(
+    new THREE.PlaneGeometry(30, 30),
+    new THREE.ShadowMaterial({ color: 0x0A0A0B, opacity: 0.17 }),
+  );
+  ground.rotation.x = -Math.PI / 2;
+  ground.position.y = -1.26;
+  ground.receiveShadow = true;
+  scene.add(ground);
+
+  const backdrop = new THREE.Mesh(
+    new THREE.PlaneGeometry(30, 16),
+    new THREE.MeshStandardMaterial({ color: 0xF2F3F5, roughness: 1, metalness: 0 }),
+  );
+  backdrop.position.set(0, 2, -5);
+  backdrop.receiveShadow = true;
+  scene.add(backdrop);
+
+  new GLTFLoader().load(modelPath, (gltf) => {
+    const model = gltf.scene;
+    model.traverse((child) => {
+      if (child.isMesh) {
+        child.castShadow = true;
+        child.receiveShadow = true;
+        const materials = Array.isArray(child.material) ? child.material : [child.material];
+        materials.forEach((material) => { if (material) material.envMapIntensity = 0.9; });
+      }
+    });
+    const box = new THREE.Box3().setFromObject(model);
+    const size = box.getSize(new THREE.Vector3());
+    const center = box.getCenter(new THREE.Vector3());
+    const max = Math.max(size.x, size.y, size.z) || 1;
+    const scale = 2.45 / max;
+    model.scale.setScalar(scale);
+    model.position.set(-center.x * scale, -box.min.y * scale - 1.24, -center.z * scale);
+    model.rotation.y = -0.42;
+    scene.add(model);
+    renderer.render(scene, camera);
+    requestAnimationFrame(() => {
+      renderer.render(scene, camera);
+      window.__RENDER_READY__ = true;
+    });
+  }, undefined, (error) => {
+    console.error(error);
+    window.__RENDER_ERROR__ = String(error);
+    window.__RENDER_READY__ = true;
+  });
+
+  addEventListener('resize', () => {
+    camera.aspect = innerWidth / innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(innerWidth, innerHeight);
+    renderer.render(scene, camera);
+  });
+</script>
+</body>
+</html>

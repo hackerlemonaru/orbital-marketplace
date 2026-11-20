@@ -1,0 +1,530 @@
+{
+  "metrics": {
+    "generatedAt": "2026-11-20T17:07:21+00:00",
+    "totalRows": 8692,
+    "assets": 6791,
+    "downloadableFiles": 6769,
+    "previewFiles": 1883,
+    "fixturesHidden": 18,
+    "linkOnly": 22,
+    "sources": 24,
+    "uploadedFiles": 4538,
+    "usedGib": 4.3679,
+    "headroomGib": 5.4321,
+    "capGib": 9.8,
+    "objects": 14581,
+    "usedPct": 44.57
+  },
+  "apiOrigin": "https://orbital-assets-proxy.jc-bose.workers.dev",
+  "repoUrl": "https://github.com/hackerlemonaru/orbital-marketplace",
+  "catalogUrl": "/catalog.json",
+  "healthUrl": "/health",
+  "endpoints": [
+    "/catalog.json",
+    "/llms.txt",
+    "/openapi.json",
+    "/health",
+    "/assets",
+    "/assets/{asset_id}",
+    "/assets/{asset_id}/install",
+    "/assets/{asset_id}/license",
+    "/assets/{asset_id}/preview",
+    "/quota"
+  ],
+  "llmsExcerpt": "# ORBITAL \u2014 3D, motion & UI-decoration asset marketplace\n> Browser-ready 3D, shader, motion and UI assets with performance budgets, machine-readable licences and a rate-limited agent API. Free read-only access for agents.\nAll endpoints are rate limited; read /docs/agent-rate-limits.md before bulk access. Free tier: search, metadata, licence, watermarked previews, install snippets. Paid file downloads require an entitlement.\n## Catalogue\n- [Catalogue JSON](https://orbital-assets-proxy.jc-bose.workers.dev/catalog.json): 8,692 rows with SPDX licence, SHA-256, source URL, R2 key\n- [Category index](https://orbital-assets-proxy.jc-bose.workers.dev/catalog.md): 8 families, 66 subcategories\n- [Format & performance spec](https://orbital-assets-proxy.jc-bose.workers.dev/docs/formats.md): GLB/KTX2, dotLottie, Rive, TSL/WGSL\n- [Licence matrix](https://orbital-assets-proxy.jc-bose.workers.dev/docs/licenses.md): CC0 / MIT / MIT-0 / CC-BY + attribution rules",
+  "allowedLicences": [
+    "CC0-1.0",
+    "MIT",
+    "MIT-0",
+    "CC-BY-4.0",
+    "Apache-2.0",
+    "Public domain + NASA usage guidelines",
+    "CC BY 4.0"
+  ],
+  "licenceGate": {
+    "allow": [
+      "CC0-1.0",
+      "MIT",
+      "MIT-0",
+      "CC-BY-4.0",
+      "Apache-2.0"
+    ],
+    "require_attribution": [
+      "CC-BY-4.0"
+    ],
+    "deny": [
+      "Commons Clause",
+      "CC-BY-NC",
+      "CC-BY-NC-SA",
+      "NOASSERTION",
+      "GPL-3.0",
+      "proprietary-no-redistribution"
+    ]
+  },
+  "sources": [
+    {
+      "id": "tge-assets",
+      "label": "tge assets",
+      "license": "CC0-1.0",
+      "mode": "full_mirror",
+      "modeLabel": "Full mirror",
+      "url": "https://github.com/Hidencod/tge-assets",
+      "note": "1,883 Kenney GLBs + thumbs, derived files also CC0 per repo LICENSE",
+      "linkOnly": false,
+      "icon": "box"
+    },
+    {
+      "id": "uiverse-galaxy",
+      "label": "uiverse galaxy",
+      "license": "MIT",
+      "mode": "archive",
+      "modeLabel": "Archive",
+      "url": "https://github.com/uiverse-io/galaxy",
+      "note": "3,000+ community UI elements; verbatim MIT licence in repo",
+      "linkOnly": false,
+      "icon": "box"
+    },
+    {
+      "id": "useanimations",
+      "label": "useanimations",
+      "license": "MIT",
+      "mode": "archive",
+      "modeLabel": "Archive",
+      "url": "https://github.com/useanimations/react-useanimations",
+      "note": "302 MIT animated icons",
+      "linkOnly": false,
+      "icon": "box"
+    },
+    {
+      "id": "tslfx",
+      "label": "tslfx",
+      "license": "MIT",
+      "mode": "full_mirror",
+      "modeLabel": "Full mirror",
+      "url": "https://github.com/verekia/tslfx",
+      "note": "TSL VFX/SDF modules, WebGPU-first with WebGL2 fallback",
+      "linkOnly": false,
+      "icon": "box"
+    },
+    {
+      "id": "magicui",
+      "label": "magicui",
+      "license": "MIT",
+      "mode": "selected",
+      "modeLabel": "Selected files",
+      "url": "https://github.com/magicuidesign/magicui",
+      "note": "MIT animated React/Tailwind components; registry JSONs fetched from magicui.design",
+      "linkOnly": false,
+      "icon": "box"
+    },
+    {
+      "id": "aws-gaussian-splats",
+      "label": "aws gaussian splats",
+      "license": "MIT-0",
+      "mode": "selected",
+      "modeLabel": "Selected files",
+      "url": "https://github.com/aws-solutions-library-samples/guidance-for-open-source-3d-reconstruction-toolbox-for-gaussian-splats-on-aws",
+      "note": "sample .spz/.sog splats from the MIT-0 3D reconstruction toolbox",
+      "linkOnly": false,
+      "icon": "box"
+    },
+    {
+      "id": "glTF-Sample-Assets",
+      "label": "glTF Sample Assets",
+      "license": "mixed CC0-1.0 / CC-BY-4.0 (per model)",
+      "mode": "selected",
+      "modeLabel": "Selected files",
+      "url": "https://github.com/KhronosGroup/glTF-Sample-Assets",
+      "note": "NC / unlicensed models excluded by the licence gate",
+      "linkOnly": false,
+      "icon": "box"
+    },
+    {
+      "id": "kaykit",
+      "label": "kaykit",
+      "license": "CC0-1.0",
+      "mode": "selected",
+      "modeLabel": "Selected files",
+      "url": "https://github.com/KayKit-Game-Assets",
+      "note": "official KayKit repos only; NOASSERTION mirrors of the paid Complete Collection are excluded",
+      "linkOnly": false,
+      "icon": "box"
+    },
+    {
+      "id": "nasa-3d-resources",
+      "label": "nasa 3d resources",
+      "license": "Public domain + NASA usage guidelines",
+      "mode": "link_only",
+      "modeLabel": "Link only",
+      "url": "https://github.com/nasa/NASA-3D-Resources",
+      "note": "5.2 GB \u2014 selective ingest only",
+      "linkOnly": true,
+      "icon": "link"
+    },
+    {
+      "id": "toxSam-cc0-models",
+      "label": "toxSam cc0 models",
+      "license": "CC0-1.0",
+      "mode": "link_only",
+      "modeLabel": "Link only",
+      "url": "https://github.com/ToxSam/cc0-models-Polygonal-Mind",
+      "note": "~991 GLBs / 1.6 GB \u2014 link index, not mirrored",
+      "linkOnly": true,
+      "icon": "link"
+    },
+    {
+      "id": "open-source-3d-assets",
+      "label": "open source 3d assets",
+      "license": "CC0-1.0",
+      "mode": "link_only",
+      "modeLabel": "Link only",
+      "url": "https://github.com/nexusmedialab/open-source-3d-assets",
+      "note": "991+ GLB JSON registry \u2014 tiny index",
+      "linkOnly": true,
+      "icon": "link"
+    },
+    {
+      "id": "polygonalmind-100avatars",
+      "label": "polygonalmind 100avatars",
+      "license": "CC0-1.0",
+      "mode": "link_only",
+      "modeLabel": "Link only",
+      "url": "https://github.com/PolygonalMind/100Avatars/releases",
+      "note": "200+ rigged VRM/FBX avatars",
+      "linkOnly": true,
+      "icon": "link"
+    },
+    {
+      "id": "polyfork-catalog",
+      "label": "polyfork catalog",
+      "license": "CC BY 4.0",
+      "mode": "link_only",
+      "modeLabel": "Link only",
+      "url": "https://github.com/lucas-martinic/polyfork-catalog",
+      "note": "3,391 GLBs \u2014 attribution required",
+      "linkOnly": true,
+      "icon": "link"
+    },
+    {
+      "id": "shadcn-ui",
+      "label": "shadcn ui",
+      "license": "MIT",
+      "mode": "link_only",
+      "modeLabel": "Link only",
+      "url": "https://github.com/shadcn-ui/ui",
+      "note": "registry contract / base components",
+      "linkOnly": true,
+      "icon": "link"
+    },
+    {
+      "id": "three-js-runtime",
+      "label": "three js runtime",
+      "license": "MIT",
+      "mode": "link_only",
+      "modeLabel": "Link only",
+      "url": "https://github.com/mrdoob/three.js",
+      "note": "runtime dependency, not catalogue items",
+      "linkOnly": true,
+      "icon": "link"
+    },
+    {
+      "id": "polygonal-mind-cc0",
+      "label": "polygonal mind cc0",
+      "license": "CC0-1.0",
+      "mode": "selected",
+      "modeLabel": "Selected files",
+      "url": "https://github.com/ToxSam/cc0-models-Polygonal-Mind",
+      "note": "120 project-diverse GLBs + matching PNG previews; CC0-1.0 verbatim licence in repo",
+      "linkOnly": false,
+      "icon": "box"
+    },
+    {
+      "id": "khronos-ccby-extra",
+      "label": "khronos ccby extra",
+      "license": "CC-BY-4.0",
+      "mode": "selected",
+      "modeLabel": "Selected files",
+      "url": "https://github.com/KhronosGroup/glTF-Sample-Assets",
+      "note": "30 additional per-model CC-BY-4.0 GLBs; NC variants excluded; attribution required",
+      "linkOnly": false,
+      "icon": "box"
+    },
+    {
+      "id": "pmndrs-assets",
+      "label": "pmndrs assets",
+      "license": "CC0-1.0",
+      "mode": "github_hero",
+      "modeLabel": "GitHub raw",
+      "url": "https://github.com/pmndrs/assets",
+      "note": "3 optimized GLBs + licence text copied into website/models; served from GitHub raw",
+      "linkOnly": false,
+      "icon": "box"
+    },
+    {
+      "id": "threejs-robot",
+      "label": "threejs robot",
+      "license": "CC0-1.0",
+      "mode": "github_hero",
+      "modeLabel": "GitHub raw",
+      "url": "https://github.com/mrdoob/three.js",
+      "note": "RobotExpressive GLB + README; CC0 per model README",
+      "linkOnly": false,
+      "icon": "box"
+    },
+    {
+      "id": "erichlof-pathtracing",
+      "label": "erichlof pathtracing",
+      "license": "CC0-1.0",
+      "mode": "github_shaders",
+      "modeLabel": "GitHub raw",
+      "url": "https://github.com/erichlof/THREE.js-PathTracing-Renderer",
+      "note": "5 CC0 GLSL fragment shaders copied into website/shaders",
+      "linkOnly": false,
+      "icon": "code"
+    },
+    {
+      "id": "javagl-tutorial",
+      "label": "javagl tutorial",
+      "license": "CC0-1.0",
+      "mode": "github_hero",
+      "modeLabel": "GitHub raw",
+      "url": "https://github.com/javagl/gltfTutorialModels",
+      "note": "Embedded glTF tutorial primitives, CC0 per README",
+      "linkOnly": false,
+      "icon": "box"
+    },
+    {
+      "id": "khronos-cc0-small",
+      "label": "khronos cc0 small",
+      "license": "CC0-1.0",
+      "mode": "github_hero",
+      "modeLabel": "GitHub raw",
+      "url": "https://github.com/KhronosGroup/glTF-Sample-Assets",
+      "note": "12 small per-model CC0 GLBs with metadata",
+      "linkOnly": false,
+      "icon": "box"
+    },
+    {
+      "id": "polyhaven-link",
+      "label": "polyhaven link",
+      "license": "CC0-1.0",
+      "mode": "link_only",
+      "modeLabel": "Link only",
+      "url": "https://polyhaven.com/models",
+      "note": "12 link-only CC0 model records; API ToS requires unique UA and visible credit if live API used",
+      "linkOnly": true,
+      "icon": "link"
+    },
+    {
+      "id": "smithsonian-link",
+      "label": "smithsonian link",
+      "license": "CC0-1.0",
+      "mode": "link_only",
+      "modeLabel": "Link only",
+      "url": "https://www.si.edu/openaccess",
+      "note": "3 link-only CC0 museum-scan records",
+      "linkOnly": true,
+      "icon": "link"
+    }
+  ],
+  "sourceMarks": [
+    {
+      "label": "Khronos",
+      "url": "https://github.com/KhronosGroup/glTF-Sample-Assets",
+      "license": "mixed CC0-1.0 / CC-BY-4.0 (per model)"
+    },
+    {
+      "label": "pmndrs",
+      "url": "https://github.com/pmndrs/assets",
+      "license": "CC0-1.0"
+    },
+    {
+      "label": "NASA",
+      "url": "https://github.com/nasa/NASA-3D-Resources",
+      "license": "Public domain + NASA usage guidelines"
+    },
+    {
+      "label": "Poly Haven",
+      "url": "https://polyhaven.com/models",
+      "license": "CC0-1.0"
+    },
+    {
+      "label": "Smithsonian",
+      "url": "https://www.si.edu/openaccess",
+      "license": "CC0-1.0"
+    }
+  ],
+  "featured": [
+    {
+      "id": "github-model/af7504cb28",
+      "name": "Expressive robot",
+      "catalogName": "Threejs robot expressive",
+      "category": "3D Objects & Models / WebGL & three.js hero models",
+      "format": "GLB",
+      "license": "CC0-1.0",
+      "bytes": 463988,
+      "sha256": "047f5e5fb3bb6d378bd1df16ca6137f2a596c99b3a1b5690b4020c05aaf6f319",
+      "sourceUrl": "https://github.com/mrdoob/three.js/blob/dev/examples/models/gltf/RobotExpressive/RobotExpressive.glb",
+      "sourceRepo": "mrdoob/three.js",
+      "verifiedUrl": "https://github.com/mrdoob/three.js/blob/dev/examples/models/gltf/RobotExpressive/README.md",
+      "publicUrl": "https://raw.githubusercontent.com/hackerlemonaru/orbital-marketplace/main/website/models/threejs-robot-expressive.glb",
+      "mode": "github",
+      "thumbnail": null,
+      "productImage": "/media/products/robot-expressive.jpg",
+      "modelPath": "/render-assets/robot-expressive.glb",
+      "renderSlug": "robot-expressive",
+      "polygonCount": 3237,
+      "cardSize": "large",
+      "downloadable": true
+    },
+    {
+      "id": "tge/prototype-kit/animal-bison",
+      "name": "Animal bison",
+      "catalogName": "Animal bison",
+      "category": "3D Objects & Models / Low-poly & stylised packs",
+      "format": "GLB",
+      "license": "CC0-1.0",
+      "bytes": 53436,
+      "sha256": "906af270025feb27cf34fc9e66864b6ca18c37445f9bc74d83fc86da30c62424",
+      "sourceUrl": "https://github.com/Hidencod/tge-assets/blob/main/packs/prototype-kit/animal-bison.glb",
+      "sourceRepo": "Hidencod/tge-assets",
+      "verifiedUrl": "https://github.com/Hidencod/tge-assets/blob/main/packs/prototype-kit/animal-bison.glb",
+      "publicUrl": "https://orbital-assets-proxy.jc-bose.workers.dev/download/assets%2Ftge%2Fpacks%2Fprototype-kit%2Fanimal-bison.glb",
+      "mode": "r2",
+      "thumbnail": "https://orbital-assets-proxy.jc-bose.workers.dev/download/assets%2Ftge%2Fpacks%2Fprototype-kit%2Fthumbs%2Fanimal-bison.webp",
+      "productImage": "/media/products/animal-bison.jpg",
+      "modelPath": "/render-assets/animal-bison.glb",
+      "renderSlug": "animal-bison",
+      "polygonCount": 264,
+      "cardSize": "small",
+      "downloadable": true
+    },
+    {
+      "id": "tge/food-kit/avocado",
+      "name": "Avocado",
+      "catalogName": "Avocado",
+      "category": "3D Objects & Models / Low-poly & stylised packs",
+      "format": "GLB",
+      "license": "CC0-1.0",
+      "bytes": 16824,
+      "sha256": "2f5d83438847f6475f7131c8681b08aeaf529b0b0d1fb7a1d3f248a3a1336e1e",
+      "sourceUrl": "https://github.com/Hidencod/tge-assets/blob/main/packs/food-kit/avocado.glb",
+      "sourceRepo": "Hidencod/tge-assets",
+      "verifiedUrl": "https://github.com/Hidencod/tge-assets/blob/main/packs/food-kit/avocado.glb",
+      "publicUrl": "https://orbital-assets-proxy.jc-bose.workers.dev/download/assets%2Ftge%2Fpacks%2Ffood-kit%2Favocado.glb",
+      "mode": "r2",
+      "thumbnail": "https://orbital-assets-proxy.jc-bose.workers.dev/download/assets%2Ftge%2Fpacks%2Ffood-kit%2Fthumbs%2Favocado.webp",
+      "productImage": "/media/products/avocado.jpg",
+      "modelPath": "/render-assets/avocado.glb",
+      "renderSlug": "avocado",
+      "polygonCount": 44,
+      "cardSize": "small",
+      "downloadable": true
+    },
+    {
+      "id": "tge/graveyard-kit/lantern-candle",
+      "name": "Lantern candle",
+      "catalogName": "Lantern candle",
+      "category": "3D Objects & Models / Low-poly & stylised packs",
+      "format": "GLB",
+      "license": "CC0-1.0",
+      "bytes": 33116,
+      "sha256": "d028d5d442dab77020d2714d2134b46c8d0773a984805ccb9c670eea5b0fb889",
+      "sourceUrl": "https://github.com/Hidencod/tge-assets/blob/main/packs/graveyard-kit/lantern-candle.glb",
+      "sourceRepo": "Hidencod/tge-assets",
+      "verifiedUrl": "https://github.com/Hidencod/tge-assets/blob/main/packs/graveyard-kit/lantern-candle.glb",
+      "publicUrl": "https://orbital-assets-proxy.jc-bose.workers.dev/download/assets%2Ftge%2Fpacks%2Fgraveyard-kit%2Flantern-candle.glb",
+      "mode": "r2",
+      "thumbnail": "https://orbital-assets-proxy.jc-bose.workers.dev/download/assets%2Ftge%2Fpacks%2Fgraveyard-kit%2Fthumbs%2Flantern-candle.webp",
+      "productImage": "/media/products/lantern-candle.jpg",
+      "modelPath": "/render-assets/lantern-candle.glb",
+      "renderSlug": "lantern-candle",
+      "polygonCount": 224,
+      "cardSize": "small",
+      "downloadable": true
+    },
+    {
+      "id": "tge/furniture-kit/cardboardboxclosed",
+      "name": "Closed cardboard box",
+      "catalogName": "Cardboardboxclosed",
+      "category": "3D Objects & Models / Low-poly & stylised packs",
+      "format": "GLB",
+      "license": "CC0-1.0",
+      "bytes": 5400,
+      "sha256": "4af079dca52960912764574950f0549ff2ae1224b3db1528718629473a2d5d81",
+      "sourceUrl": "https://github.com/Hidencod/tge-assets/blob/main/packs/furniture-kit/cardboardboxclosed.glb",
+      "sourceRepo": "Hidencod/tge-assets",
+      "verifiedUrl": "https://github.com/Hidencod/tge-assets/blob/main/packs/furniture-kit/cardboardboxclosed.glb",
+      "publicUrl": "https://orbital-assets-proxy.jc-bose.workers.dev/download/assets%2Ftge%2Fpacks%2Ffurniture-kit%2Fcardboardboxclosed.glb",
+      "mode": "r2",
+      "thumbnail": "https://orbital-assets-proxy.jc-bose.workers.dev/download/assets%2Ftge%2Fpacks%2Ffurniture-kit%2Fthumbs%2Fcardboardboxclosed.webp",
+      "productImage": "/media/products/cardboardboxclosed.jpg",
+      "modelPath": "/render-assets/cardboardboxclosed.glb",
+      "renderSlug": "cardboardboxclosed",
+      "polygonCount": 60,
+      "cardSize": "small",
+      "downloadable": true
+    }
+  ],
+  "passport": {
+    "id": "tge/prototype-kit/animal-bison",
+    "name": "Animal bison",
+    "license": "CC0-1.0",
+    "sha256": "906af270025feb27cf34fc9e66864b6ca18c37445f9bc74d83fc86da30c62424",
+    "format": "GLB",
+    "bytes": 53436,
+    "sourceUrl": "https://github.com/Hidencod/tge-assets/blob/main/packs/prototype-kit/animal-bison.glb",
+    "sourceRepo": "Hidencod/tge-assets",
+    "verifiedUrl": "https://github.com/Hidencod/tge-assets/blob/main/packs/prototype-kit/animal-bison.glb",
+    "attribution": "Kenney (kenney.nl)",
+    "publicUrl": "https://orbital-assets-proxy.jc-bose.workers.dev/download/assets%2Ftge%2Fpacks%2Fprototype-kit%2Fanimal-bison.glb",
+    "mode": "r2",
+    "verificationDate": "2026-11-19"
+  },
+  "motionPlates": [
+    {
+      "label": "Agents",
+      "image": "/media/poster-agent.jpg",
+      "caption": "Agents studio plate"
+    },
+    {
+      "label": "Monolith",
+      "image": "/media/poster-hero.jpg",
+      "caption": "Monolith studio plate"
+    },
+    {
+      "label": "Material",
+      "image": "/media/poster-material.jpg",
+      "caption": "Material studio plate"
+    },
+    {
+      "label": "Orbit",
+      "image": "/media/poster-orbit.jpg",
+      "caption": "Orbit studio plate"
+    }
+  ],
+  "polygonMap": {
+    "github-model/af7504cb28": 3237,
+    "tge/prototype-kit/animal-bison": 264,
+    "tge/food-kit/avocado": 44,
+    "tge/graveyard-kit/lantern-candle": 224,
+    "tge/furniture-kit/cardboardboxclosed": 60,
+    "github-model/5da3ce834b": 2696,
+    "github-model/7912e974f0": 15744,
+    "github-model/15244c8e54": 5696,
+    "github-model/b67e85e3c9": 12,
+    "github-model/36903a30df": 2,
+    "github-model/2c3db1f758": 36,
+    "github-model/d5f324c586": 12,
+    "github-model/ec334d58d7": 2,
+    "github-model/74416d524e": 642,
+    "github-model/af7a0a8230": 12,
+    "github-model/808f77d2d5": 14,
+    "github-model/4743b1e0e9": 10,
+    "github-model/a654cdbc11": 48,
+    "github-model/70e12f3a4f": 3844,
+    "github-model/a1bc940019": 16
+  },
+  "heroGlb": "/models/orbital-monolith.glb",
+  "heroPoster": "/media/poster-hero.jpg"
+}

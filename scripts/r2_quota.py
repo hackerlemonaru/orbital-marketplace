@@ -2,17 +2,17 @@
 """Measure exact R2 usage and enforce the 9.8 GiB free-tier guardrail."""
 import os, json, sys, collections, requests
 
-ROOT = "/home/user/orbital-marketplace"
+ROOT = str(__import__("pathlib").Path(__file__).resolve().parent.parent)
 CAP_GIB = float(os.environ.get("R2_CAP_GIB", "9.8"))
 CAP = int(CAP_GIB * 1024 ** 3)
 
 def env(path):
     return dict(l.split("=", 1) for l in open(path).read().splitlines() if "=" in l and not l.startswith("#"))
 
-cf = env("/home/user/.secrets/cloudflare.env")
-TOKEN = os.environ.get("CF_API_TOKEN") or cf["CF_API_TOKEN"]
-ACC = os.environ.get("CF_ACCOUNT_ID") or cf["CF_ACCOUNT_ID"]
-BUCKET = os.environ.get("CF_R2_BUCKET") or cf["CF_R2_BUCKET"]
+cf = env("/home/user/.secrets/cloudflare.env") if os.path.exists("/home/user/.secrets/cloudflare.env") else {}
+TOKEN = os.environ.get("CF_API_TOKEN") or cf.get("CF_API_TOKEN")
+ACC = os.environ.get("CF_ACCOUNT_ID") or cf.get("CF_ACCOUNT_ID")
+BUCKET = os.environ.get("CF_R2_BUCKET") or cf.get("CF_R2_BUCKET")
 API = f"https://api.cloudflare.com/client/v4/accounts/{ACC}/r2/buckets/{BUCKET}/objects"
 h = {"Authorization": f"Bearer {TOKEN}"}
 

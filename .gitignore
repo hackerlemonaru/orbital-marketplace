@@ -37,6 +37,10 @@ asset-corpus/
 !website/models/**/*.txt
 !website/shaders/**/*.glsl
 !website/shaders/**/*.txt
+!frontend/public/models/**/*.glb
+
+# local render inputs are regenerated from the catalogue
+frontend/render-assets/
 
 # python caches
 __pycache__/
