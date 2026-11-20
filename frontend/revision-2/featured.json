@@ -1,0 +1,180 @@
+[
+  {
+    "slug": "IridescenceLamp",
+    "name": "Iridescence Lamp",
+    "licenses": [
+      "CC-BY-4.0"
+    ],
+    "credits": [
+      {
+        "license": "CC-BY-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+        "artist": "Eric Chadwick",
+        "year": "2022",
+        "owner": "Wayfair, LLC",
+        "what": "Everything",
+        "text": "Creative Commons Attribution 4.0 International",
+        "spdx": "CC-BY-4.0",
+        "icon": "https://licensebuttons.net/l/by/4.0/88x31.png"
+      }
+    ],
+    "bytes": 4083912,
+    "sha256": "17cfdc79ec9e38fadb28db159734c5f9592ca423977b546e5057e350ba29ff13",
+    "modelUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/IridescenceLamp/glTF-Binary/IridescenceLamp.glb",
+    "licenseUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/IridescenceLamp/LICENSE.md",
+    "metadataUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/IridescenceLamp/metadata.json",
+    "archiveBytes": 3834550
+  },
+  {
+    "slug": "ToyCar",
+    "name": "Toy Car",
+    "licenses": [
+      "CC0-1.0"
+    ],
+    "credits": [
+      {
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "artist": "Guido Odendahl",
+        "year": "2020",
+        "owner": "Public",
+        "what": "Initial car model",
+        "text": "Creative Commons Zero v1.0 Universal",
+        "spdx": "CC0-1.0",
+        "icon": "https://licensebuttons.net/p/zero/1.0/88x31.png"
+      },
+      {
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "artist": "Eric Chadwick",
+        "year": "2020",
+        "owner": "Public",
+        "what": "Extensions and scene composition",
+        "text": "Creative Commons Zero v1.0 Universal",
+        "spdx": "CC0-1.0",
+        "icon": "https://licensebuttons.net/p/zero/1.0/88x31.png"
+      }
+    ],
+    "bytes": 5422412,
+    "sha256": "01a60862de55cd4b9f3acfab0b0def86451800f9c42467fcd61052c16cb9838c",
+    "modelUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ToyCar/glTF-Binary/ToyCar.glb",
+    "licenseUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ToyCar/LICENSE.md",
+    "metadataUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ToyCar/metadata.json",
+    "archiveBytes": 4470469
+  },
+  {
+    "slug": "SheenChair",
+    "name": "Sheen Chair",
+    "licenses": [
+      "CC0-1.0"
+    ],
+    "credits": [
+      {
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "artist": "Eric Chadwick",
+        "year": "2020",
+        "owner": "Wayfair, LLC",
+        "what": "Everything",
+        "text": "Creative Commons Zero v1.0 Universal",
+        "spdx": "CC0-1.0",
+        "icon": "https://licensebuttons.net/p/zero/1.0/88x31.png"
+      }
+    ],
+    "bytes": 4125648,
+    "sha256": "f0af2a2b102d28d540236306ae19f8fb36842df76bd38cf76f063f9bd2853399",
+    "modelUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/glTF-Binary/SheenChair.glb",
+    "licenseUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/LICENSE.md",
+    "metadataUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/metadata.json",
+    "archiveBytes": 3811704
+  },
+  {
+    "slug": "MaterialsVariantsShoe",
+    "name": "Materials Variants Shoe",
+    "licenses": [
+      "CC-BY-4.0"
+    ],
+    "credits": [
+      {
+        "year": "2021",
+        "owner": "Shopify",
+        "license": "CC-BY-4.0",
+        "artist": "Shopify",
+        "what": "Everthing",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
+        "text": "Creative Commons Attribution 4.0 International",
+        "spdx": "CC-BY-4.0",
+        "icon": "https://licensebuttons.net/l/by/4.0/88x31.png"
+      }
+    ],
+    "bytes": 7833592,
+    "sha256": "e1d7cb190382111e5a5b37b51e9a7f007f7eb2ab1b6185e0188e8d0a0d1265a7",
+    "modelUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/MaterialsVariantsShoe/glTF-Binary/MaterialsVariantsShoe.glb",
+    "licenseUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/MaterialsVariantsShoe/LICENSE.md",
+    "metadataUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/MaterialsVariantsShoe/metadata.json",
+    "archiveBytes": 7500773
+  },
+  {
+    "slug": "Lantern",
+    "name": "Lantern",
+    "licenses": [
+      "CC0-1.0"
+    ],
+    "credits": [
+      {
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "artist": "sbtron",
+        "year": "2017",
+        "owner": "Microsoft",
+        "what": "Initial version",
+        "text": "Creative Commons Zero v1.0 Universal",
+        "spdx": "CC0-1.0",
+        "icon": "https://licensebuttons.net/p/zero/1.0/88x31.png"
+      },
+      {
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "artist": "Frank Galligan",
+        "year": "2018",
+        "owner": "Frank Galligan",
+        "what": "Draco compression",
+        "text": "Creative Commons Zero v1.0 Universal",
+        "spdx": "CC0-1.0",
+        "icon": "https://licensebuttons.net/p/zero/1.0/88x31.png"
+      }
+    ],
+    "bytes": 9564264,
+    "sha256": "a79458c4b02d695187a952f23a63b8bf278e7bc3d316a3c2a314f2d6974181f1",
+    "modelUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Lantern/glTF-Binary/Lantern.glb",
+    "licenseUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Lantern/LICENSE.md",
+    "metadataUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/Lantern/metadata.json",
+    "archiveBytes": 9382449
+  },
+  {
+    "slug": "BoomBox",
+    "name": "Boom Box",
+    "licenses": [
+      "CC0-1.0"
+    ],
+    "credits": [
+      {
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "artist": "Microsoft",
+        "year": "2017",
+        "owner": "Public",
+        "what": "Everything",
+        "text": "Creative Commons Zero v1.0 Universal",
+        "spdx": "CC0-1.0",
+        "icon": "https://licensebuttons.net/p/zero/1.0/88x31.png"
+      }
+    ],
+    "bytes": 10614184,
+    "sha256": "f8b918445ebdd006768232205a62f5182d2208ca57f84c6ccc084943c0bc8f15",
+    "modelUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/BoomBox/glTF-Binary/BoomBox.glb",
+    "licenseUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/BoomBox/LICENSE.md",
+    "metadataUrl": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/BoomBox/metadata.json",
+    "archiveBytes": 10505692
+  }
+]

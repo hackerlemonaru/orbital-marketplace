@@ -1,0 +1,22 @@
+:root {
+  color-scheme: dark;
+  --bg: #0D0F12;
+  --surface-1: #14171B;
+  --surface-2: #1B1F25;
+  --surface-3: #242931;
+  --border: #272C34;
+  --border-strong: #353B45;
+  --text-1: #ECEEF1;
+  --text-2: #A3A9B3;
+  --text-3: #7B828D;
+  --accent: #285ED5;
+  --accent-hover: #255BD2;
+  --accent-text: #6EA2FF;
+  --focus: #8DB8FF;
+  --studio-center: #2A3039;
+  --studio: radial-gradient(ellipse at 50% 35%, var(--studio-center) 0%, var(--surface-1) 70%);
+  --radius-input: 6px;
+  --radius-card: 12px;
+  --radius-panel: 20px;
+  --radius-pill: 999px;
+}

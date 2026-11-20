@@ -1,0 +1,8 @@
+Materials Variants Shoe
+Original file: https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/MaterialsVariantsShoe/glTF-Binary/MaterialsVariantsShoe.glb
+Model information: https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/MaterialsVariantsShoe/metadata.json
+Changes: no changes to the original GLB.
+
+Everthing: Shopify; copyright 2021 Shopify. CC-BY-4.0: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Licence details: see LICENSE.md included in this package.

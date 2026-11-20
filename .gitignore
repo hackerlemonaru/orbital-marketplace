@@ -38,6 +38,9 @@ asset-corpus/
 !website/shaders/**/*.glsl
 !website/shaders/**/*.txt
 !frontend/public/models/**/*.glb
+# Revision 2: compact, reproducible previews only; full models are restored by hash.
+!frontend/revision-2/public/showcase/**/preview.glb
+frontend/revision-2/public/index-data.json
 
 # local render inputs are regenerated from the catalogue
 frontend/render-assets/

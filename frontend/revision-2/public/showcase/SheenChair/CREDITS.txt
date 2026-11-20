@@ -1,0 +1,8 @@
+Sheen Chair
+Original file: https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/glTF-Binary/SheenChair.glb
+Model information: https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/metadata.json
+Changes: no changes to the original GLB.
+
+Everything: Eric Chadwick; copyright 2020 Wayfair, LLC. CC0-1.0: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+Licence details: see LICENSE.md included in this package.

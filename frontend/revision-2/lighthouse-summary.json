@@ -1,0 +1,9 @@
+{
+  "url": "http://127.0.0.1:4174/",
+  "lighthouseVersion": "12.8.2",
+  "score": 0.94,
+  "LCP_ms": 1552.0371,
+  "CLS": 0,
+  "TBT_ms": 264,
+  "note": "Mobile emulation, local Vite preview, headless Chromium. Results vary; another run scored 90 with 1.88s LCP. 60fps sampled separately."
+}

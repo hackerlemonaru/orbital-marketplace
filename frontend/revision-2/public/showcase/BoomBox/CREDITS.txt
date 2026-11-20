@@ -1,0 +1,8 @@
+Boom Box
+Original file: https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/BoomBox/glTF-Binary/BoomBox.glb
+Model information: https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/BoomBox/metadata.json
+Changes: no changes to the original GLB.
+
+Everything: Microsoft; copyright 2017 Public. CC0-1.0: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+Licence details: see LICENSE.md included in this package.

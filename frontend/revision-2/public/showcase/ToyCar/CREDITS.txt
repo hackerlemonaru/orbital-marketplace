@@ -1,0 +1,9 @@
+Toy Car
+Original file: https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ToyCar/glTF-Binary/ToyCar.glb
+Model information: https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ToyCar/metadata.json
+Changes: no changes to the original GLB.
+
+Initial car model: Guido Odendahl; copyright 2020 Public. CC0-1.0: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+Extensions and scene composition: Eric Chadwick; copyright 2020 Public. CC0-1.0: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+Licence details: see LICENSE.md included in this package.

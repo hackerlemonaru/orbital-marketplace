@@ -1,11 +1,11 @@
 {
   "cap_gib": 9.8,
   "cap_bytes": 10522669875,
-  "used_bytes": 4689979553,
-  "used_gib": 4.3679,
-  "headroom_bytes": 5832690322,
-  "headroom_gib": 5.4321,
-  "objects": 14581,
+  "used_bytes": 4763686795,
+  "used_gib": 4.4365,
+  "headroom_bytes": 5758983080,
+  "headroom_gib": 5.3635,
+  "objects": 14655,
   "pages": 15,
   "by_first_segment_gib": {
     "Bachelor of Technology (B.Tech.)": 2.444,
@@ -19,9 +19,10 @@
     "Bachelor of Business Administration (BBA)": 0.0971,
     "Bachelor of Computer Applications (BCA)": 0.0902,
     "Master of Arts (M.A.)": 0.0696,
+    "site-preproduction": 0.0678,
     "Bachelor of Commerce": 0.0628,
     "Master of Computer Applications (MCA)": 0.0426,
-    "site": 0.0183,
+    "site": 0.0192,
     "meta": 0.0003,
     "avatars": 0.0,
     "_probe": 0.0
