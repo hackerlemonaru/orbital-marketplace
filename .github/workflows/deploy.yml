@@ -1,17 +1,19 @@
-name: validate-build-sync
+name: validate-revision-2
 
 on:
   push:
-    branches: [main]
+    branches: [main, revision-2-preproduction]
   workflow_dispatch:
 
+# Deployment is deliberate: publish to pre-production, verify it, then promote
+# the same build with scripts/promote_revision2.py. This workflow never silently
+# replaces the production site or deploys the Worker on a push.
 jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-      CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-      CF_R2_BUCKET: ${{ secrets.CF_R2_BUCKET }}
+      PLAYWRIGHT_BROWSERS_PATH: '0'
+      TMPDIR: /tmp
     steps:
       - uses: actions/checkout@v4
         with:
@@ -26,19 +28,19 @@ jobs:
           cache-dependency-path: frontend/package-lock.json
       - name: Install dependencies
         run: |
-          python3 -m pip install --quiet requests
+          python3 -m pip install --quiet requests pillow
           npm ci --prefix frontend
-      - name: Validate catalogue
+          cd frontend && npx playwright install --with-deps chromium
+      - name: Validate catalogue licence gate
         run: python3 scripts/validate_assets.py
-      - name: Typecheck and build storefront
+      - name: Build revision 2
+        run: bash frontend/revision-2/build.sh
+      - name: Check readable UI content
+        run: python3 frontend/revision-2/check-output.py
+      - name: Preview and browser checks
+        working-directory: frontend/revision-2
         run: |
-          npm run typecheck --prefix frontend
-          npm run build --prefix frontend
-      - name: Frontend quality gate
-        run: python3 scripts/check_frontend.py
-      - name: R2 quota guard
-        if: ${{ env.CF_API_TOKEN != '' && env.CF_ACCOUNT_ID != '' && env.CF_R2_BUCKET != '' }}
-        run: python3 scripts/r2_quota.py
-      - name: Sync storefront to R2
-        if: ${{ env.CF_API_TOKEN != '' && env.CF_ACCOUNT_ID != '' && env.CF_R2_BUCKET != '' }}
-        run: python3 scripts/r2_sync_site.py
+          ../node_modules/.bin/vite preview --config vite.config.mjs --port 4174 --strictPort > /tmp/orbital-preview.log 2>&1 &
+          for i in $(seq 1 30); do curl --fail --silent http://127.0.0.1:4174/ > /dev/null && break; sleep 1; done
+          node check-ui.mjs http://127.0.0.1:4174
+          node check-interactions.mjs http://127.0.0.1:4174

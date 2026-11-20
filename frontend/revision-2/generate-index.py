@@ -9,10 +9,15 @@ ROOT = HERE.parent.parent
 catalog = json.loads((ROOT / 'catalog/catalog.json').read_text())['assets']
 featured = json.loads((HERE / 'featured.json').read_text())
 byid = {a['id']:a for a in catalog}
+bysha = {a.get('sha256'):a for a in catalog if a.get('sha256')}
+seed = json.loads((ROOT / 'seed-assets/seed-manifest.json').read_text())['assets']
+seed_by_sha = {a.get('sha256'):a for a in seed if a.get('sha256')}
+seed_by_file = {a['file']:a for a in seed}
 fixtures = re.compile(r'Triangle|SimpleMaterial|SimpleMeshes|Cameras|SimpleSkin|Unicode|Interpolation|Visibility|Coordinate|TextureEncoding|TextureLinear|BoxVertexColors|LightVisibility|NodeVisibility|AnimatedColorsCube|AnimatedMorphCube|CubeVisibility|SimpleInstancing', re.I)
 
 def clean(s):
     s=re.sub(r'^\d+[_\- ]*','',s or '')
+    s=re.sub(r'\.(glb|gltf|webp|json|lottie|html|ts|spz|sog)$','',s,flags=re.I)
     s=re.sub(r'_Art$','',s,flags=re.I).replace('_',' ').replace('-',' ')
     s=re.sub(r'(?<=[a-z])(?=[A-Z])',' ',s)
     return re.sub(r'\s+',' ',s).strip().capitalize() or 'Untitled'
@@ -41,7 +46,7 @@ def quality(name, info, featured=False):
     if info['animated']: score += 2
     count = info['triangles'] or 0
     if 5000 <= count <= 300000: score += 1
-    if not info['textured'] and 0 < count < 2000: score -= 3
+    if info['textured'] is False and 0 < count < 2000: score -= 3
     return score
 
 items=[]
@@ -53,19 +58,37 @@ for x in featured:
 for a in catalog:
     name=a.get('name','');aid=a.get('id','')
     if aid.endswith('#thumb') or '(preview)' in name.lower() or fixtures.search(name): continue
-    if a.get('mode') not in ('r2','github','archive') or not a.get('public_url') or not a.get('bytes'):continue
-    license=str(a.get('license') or '')
-    if license not in ('CC0-1.0','MIT','MIT-0','CC-BY-4.0','CC BY 4.0'):continue
-    thumb=byid.get(aid+'#thumb',{});image=thumb.get('preview_url') or thumb.get('public_url') or a.get('preview_url') or ''
+    if re.search(r'^(?:cesium[ _-]*)?box(?:[ _.-]|$)',name,re.I): continue
+    if a.get('mode') == 'link_only' and not (aid.startswith('link/polyhaven/') or aid.startswith('link/smithsonian/')): continue
+    seed_info=seed_by_sha.get(a.get('sha256')) if aid.startswith('seed/') else None
+    if seed_info and seed_info['file'].startswith('licenses/'): continue
+    if seed_info and seed_info['file'].endswith('.webp') and seed_info['file'][:-5]+'.glb' in seed_by_file: continue
+    license=str(seed_info.get('license') if seed_info else a.get('license') or '')
+    if license not in ('CC0-1.0','MIT','MIT-0','CC-BY-4.0','CC BY 4.0','Public domain + NASA usage guidelines'):continue
+    thumb=byid.get(aid+'#thumb',{})
+    if not thumb and seed_info and seed_info['file'].endswith('.glb'):
+        seed_thumb=seed_by_file.get(seed_info['file'][:-4]+'.webp',{})
+        thumb=bysha.get(seed_thumb.get('sha256'),{})
+    image=thumb.get('preview_url') or thumb.get('public_url') or a.get('preview_url') or ''
     if not re.search(r'\.(webp|png|jpe?g|avif)$', unquote(urlparse(image).path), re.I): image = ''
     # Archive entries are not individual files on the server. Fetch and extract
     # their actual member instead of offering the known 404 URL.
     archive = a.get('archive') or ''
     member = a.get('archive_member') or ''
-    download = ('https://orbital-assets-proxy.jc-bose.workers.dev/download/' + quote(archive, safe='')) if archive and member else a['public_url']
+    public_url='' if a.get('mode') == 'link_only' else (a.get('public_url') or '')
+    download = ('https://orbital-assets-proxy.jc-bose.workers.dev/download/' + quote(archive, safe='')) if archive and member else public_url
     licence_map={'uiverse':'MIT-uiverse.txt','useanim':'MIT-useanimations.txt','tslfx':'MIT-tslfx.txt','magicui':'MIT-magicui.txt','aws-splat':'MIT-0-aws.txt'}
-    licence_name=licence_map.get(aid.split('/')[0])
-    items.append({'id':aid,'name':clean(name),'category':(a.get('category_path') or 'Other').split(' / ')[0],'format':str(a.get('format') or 'FILE').upper(),'license':license,'credit':a.get('attribution','') if 'BY' in license.upper() else '', 'creditSource':a.get('source_url','') if 'BY' in license.upper() else '', 'licenseFile':('/licence-texts/'+licence_name) if licence_name else '', 'bytes':a['bytes'],'sha':a.get('sha256') or '', 'image':image,'model':a['public_url'] if str(a.get('format','')).upper() in ('GLB','GLTF') else '', 'download':download,'member':member,'featured':False,'score':quality(name,None)})
+    key=aid.split('/')[0]
+    if seed_info:
+        source=seed_info.get('source','').lower()
+        key='uiverse' if 'uiverse' in source else 'useanim' if 'useanimations' in source else 'tslfx' if 'tslfx' in source else 'aws-splat' if 'amazon' in source or 'aws-solutions' in source else key
+    licence_name=licence_map.get(key)
+    needs_credit='BY' in license.upper() or license=='MIT' or license.startswith('Public domain')
+    attribution=(seed_info.get('attribution','') if seed_info else a.get('attribution','')) if needs_credit else ''
+    source_url=(seed_info.get('source','') if seed_info else a.get('source_url','')) if needs_credit else ''
+    local = a.get('local_path') or ''
+    info = inspect_glb(ROOT / local) if local and str(a.get('format','')).upper() == 'GLB' else None
+    items.append({'id':aid,'name':clean(name),'category':(a.get('category_path') or 'Other').split(' / ')[0],'format':str(a.get('format') or 'FILE').upper(),'license':license,'credit':attribution,'creditSource':source_url,'licenseFile':('/licence-texts/'+licence_name) if licence_name else '', 'bytes':a.get('bytes') or 0,'sha':a.get('sha256') or '', 'image':image,'model':public_url if str(a.get('format','')).upper() in ('GLB','GLTF') else '', 'download':download,'member':member,'triangles':info['triangles'] if info else None,'featured':False,'score':quality(name,info)})
 (HERE/'public'/'index-data.json').write_text(json.dumps(items,separators=(',',':'),ensure_ascii=False))
 (HERE/'src'/'featured-data.json').write_text(json.dumps(items[:len(featured)],separators=(',',':'),ensure_ascii=False))
 (HERE/'src'/'stats.json').write_text(json.dumps({'total':len(items),'formats':len({x['format'] for x in items}),'categories':len({x['category'] for x in items})},separators=(',',':')))
